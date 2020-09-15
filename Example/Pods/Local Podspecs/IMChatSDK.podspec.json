@@ -1,6 +1,6 @@
 {
   "name": "IMChatSDK",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "summary": "Connect to custom service",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/ruilisi/IMChatSDK",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/ruilisi/IMChatSDK.git",
-    "tag": "1.1.0"
+    "tag": "1.1.1"
   },
   "platforms": {
     "ios": "10.0"
