@@ -14,7 +14,7 @@ class MessageTableViewCell: UITableViewCell {
     let label = UILabel()
     let time = UILabel()
     let bgimage = UIImageView()
-    let loadingLottie = AnimationView(name: "msgloading")
+    let loadingLottie = AnimationView(name: "msgloading", bundle: Resources.bundle, imageProvider: nil, animationCache: nil)
     
     var timeInt = Int()
     var messageID = String()
