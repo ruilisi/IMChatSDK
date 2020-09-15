@@ -1,0 +1,22 @@
+{
+  "name": "IMChatSDK",
+  "version": "0.1.0",
+  "summary": "A short description of IMChatSDK.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Thisismy0312/IMChatSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Thisismy0312": "qq867327466@163.com"
+  },
+  "source": {
+    "git": "https://github.com/Thisismy0312/IMChatSDK.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "IMChatSDK/Classes/**/*"
+}

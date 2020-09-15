@@ -1,0 +1,6 @@
+framework module Pods_IMChatSDK_Tests {
+  umbrella header "Pods-IMChatSDK_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

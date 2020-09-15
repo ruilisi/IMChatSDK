@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		1E24B0FD25F14D77F4236DD1 /* Pods-IMChatSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMChatSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-IMChatSDK_Example/Pods-IMChatSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		4DD6EED60D7E0F5CC9A40C4C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4DD6EED60D7E0F5CC9A40C4C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* IMChatSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMChatSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,10 +40,10 @@
 		607FACE51AFB9204008FA782 /* IMChatSDK_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMChatSDK_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6B528CD9DD591B865CEC60B7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6B528CD9DD591B865CEC60B7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7E52FB4DD15B94D571CB8297 /* Pods-IMChatSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMChatSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-IMChatSDK_Tests/Pods-IMChatSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6C212A2CB41895C10D54824 /* Pods_IMChatSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMChatSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4E064B0FE7EB926F477E93B /* IMChatSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = IMChatSDK.podspec; path = ../IMChatSDK.podspec; sourceTree = "<group>"; };
+		B4E064B0FE7EB926F477E93B /* IMChatSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IMChatSDK.podspec; path = ../IMChatSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C01513DBF590A2F05163A74F /* Pods-IMChatSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMChatSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-IMChatSDK_Tests/Pods-IMChatSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C584D3F0AAE1E6FCB0C41304 /* Pods_IMChatSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMChatSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFDB4836527AC519766588CC /* Pods-IMChatSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMChatSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-IMChatSDK_Example/Pods-IMChatSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,7 +147,6 @@
 				7E52FB4DD15B94D571CB8297 /* Pods-IMChatSDK_Tests.debug.xcconfig */,
 				C01513DBF590A2F05163A74F /* Pods-IMChatSDK_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

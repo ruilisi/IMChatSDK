@@ -1,0 +1,16 @@
+PODS:
+  - IMChatSDK (0.1.0)
+
+DEPENDENCIES:
+  - IMChatSDK (from `../`)
+
+EXTERNAL SOURCES:
+  IMChatSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  IMChatSDK: 9df9fe74299cca9ce1cae9a7734efa395a56bb40
+
+PODFILE CHECKSUM: 7bd117499a9be03d3ab25ede6b0b55498ea2cd50
+
+COCOAPODS: 1.9.1
