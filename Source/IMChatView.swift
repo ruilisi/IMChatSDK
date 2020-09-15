@@ -72,13 +72,13 @@ open class IMChatView: UIView {
 
 public extension IMChatView {
     
-    public func setFrame(_ rect: CGRect) {
+    func setFrame(_ rect: CGRect) {
         self.frame = rect
         setBottomView()
         setMsgView()
     }
     
-    public func setBottomView() {
+    func setBottomView() {
         let bottomViewWidth = frame.width
         let bottomViewHeight = 57.flo
         
@@ -118,7 +118,7 @@ public extension IMChatView {
     }
     
     // MARK: - 消息列表
-    public func setMsgView() {
+    func setMsgView() {
         messageTable.translatesAutoresizingMaskIntoConstraints = false
         self.addConstraints([
             .init(item: messageTable, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0),
@@ -132,7 +132,7 @@ public extension IMChatView {
 
 extension IMChatView {
     @objc func sendMsg() {
-        if let msg = textView.text, ImDataAccess.imInfor != nil, !msg.isEmpty {
+        if let msg = textView.text {
             messageTable.sendMessage(message: msg)
             self.textView.text = ""
             self.textViewDidChange(textView)
