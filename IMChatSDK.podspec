@@ -38,7 +38,8 @@ TODO: Add long description of the pod here.
                     'Source/*.{swift}']
   
   s.resource_bundles = {
-    'IMChatSDK' => ['Resources/**/*.{xcassets}']
+    'IMChatSDK' => ['Resources/**/*.{xcassets}',
+                    'Resources/**/*.{json}']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
