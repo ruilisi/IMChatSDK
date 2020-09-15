@@ -7,203 +7,206 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01A626E262ACFD2A702AA8AC1D8A215A /* IMChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F26DE84C8A2E16F9738E76D7735F555 /* IMChatView.swift */; };
-		01BA39D24255EE1CA4BF5FA2EBC3BB4F /* PassThroughOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAEA34816822833A8B5FB7ECCB77F2 /* PassThroughOutputNode.swift */; };
-		01CACB7ECBC833C75BE39E9FB22DB18B /* ShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8485EEC8D8487DAB5F31E35E431192 /* ShapeNode.swift */; };
-		02C3FA5900CF199F67738EE4365B3C78 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55CA9D54AA4F87321AF454D60FCFC55 /* AnimationView.swift */; };
-		0748FB9E97A8A72B541BD5F5E84940CB /* PreCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB71F577572F869A876AFA9C51195 /* PreCompositionLayer.swift */; };
-		088B22641066F910281ECE420D2A4C16 /* FoundationTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2813C7E3BC4CE127A8299DD6798EC050 /* FoundationTransport.swift */; };
-		08DFD81B5516D531A1DEAE32BFFFC9D5 /* lottie-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4A7B810C2772A5B7A6DC11EFBE6B0E /* lottie-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0B2AFC5C6083642F6A74756CAD92E0B5 /* PointValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986A76F37A9C231807C31700A242654 /* PointValueProvider.swift */; };
-		0B329FD9EFBED848BD27DD703B2380DC /* ShapeContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4446C6EC9627E6CC5796A0437413F851 /* ShapeContainerLayer.swift */; };
-		0DB8903BB19F16C75835057B44E3BB79 /* LayerDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25413BBF152751F71D46349F0F7894C3 /* LayerDebugging.swift */; };
-		0F4CDCFF09B20B8B960BA3415D55F271 /* AnyValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F67BA814AAA1A9082180D9A04E603E /* AnyValueContainer.swift */; };
-		0FC068D33F7A9A5381B49DE509529998 /* AnimationViewInitializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E8F78B9C96AE0197AEB6B8205B74D8 /* AnimationViewInitializers.swift */; };
-		10672940547ADDD90A7F360350DA92ED /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECB7DB8C143A390DBADC813F96FB0F1 /* Font.swift */; };
-		1399329A1418E24D68D7EAD04F5BA627 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F5A8C8D596B6DAF44C32F1953DDE3B /* UIView+Extension.swift */; };
-		13F0FFBC855A43E35CF45F0FC02A5551 /* ImageCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2395896DD9A5A92E67198F0663A07 /* ImageCompositionLayer.swift */; };
-		14AB50AEFE3CC6895DEF206530886994 /* NullCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B76BF37B7ECCB38B76B5C1017806 /* NullCompositionLayer.swift */; };
-		14F6375348C562AE0EEFABB9A32F301B /* FoundationHTTPServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53F482B0E24E16083CFCADDDDCAE9C8 /* FoundationHTTPServerHandler.swift */; };
-		16566792BF8D9A0731914EF247EAA033 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288A3D4036D10DEBC1F938FAF847354A /* QuartzCore.framework */; };
-		1901653562CF49571C58331DEB9A1ADE /* Vectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD4366783C29335AEC0A669BBE415A /* Vectors.swift */; };
-		19BE7A363FA00AC51929D3309F7CACED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D137A175DF0FAA7948F73B8230A666 /* CoreGraphics.framework */; };
-		1A70F1D7621843ADAB1230CA06348FBF /* ImageLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E8C13C38AC27D284B0DBBAA690F218 /* ImageLayerModel.swift */; };
-		1ABB16D7D47FFAA33AF95015A9356263 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D652D4EDC12646541F4DDAD5E8511806 /* Foundation.framework */; };
-		1B985581283C0F5E368D59F52E4D7D48 /* PrecompAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261E341EB2503003AC66935524CCB100 /* PrecompAsset.swift */; };
-		1D3D57E5DD8E6AA596F3F9CAA1625718 /* StrokeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E36622BF3469F6CC59358C3C34BCD6 /* StrokeRenderer.swift */; };
-		1FBB3C52109B2B5CE18E177E385727EF /* TextAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB60DDAC62C32979D2C9D54F15AE69F /* TextAnimator.swift */; };
-		20030C75FAE29884ACCFEC0369D093A1 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0886EA44F19D9C3C76CF9E2F085A7F /* CGFloatExtensions.swift */; };
-		2027D4CEC0B59DBE2AE3855F93543F65 /* StarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99AC9BE11A4D23376073FA6445DA5BC /* StarNode.swift */; };
-		228548A86715FB0F89A34975551734A8 /* AnimationKeypathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9660BCD280D30D6CCCA79851B8DD40E4 /* AnimationKeypathExtension.swift */; };
-		243F33E43E4B0749F421DF2D07C1B109 /* ShapeLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485D16579E4E4B15AD36A9A90530450 /* ShapeLayerModel.swift */; };
-		28A97F35DC3DD6648ACC3E80CE962E65 /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259CA89CCB54DABC6CD1CFFEBF58C0B0 /* Mask.swift */; };
+		008C4F55B237CA09F35D6FC07264F6CA /* PathOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F13AB9925589EFFA2A9A6D1668424 /* PathOutputNode.swift */; };
+		00F12106D48AF5FA155AC552468D39E1 /* Vectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD4366783C29335AEC0A669BBE415A /* Vectors.swift */; };
+		0356C2AD677E56407020D034D5AB3A50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D652D4EDC12646541F4DDAD5E8511806 /* Foundation.framework */; };
+		04869AB6736786D36AA750952BC19593 /* FillI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F4EE99AF3BC72D14357DE459C6B944 /* FillI.swift */; };
+		04D227E09D46D65C716CCD69EB76F6E4 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB1DED8D602AE9BA7086490F05BFCD4 /* Transform.swift */; };
+		0529FAEC8672C429F7F44E4AEA9898D1 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0886EA44F19D9C3C76CF9E2F085A7F /* CGFloatExtensions.swift */; };
+		0733EFA8607688881D24C24325C8F993 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613A8EAF7525EFC33823A90E713682B5 /* MessageTableViewCell.swift */; };
+		079FDEFC061F7DE38C9D5BF57140E15C /* AnimatedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789ED2BEF85CB73BC58CCF980D46654F /* AnimatedControl.swift */; };
+		08E4042F7A08F1C7C963E9D5950DC5BA /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4029ABAD75C2300F24869E5C4301A46A /* SwiftyJSON-dummy.m */; };
+		098D699A5F3EF3AE24E102E48330055C /* lottie-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4A7B810C2772A5B7A6DC11EFBE6B0E /* lottie-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BE8FF3B7EEDB7A2D52133C671DE89C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D652D4EDC12646541F4DDAD5E8511806 /* Foundation.framework */; };
+		0C52C0F9ED98B605A75BF6F97B2E4761 /* TextCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B6AA153BD9CCDE7E747CA10496A3A1 /* TextCompositionLayer.swift */; };
+		0CFABDC244B12DCB5F9AA785490D25CF /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D58DA7B78544902A4AD1AD9A30C0A38 /* Lottie.framework */; };
+		0D2372E2C7D8B1B28F53E3AA6BC4682B /* FoundationSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FB4C7569FD0521BC9E83744F43F542 /* FoundationSecurity.swift */; };
+		0F4CB09580613C9BCA36FD548EFDFE99 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B64D238D976488522ABAACB46E4EE /* UIColorExtension.swift */; };
+		114D6A9B959CF1ABABACCBEA2F6D8427 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82A43C96DE1DC1DB3A941EC745E4895 /* UIApplication+Extension.swift */; };
+		17C18158904B77F2A201F9F164CB3FF4 /* lottie-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB06BF878C9E4C9312668EB53A788402 /* lottie-ios-dummy.m */; };
+		1843E0793D23311C185180E6F9894767 /* SolidLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF2873FDFE78F61ADB8A5ED1B493CE6 /* SolidLayerModel.swift */; };
+		185A7BF33AE5C3C8F629D6484ED411B2 /* Framer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD6CCA76B83E296AE62D508E3337C7 /* Framer.swift */; };
+		1965041527EEFB34D9E63BCD5387993B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D652D4EDC12646541F4DDAD5E8511806 /* Foundation.framework */; };
+		197A415526E31473333277FFBBE97417 /* ShapeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AF797D66BA7FA91C9B386D7BE1A42 /* ShapeItem.swift */; };
+		1A5F5F71DD92AD6F6397A7FF85624FC8 /* FillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA75BBED412211618F25B1F5D5F16B0 /* FillRenderer.swift */; };
+		1AC8089175F09ED293F92A2506F6CFC2 /* StrokeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E36622BF3469F6CC59358C3C34BCD6 /* StrokeRenderer.swift */; };
+		1B0FDEBB3D240BF65998F4F16F325E78 /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8FCD8B332D5D813FE2F03314F64925 /* Ellipse.swift */; };
+		1B34BB624EF07EF5875A7FFCB48A18A9 /* GroupInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA323495AE050C2BB577E36B5C5635A4 /* GroupInterpolator.swift */; };
+		1C6D6DE6D2B2D5BDF21EF4C6C9626A99 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD031DD2841C56DB1EA6A7A0F9BB877 /* Marker.swift */; };
+		1DD2813D00FDCF33C06C08230CC04BB2 /* PathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66149BCB55E5947AA862B4F5EB23A9E /* PathNode.swift */; };
+		20DC7489B60CF0FF1CDFECBB1CEFBD06 /* PassThroughOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAEA34816822833A8B5FB7ECCB77F2 /* PassThroughOutputNode.swift */; };
+		22162C42EF325FDC13945F0AB14A73C0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB01842CA415F52909F30271BC267B /* UIColor+Extension.swift */; };
+		23F8E46508EDA5F65D7D289FEDBC33AB /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259CA89CCB54DABC6CD1CFFEBF58C0B0 /* Mask.swift */; };
+		246DE749823E4E208C649F2BE894D4ED /* CompatibleAnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730AB975C71DEF9097AF38DEF9103B58 /* CompatibleAnimationKeypath.swift */; };
+		2472BA92A1AD4C3D6447872468A6B666 /* ShapeCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63AC10C84959ECF710E6D2C9015791 /* ShapeCompositionLayer.swift */; };
+		26A67341AF0A19DBD974B730DFCC8FF6 /* CurveVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2CBE30F0A29DE80B8F652BC48A97B9 /* CurveVertex.swift */; };
+		271BB1275255203FAE9905551936E5B1 /* TextLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDC10E41C162D41563EE8974627F7 /* TextLayerModel.swift */; };
+		27F04FA29BF2CEDB45B34B5F54EEA246 /* GradientFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E848B2C516EA189CAB8A5783335D35B /* GradientFill.swift */; };
+		286B42BB03BC04074DD0702C86D70E51 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899FC603EB12502C0E364E181B0FE582 /* Starscream.framework */; };
+		28CE819F7B71604EA010DE405FDA2142 /* ShapeLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485D16579E4E4B15AD36A9A90530450 /* ShapeLayerModel.swift */; };
 		2905E122E59B83611F1D1D5DD9FC5F76 /* Pods-IMChatSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E4BA6D48FEDA80DF717F2D959EF692A /* Pods-IMChatSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29775127C233E9EF98A2EA3079358FD4 /* GradientFillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8848A9FC57596B28741C9696B363075 /* GradientFillRenderer.swift */; };
-		29946CC2F68FC6EA81F814936DC3E5E3 /* AnimatedSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F924F23A37F92527C73A99E39AAB2A /* AnimatedSwitch.swift */; };
-		29A325724CFE150227937C61726A9793 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B088AB925BCC230F981C6D450A0F5 /* WebSocket.swift */; };
-		29D6D3106CD8F9506ABCB2B932EF66E7 /* SizeValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A74C029C5D410EFEB0A3FBD81F691 /* SizeValueProvider.swift */; };
-		2A69C447D1DB8945990A310CC37D1BBE /* PreCompLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F5BF6D79B512A9E45B1897A6D5D4F /* PreCompLayerModel.swift */; };
-		2CA19C43D904E5642F0674FB4FEDE4E2 /* AnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C75C216344097872354A21F13453F3 /* AnimatorNode.swift */; };
-		2CF130581115C4B34C7AC2D8C5D46054 /* KeypathSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E81BBB7638A75B24DDBE5816804FE4 /* KeypathSearchable.swift */; };
-		2D5B8E454F1AF9E5C07F06E5136EDC7A /* AnimationPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE7F9B65B28C05B5BBAB4EE7AC937 /* AnimationPublic.swift */; };
-		30B3EA1C160862A846AF431189CD9DDD /* RenderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE415255A81E34460C82F52D3AD69600 /* RenderNode.swift */; };
-		30E5E2804E71E3CAF9841038357C4542 /* GradientStrokeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B86E9648494EC231A732DDA7CF9CDA /* GradientStrokeNode.swift */; };
-		31DF5648B2AD6E695CB91BC9AC9E2C9B /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09814ABCBEA30333F95BF6837F1D4940 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		321BD16D9D6E21FF56A6A4021F03687A /* Framer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD6CCA76B83E296AE62D508E3337C7 /* Framer.swift */; };
-		327F7447F08BE67AF677A14E7C18016A /* ColorValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F8D5A52CD0A46B4D246D7116AA28F /* ColorValueProvider.swift */; };
-		332F8657DFBEC110021DBFF55D25ED78 /* ImInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80D1656B1E22D93EE51BB61567BD5D /* ImInfo.swift */; };
-		354C3EEEC1C797206FBC9EE5652AD54E /* SingleValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694D1D119B0E0E126FD1B1EDD2B3C46 /* SingleValueProvider.swift */; };
-		369C4C45C148697AF21ECE4BB14CA7C9 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E9EB214648936FE808973AD31179E0 /* Group.swift */; };
-		3D0204E94E7F761539FDA58B21A1A2BD /* FillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F4DB81DD025E3C02C0857EDE80FB65 /* FillNode.swift */; };
-		3E78CB9E51F790A45DD3706DE776835A /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8FCD8B332D5D813FE2F03314F64925 /* Ellipse.swift */; };
-		3F6AD7A5795DFC38938B3A9FF8A060ED /* StrokeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31590A1E4D77A8E03A4914D253C19764 /* StrokeNode.swift */; };
-		4093089BB348D1421F2B142759546E5D /* GradientStrokeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3E797F14DB9EB3ECD17B5B4AFC7365 /* GradientStrokeRenderer.swift */; };
-		4118B59B2412E31931698B2F8BCE3DD7 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47FEBFF7122193F74986EB1301D557 /* Engine.swift */; };
-		4207E53B633BEDC9D528158C85FA9621 /* IMTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275203B3501026AE00229B3104650A3 /* IMTableView.swift */; };
-		453670CFE11E7BA9428E0D70B5C7BFBC /* UnifyDataConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E9AB757B9485FDB7029521313D51E6 /* UnifyDataConfig.swift */; };
-		45D600877EB6FA8EB4729F629990876B /* AnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABF006EA6542ADD8A03880ADE51FBE8 /* AnimationKeypath.swift */; };
-		464FED5E1564583BD19762D8B3B28993 /* KeyframeInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4991200DF82FF165D9D8C5E4FBC167 /* KeyframeInterpolator.swift */; };
-		469A312C25EBE4CC3999023483420D40 /* CompatibleAnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730AB975C71DEF9097AF38DEF9103B58 /* CompatibleAnimationKeypath.swift */; };
-		4B375CB93049E5C3F3E24EA1A8635DFE /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97384BF0B7C034890348FC889598444 /* MessageModel.swift */; };
-		4BC7AC04732B8664F68955181C0AADF3 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7669413F33DB0B799C8A2625DDC5B53 /* Asset.swift */; };
-		4CCB7A9702A7CDBE6E55A853FCF8C065 /* NodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A57321CF02423FD285DBBBB150758F /* NodeProperty.swift */; };
-		4EBD391B553A2CE49826225B2B7A9C1C /* PathOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F13AB9925589EFFA2A9A6D1668424 /* PathOutputNode.swift */; };
-		4F13B37EDE8C538F89CF1B344A32410A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3346A285C7C5B1C2E69E5A7DD97E63F /* LottieView.swift */; };
-		50FDCFFA8C18DB02DD388143BF1D9939 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877FAE5EB14C734E06B1DCCF5DB7CFD4 /* UIColor+Extension.swift */; };
-		51E5101E0A5AEF9202B8FAB98F57E9D1 /* Repeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DDCF80B57D4022615505EEE504D043 /* Repeater.swift */; };
-		52E54763F22BBF8C81FC272D988BF1C3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B64D238D976488522ABAACB46E4EE /* UIColorExtension.swift */; };
-		54B86DCBEE58E3B8B628211DA247D8F9 /* AnimationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AE6008757DDB4087682E92C921BF3 /* AnimationContext.swift */; };
-		56F68323C1755AA074B2D40C5278D383 /* TextAnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABAA693EC699919EC3A8DD996A671B /* TextAnimatorNode.swift */; };
-		573F3E8823666F3E0FEF56BFFA9F3DB7 /* LayerTransformNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD468A0F69D9CF41DC5C884D3FF2FA20 /* LayerTransformNode.swift */; };
-		58D67BFC3881B0047967AF82843115BF /* PathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66149BCB55E5947AA862B4F5EB23A9E /* PathNode.swift */; };
-		595F537FBFEB63F4C02955A91B2C2EF9 /* LayerImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78AC0B4C017634AFAC5C7567B4E8805 /* LayerImageProvider.swift */; };
-		599DE8922CE0F3BE9CFA5DE8A95E20D5 /* LayerTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCD1E55D1946624214D6C5A1BBA5E5 /* LayerTextProvider.swift */; };
-		5C16FFA360F69A51400A003ED2940D27 /* DashPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD387D7856F90BC3E278941CCB0894 /* DashPattern.swift */; };
-		5E486D2F2A3203D25BC928BCD31F17A1 /* KeyframeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AA2E1BD10C2BE5B783F71A05B4E6AF /* KeyframeGroup.swift */; };
-		5E5844B7867781EC282467B9D9D49F95 /* KeyframeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2438830EC00F9D0BCB6AEC8FDA94A2 /* KeyframeExtensions.swift */; };
-		5E9D78ABD7DDCB0C78CB190A128DD56B /* CompatibleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89125FFC8A0A8300FAF0EC0D661B4EC7 /* CompatibleAnimationView.swift */; };
-		607E15E12E74B173A9C78AD2AACE455F /* FrameCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D339AD38C85FFB7C67092AAE5E4665C /* FrameCollector.swift */; };
-		648B171EA2AEDA96778DF910EDBC4401 /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807E5CDB51A1445FC1918660E673366F /* KeyedDecodingContainerExtensions.swift */; };
-		648B68E04B5363C68A745EC32A92C2F3 /* CurveVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2CBE30F0A29DE80B8F652BC48A97B9 /* CurveVertex.swift */; };
-		66A6962F0E5A7A17772FF4CDB5A140EB /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BE4EE9BEE30B8670399C82C28DC9C0 /* Glyph.swift */; };
-		670571BE8D4617EA6C8A084C78D5A497 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D652D4EDC12646541F4DDAD5E8511806 /* Foundation.framework */; };
+		2EE2209CA8B2B3CF2D6D9CC27674CFB4 /* FoundationHTTPServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53F482B0E24E16083CFCADDDDCAE9C8 /* FoundationHTTPServerHandler.swift */; };
+		2F84A95F64988C6524AC9F45CD86617B /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFC926FA49DCE2347A295625857A844 /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		361B56BF68438FDA39E3787888936EFD /* IMTableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151D8AE7C9190E1B076B3C3C5B8C994 /* IMTableView+Extension.swift */; };
+		382DE5C8EF362FBD78104C1C1933CF13 /* IMTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E477BF9C229CB92E60D6765F5086D16 /* IMTableView.swift */; };
+		398EC47883684FA7F298539F81ABEB26 /* AnyNodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3B6453D8D5E94CFF8D6B869F0B3CB9 /* AnyNodeProperty.swift */; };
+		39FBA0C8B0C93D9F60A4FA87879AE82E /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E073B0850B1F0A81A24C2EFFF47245A /* Stroke.swift */; };
+		3B1E66DA3F557F21A0FB76851AF8AA04 /* ColorValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F8D5A52CD0A46B4D246D7116AA28F /* ColorValueProvider.swift */; };
+		3C94A50EEDE757ED915355BB1527E1D1 /* InvertedMatteLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F7C5DD5F513184509CE69951D323F /* InvertedMatteLayer.swift */; };
+		3D247A77447AA3DF7117B206514D9BF5 /* IMChatSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DA37BA8C128F5545C234E5527C0F347 /* IMChatSDK.bundle */; };
+		3F4BB5223F41A3DF06E84091C5896CFD /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA33A3B5EB867489B794DF945DC008 /* Server.swift */; };
+		3F719306121B3073D743725D2ADA9BEB /* KeyframeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AA2E1BD10C2BE5B783F71A05B4E6AF /* KeyframeGroup.swift */; };
+		3FC9BB93EED11CC843B5C3E039B7B9D5 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55CA9D54AA4F87321AF454D60FCFC55 /* AnimationView.swift */; };
+		47BF657405DAA433D93F5AADCD890298 /* AnimationPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE7F9B65B28C05B5BBAB4EE7AC937 /* AnimationPublic.swift */; };
+		48449FD724BF1F9C1BC98EF933BD2B0E /* PreCompLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F5BF6D79B512A9E45B1897A6D5D4F /* PreCompLayerModel.swift */; };
+		487D5D0073FA7D8E3936BFF0E433D44D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEBFA2A768C1CC03AAB9685487F34B1 /* Constants.swift */; };
+		4880B9F0FADECBB9ACAE4BE32ABE870F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288A3D4036D10DEBC1F938FAF847354A /* QuartzCore.framework */; };
+		48A1B9501008424CEB8C73A69178CB45 /* ShapeContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4446C6EC9627E6CC5796A0437413F851 /* ShapeContainerLayer.swift */; };
+		49E68852CB4ACE0B963303167E674E44 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09814ABCBEA30333F95BF6837F1D4940 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CF05F283666CA618FB454F468B6F8CF /* WSCompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A25B844B700697A3B820C88A1888CB6 /* WSCompression.swift */; };
+		4D256549CB3E2D523B7406B812DCCAB1 /* ShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8485EEC8D8487DAB5F31E35E431192 /* ShapeNode.swift */; };
+		4D9C631D7F0AE9C38D08D3E1828A709A /* TrimPathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C9D10A466E0B01E5A3A04C390CEEA9 /* TrimPathNode.swift */; };
+		4F1BC8466FD934F8F46815D87756F30F /* Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF830377937610CD8FFA0F551E139BF /* Trim.swift */; };
+		4F6AC74009011D85D1FAFE134AD6D00F /* PointValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986A76F37A9C231807C31700A242654 /* PointValueProvider.swift */; };
+		50D0E106ABD689E648EAD159F4E2DCAE /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C502F052D6C7B0B89D19C7FE3237A4 /* Int+Extension.swift */; };
+		5107BC0F4A21D382955C15B33899065D /* Repeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DDCF80B57D4022615505EEE504D043 /* Repeater.swift */; };
+		5145E237C0FA9F997C46EC8AD5E3C343 /* InterpolatableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDAE6AE889F1D84C230235FE6F52C03 /* InterpolatableExtensions.swift */; };
+		52BEE937A7A18F4616993649F1024E2F /* StrokeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31590A1E4D77A8E03A4914D253C19764 /* StrokeNode.swift */; };
+		534C7E7E5A7974AB256A9A1256310F8F /* ValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA500427F0AFC98DCDBAB9BD3BD58436 /* ValueContainer.swift */; };
+		5819574A15973376D6306B467EED919E /* AssetLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DDDD5B4B13BAEC82BFC85BB2A7949 /* AssetLibrary.swift */; };
+		5A0EA7B89008197751929F868F08EB1B /* StringHTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94425DD4BB1010DBE4D4774698F569 /* StringHTTPHandler.swift */; };
+		5AA515800651A7BFB03507D88E26C076 /* LayerTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CCD1E55D1946624214D6C5A1BBA5E5 /* LayerTextProvider.swift */; };
+		5D2A74B68F087BADC596A28631B6F1BE /* CompatibleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89125FFC8A0A8300FAF0EC0D661B4EC7 /* CompatibleAnimationView.swift */; };
+		5E4DF0C41C93376DEF135A91AFEA98D3 /* ImageLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E8C13C38AC27D284B0DBBAA690F218 /* ImageLayerModel.swift */; };
+		5FDF05B057B0908236D88C67E96B1AC2 /* AnimationImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623551F418238E962EF317ACE8ECD482 /* AnimationImageProvider.swift */; };
+		60893487B4F2737BDFA04DC46B5D4D37 /* LRUAnimationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0CAB64277AED676DD9014F77C5A5F4 /* LRUAnimationCache.swift */; };
+		62D3781D7C9FCEA04ADBBB8A74584C72 /* ShapeTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B5BDBAD58174430789DC1BC1E51469 /* ShapeTransform.swift */; };
 		679DC5A62C0186BADCFB2BD2F45C8ED6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D652D4EDC12646541F4DDAD5E8511806 /* Foundation.framework */; };
-		6979F77CE603538AAE77095014FEB038 /* InterpolatableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDAE6AE889F1D84C230235FE6F52C03 /* InterpolatableExtensions.swift */; };
-		6AF7CE305115B45F0DF4AEDB7E95E27E /* CompositionLayersInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC847B516157ABB93645B75E4BD2F4D6 /* CompositionLayersInitializer.swift */; };
-		6B758EE5B093EA14FDE3698645BDD396 /* FillI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F4EE99AF3BC72D14357DE459C6B944 /* FillI.swift */; };
-		6DE286D4D74313F23FDF9E2ECD88A54F /* AnimatedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789ED2BEF85CB73BC58CCF980D46654F /* AnimatedControl.swift */; };
-		6F74BEB8089F9954AA985C567A72F9D4 /* AnimationImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623551F418238E962EF317ACE8ECD482 /* AnimationImageProvider.swift */; };
-		70A6D37BD75BDC31C083D5B90600B78D /* GradientStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E025743DE766819D1697E060B0CBF1 /* GradientStroke.swift */; };
-		71FF6196E1ED7855E5C817E9211F08B2 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBAD10C1343A8E4E01A7D7894CEB312 /* Data+Extensions.swift */; };
-		72E31070CFE040BC0DD692449EC59FE4 /* GradientFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E848B2C516EA189CAB8A5783335D35B /* GradientFill.swift */; };
-		74C71CC8B577A1B483FEF552301BE0F4 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925A660ED623D82E9A69F89CE0F4387 /* ColorExtension.swift */; };
-		759176D287D13DAC8B27D220B496E931 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949AD0178A212DB31E21AA946CD707C /* Rectangle.swift */; };
-		75F353D013713C05070720C17485834E /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B09FEC5AAF97A76888A13C9DC6A8B67 /* AnimatedButton.swift */; };
-		76E3D46B94FCE9DCE89AFA3863B7F56E /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E073B0850B1F0A81A24C2EFFF47245A /* Stroke.swift */; };
-		77DE398D3FB0AB6AFF3F2E38A5D555A6 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB599A3627CDA93382D1331BEFA2B78B /* Compression.swift */; };
-		78C1B9FF677BBB7A0C93F7F9260766BE /* SolidCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C76467B56369721E0B0A9B4B470EF4 /* SolidCompositionLayer.swift */; };
-		7B1C11472F2B87A8FF2985FD4B0C92D8 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB1DED8D602AE9BA7086490F05BFCD4 /* Transform.swift */; };
-		7CEC0E142F061C2D045528DD9805D6DA /* IMChatSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F9B9AE425449C095EECFB7B7460EF /* IMChatSDK-dummy.m */; };
-		7FE86CFBFAFBC6984978B3748BF046F8 /* TextCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B6AA153BD9CCDE7E747CA10496A3A1 /* TextCompositionLayer.swift */; };
-		80CFC970C10DE351FFAA29C5E6041236 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D652D4EDC12646541F4DDAD5E8511806 /* Foundation.framework */; };
-		81FB806D7FF88369276ED59734612CBC /* GroupOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770151DB4DC833BE05C9ED5B638EF27 /* GroupOutputNode.swift */; };
-		8377C1ED943C46EDFBD78DDEEC8C42DE /* ValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA500427F0AFC98DCDBAB9BD3BD58436 /* ValueContainer.swift */; };
+		692A8B1DD33F567688CB370E24FF6127 /* UnifyUIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC6618734ED1E94B123E75E77AE7DF /* UnifyUIConfig.swift */; };
+		693534ECBDC3AA4A6F8BA4625302AA4A /* CompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B607B697547252BB8CAC470E49B0D /* CompositionLayer.swift */; };
+		69687411D8AABD0C5D59D90CFB341D28 /* NativeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0ADDFAD14F56A26A784D2962DA949 /* NativeEngine.swift */; };
+		6B48EA47B996B604A9E78076F453E604 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925A660ED623D82E9A69F89CE0F4387 /* ColorExtension.swift */; };
+		6B9EC27455E3DAF3F62A1616DE810307 /* AnimationTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4690E97F007E7931C5657F051F2E4DD8 /* AnimationTime.swift */; };
+		6D18D9291C0D51E8A3FA292A18B9E452 /* IMChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AE1E6703B0DAA33403E3D70F469BF3 /* IMChatView.swift */; };
+		6D1A5A8D96CAF022F3B18C6AE8EF4005 /* TextAnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABAA693EC699919EC3A8DD996A671B /* TextAnimatorNode.swift */; };
+		6D7CF939C7950D9944EBAEB24CD2B4B3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D640E5B2AD6849620266A17E197A6091 /* String+Extension.swift */; };
+		730ADAE11146F2736FCB5033C1A03D37 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3346A285C7C5B1C2E69E5A7DD97E63F /* LottieView.swift */; };
+		73313F140E778B16D42EAECA13D4ED60 /* BezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58D922130E4F04C6E2EF9320C69C8C /* BezierPath.swift */; };
+		73FE731D7E620D937024EE452CC5E1F3 /* GradientFillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8848A9FC57596B28741C9696B363075 /* GradientFillRenderer.swift */; };
+		751AF858F6669469BD29C1BAA2560DB7 /* AnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABF006EA6542ADD8A03880ADE51FBE8 /* AnimationKeypath.swift */; };
+		7604516F9BDDEC72E4831AD122CC895A /* LayerImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78AC0B4C017634AFAC5C7567B4E8805 /* LayerImageProvider.swift */; };
+		77434A3335F5D0DB5C9892458E955999 /* CompositionLayersInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC847B516157ABB93645B75E4BD2F4D6 /* CompositionLayersInitializer.swift */; };
+		7B7C9025490AE6EEF7D9E412283AD9C4 /* FillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F4DB81DD025E3C02C0857EDE80FB65 /* FillNode.swift */; };
+		7F18FFCFFE79EBA8AB7FD2757BC7E117 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F896762BEF9D27A8F7E69F23B3C5ABE /* MessageModel.swift */; };
+		826877460C478D6D55154F792DF68B0D /* NullCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B0B76BF37B7ECCB38B76B5C1017806 /* NullCompositionLayer.swift */; };
+		83AC2683800B704EE8CC0CED99A9EFC8 /* BundleImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06978B17E83DB6930CAAC6C48BF69F79 /* BundleImageProvider.swift */; };
+		8611095ADDE29CB274D87E5A9CD8EF74 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B9F893DCA916DA74BC4BB3D8C2D3F /* Color.swift */; };
+		86862621ABB5F6145EAC261989D27385 /* GroupOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770151DB4DC833BE05C9ED5B638EF27 /* GroupOutputNode.swift */; };
 		86A481D4C1A9DDDCCAB51231A569F49D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D652D4EDC12646541F4DDAD5E8511806 /* Foundation.framework */; };
-		86FDC4DA56E0A633B389892DD57255CE /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD031DD2841C56DB1EA6A7A0F9BB877 /* Marker.swift */; };
-		8ADC6C966D5DBCCD7EF44EC9D6B12C92 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAEE4DAF929CE86E7864CA977E2C876 /* MessageTableViewCell.swift */; };
-		8C466472FE7A5A9951772D1D5D579AB2 /* WSCompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A25B844B700697A3B820C88A1888CB6 /* WSCompression.swift */; };
-		8D673DA65ABC70BF0B399047A7211B8A /* CompoundBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D8EC3272ED52E18494037DEEF09DC5 /* CompoundBezierPath.swift */; };
-		8D90999DA7D2C6E809DBF396CD56995C /* StringHTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94425DD4BB1010DBE4D4774698F569 /* StringHTTPHandler.swift */; };
-		8E9F104BB63A79E3F862A33057F15E1F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078AEE5E1429853A08D49126649544DD /* SwiftyJSON.framework */; };
-		8F47F233313039E3E699CED33EFF2875 /* FoundationHTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8783A64E0C8A13325F70A027ADC47E3E /* FoundationHTTPHandler.swift */; };
-		9060331972FEF7AB8C79106695A06DF7 /* InvertedMatteLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F7C5DD5F513184509CE69951D323F /* InvertedMatteLayer.swift */; };
-		91B03976FC1965C33B891860A50D0D88 /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BB48E6BC950422A28901AB82002A10 /* Interpolatable.swift */; };
-		923AD5D5F0B55162C26DBA2CC10BD7C8 /* AnimationCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5FCA5F46C55AFB7ACE45A700F55C2 /* AnimationCacheProvider.swift */; };
-		938C78C596B97EE85405DC9E39201083 /* EllipseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2635D48D84468B4C358BBCB94DEE06A3 /* EllipseNode.swift */; };
-		9452E2DAC39303FE9020E23578F1C025 /* MaskContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5768036F45D9D4C2AF0057C469A95D2B /* MaskContainerLayer.swift */; };
-		975AE3E4ED300ADE2EE8F6E0A3ED67BA /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899FC603EB12502C0E364E181B0FE582 /* Starscream.framework */; };
-		9882322E7FACE3CC85A52EABA532C47F /* Keyframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA2DE051813285E65C2F4AA67C26F9E /* Keyframe.swift */; };
-		9A0FB2530B4BD3A726D02ABFC361DC16 /* ShapeRenderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B00F38060D119D04F47C82DE6083BA /* ShapeRenderLayer.swift */; };
+		87411724711AB13CF427990C3E0146DC /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BE4EE9BEE30B8670399C82C28DC9C0 /* Glyph.swift */; };
+		8BEEE2E9607A08FB912DA85F69F61DFB /* KeyframeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2438830EC00F9D0BCB6AEC8FDA94A2 /* KeyframeExtensions.swift */; };
+		8F4D1F92BA47D69B1D9FD15A4E6A3AD5 /* AnimationSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB232DF3BFC89008D272719DAFB47E /* AnimationSubview.swift */; };
+		93D7B96DDA3CEA587CF03F96FA45E6D9 /* NodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A57321CF02423FD285DBBBB150758F /* NodeProperty.swift */; };
+		943BF03AE2FB3F4CD7A76534D91CE98B /* msgloading.json in Resources */ = {isa = PBXBuildFile; fileRef = BE5B62EDE488F33D9725A2C8C0995460 /* msgloading.json */; };
+		9506D6A2F943C2E18FBC504E6EBA85E9 /* EllipseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2635D48D84468B4C358BBCB94DEE06A3 /* EllipseNode.swift */; };
+		9A92956A759FBDCBCD0E0EC998C8D02F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528565E60757FF1D3BF92EDEEFA369A /* SwiftyJSON.swift */; };
 		9AB1B21F84150760E36E8AEA7D28335F /* Pods-IMChatSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D967BC0B57020F4F919C796277BA0ED /* Pods-IMChatSDK_Example-dummy.m */; };
-		9C078707DF334C97A4AD940C772E43E4 /* GroupInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA323495AE050C2BB577E36B5C5635A4 /* GroupInterpolator.swift */; };
-		9C8A9FDE2FCA113C38BB9DA14135244A /* AnyNodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3B6453D8D5E94CFF8D6B869F0B3CB9 /* AnyNodeProperty.swift */; };
-		9D65E770D3F96C89D572EC9E8CE9EA4B /* AnimationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB17F0A8E8BA09CDEE1DA4D13113639 /* AnimationContainer.swift */; };
-		9E1C0A1FD79A772CBEEB8877060B5A26 /* Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF830377937610CD8FFA0F551E139BF /* Trim.swift */; };
-		9E6A644899132BC3535B98B439A23E56 /* AnyValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB6A7777FD62DE45329B46F6B4AF2B9 /* AnyValueProvider.swift */; };
-		A06A309126451979E8A21AEF99A67A97 /* IMTableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572052AA3CC3EF43D9A6B26FBD5D9D0D /* IMTableView+Extension.swift */; };
-		A199AACFB8A909DE2657D006C92C4C43 /* IMChatSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 593124FAA993F876BABE04DD72C8474C /* IMChatSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A1D175F0D6E3904DF771700CE132D818 /* GradientFillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F3D25B61D85F2C8C4922CC1B3C9F2F /* GradientFillNode.swift */; };
-		A35E06828D1AE4140FD340B64256DA0C /* MathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C168056D9E7821D1792E49A486639 /* MathKit.swift */; };
-		A9C42A0C4B96186119A6DD7F23FC7547 /* BezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58D922130E4F04C6E2EF9320C69C8C /* BezierPath.swift */; };
-		AA78D2E78D0DF53B8211606B353047E8 /* TextDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794BFFDDB35C767C3C3FBACACD67422 /* TextDocument.swift */; };
-		ACCDAE7F9C66388046DEE9EF184DB2ED /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F900CFB1C586588B939F1D1E894B53B /* Starscream-dummy.m */; };
-		ACEF66E34814A3AA11033C818F24F3C6 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FDCFFFE40CA8C9C65CD10584185058 /* Animation.swift */; };
-		AF16F72530C14C7BF681FD8E375F0DDE /* AnimationSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB232DF3BFC89008D272719DAFB47E /* AnimationSubview.swift */; };
-		B0E07DFD0CF34A1FCDFDE844C2BDC319 /* ShapeTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B5BDBAD58174430789DC1BC1E51469 /* ShapeTransform.swift */; };
-		B1F119B80B1B99855E5F671830046394 /* FoundationSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FB4C7569FD0521BC9E83744F43F542 /* FoundationSecurity.swift */; };
-		B1F2850F71A156D77E6E1FA37ABBD0B0 /* WSEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19682E3B15B929733A25805860A64AE /* WSEngine.swift */; };
-		B3A80E97B514A523BB5F324816B88EF6 /* HTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EAFC325FD18E2FEFE59512966051E /* HTTPHandler.swift */; };
-		B84785383474E42056355ECCF3F97611 /* Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09CFB223AFE13FB77878DD260712350 /* Merge.swift */; };
-		B8556FB7ACE6D61A429FA65C091C2EC3 /* VectorsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F1E57DC2CB544501667BFC7B8C4AF /* VectorsExtensions.swift */; };
-		B92D1C60A110EE5E32BCE45E81A94CD5 /* FilepathImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD92D8AF2F3D8D2865B1186AEF7996AD /* FilepathImageProvider.swift */; };
-		BA4DD97C610BF6451594EEA11BDACD26 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4029ABAD75C2300F24869E5C4301A46A /* SwiftyJSON-dummy.m */; };
-		BC71DD4F76A616E33D45EF14B29251DF /* ShapeCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63AC10C84959ECF710E6D2C9015791 /* ShapeCompositionLayer.swift */; };
-		BD459B52D3A222069FA573207D886FDC /* TextLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDC10E41C162D41563EE8974627F7 /* TextLayerModel.swift */; };
-		BD8A3D9C330B5ED1B526C7CBBEF4DCEA /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7192DBB390FDF7764D4D7C0ADF82C47 /* Star.swift */; };
-		BE052BED17E5DEA220EDD1EB900C15A7 /* RectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABAD4F7C18E75527339914C461F56E /* RectNode.swift */; };
-		BE49BD8B7ED962DA57BB67E7D54D0AF5 /* PolygonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81CFE83FFE201615935099BD7AA6338 /* PolygonNode.swift */; };
-		C0C68C5235F0FF106039B8EC22DFF438 /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFC926FA49DCE2347A295625857A844 /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C434AD1A8D22DCDC6B358E9CD184FD77 /* FloatValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5D7612FE722C2714276D057378C199 /* FloatValueProvider.swift */; };
-		C4FA4846C97F61E8A00772C7A70EF99C /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA33A3B5EB867489B794DF945DC008 /* Server.swift */; };
-		C629CBF853E5D801A301872EFC45ECA5 /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503B384DCB1DB9285283D607F395F8BA /* Transport.swift */; };
-		C70EDB17246FB0031BA99785CD6A78D2 /* lottie-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB06BF878C9E4C9312668EB53A788402 /* lottie-ios-dummy.m */; };
-		C82922623E59D1983D88D047E062FA7B /* FillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA75BBED412211618F25B1F5D5F16B0 /* FillRenderer.swift */; };
-		C9DFE49EECA91AC1A78DB09946026B53 /* NativeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0ADDFAD14F56A26A784D2962DA949 /* NativeEngine.swift */; };
-		CB52C920C78397A46410C4AA488EE65C /* AnimationTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4690E97F007E7931C5657F051F2E4DD8 /* AnimationTime.swift */; };
-		CE9A2BE9B3322D90F7A55971D1C6BE71 /* BundleImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06978B17E83DB6930CAAC6C48BF69F79 /* BundleImageProvider.swift */; };
-		D01FC05FF1DEC58B30D2EF32F7093BD3 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDD095754CE533F7972F057CFFAD0C3 /* Int+Extension.swift */; };
-		D05A707838C1A82EA3FAB26C403F04E7 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95E5E964AA9E591F27C33414DDFD904 /* String+Extension.swift */; };
-		D61A12A589FD193725AC79DA9B138DE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D652D4EDC12646541F4DDAD5E8511806 /* Foundation.framework */; };
-		D6A52D77496F2F066BAE3FE482361AE6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B9F893DCA916DA74BC4BB3D8C2D3F /* Color.swift */; };
-		D7171CB83941029CB1A0480A61696795 /* PathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A74D5936E0239E2FF8C655B77B56F49 /* PathElement.swift */; };
-		D75228D25E13C801B6D952A98435E90D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528565E60757FF1D3BF92EDEEFA369A /* SwiftyJSON.swift */; };
-		DB0B89F9AF362579DC81C3E17A9755B2 /* TCPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3186062C9FA412EBEBB01BE376AEE411 /* TCPTransport.swift */; };
-		DC89707DB8015A6763E3B5F1237BC2F2 /* TrimPathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C9D10A466E0B01E5A3A04C390CEEA9 /* TrimPathNode.swift */; };
-		DD1FBD76B95E58BCF170B402DCB22585 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5441C23BA25AF6CCA43FE0251D9CA /* Shape.swift */; };
-		DDE56591EEBBE26E4804D91ACFF2AF86 /* WebSocketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8735117573CA8A38B89367D695AE30D /* WebSocketHelper.swift */; };
-		DE9C998EF95B30CF440BC2C4C108D17C /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B3C5E167812ECECF8B11B9510C0609 /* ImageAsset.swift */; };
-		DEC87D9152460FEFB4E4B07AA0E5A7B9 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024016A279C6789714FBEF46A6F9C071 /* Security.swift */; };
-		E5C3749898604C505107EDCE2B2F62AA /* AnimatorNodeDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD3A9444B7ECF38E8A41D9BB57A7D21 /* AnimatorNodeDebugging.swift */; };
-		E7AB196A7AF35A9994C7FEED97844EDF /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D4A0D2DAE19B77BF9CBD21690C924 /* WebSocketServer.swift */; };
-		EA88B2C48BB2F47B61BDFC4BE5B07A47 /* NodePropertyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D95E18CAF07007CD82FA8406CC9831E /* NodePropertyMap.swift */; };
-		EDC2A66FB9762247F6230423F5CF19A6 /* LayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041B4D12952093ADA7025210373C315 /* LayerModel.swift */; };
-		EE31CF76A22CB669D6096232D68DBE08 /* ImDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5E5F85CAB6BAF29F39B56F4D2324F1 /* ImDataAccess.swift */; };
-		EEED9B23205247761B942B110BB5A364 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D58DA7B78544902A4AD1AD9A30C0A38 /* Lottie.framework */; };
-		F0254F1CF69817C74D7C401AB9D1293F /* LRUAnimationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0CAB64277AED676DD9014F77C5A5F4 /* LRUAnimationCache.swift */; };
-		F23CF04E61C999CCE50053FE877CE0C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB93BCB9D238FDCCA53741C1D73F79 /* Constants.swift */; };
+		9AF75772DA765C735DC9B94430AF3AC6 /* FilepathImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD92D8AF2F3D8D2865B1186AEF7996AD /* FilepathImageProvider.swift */; };
+		9B1620F4CB1785EE8904EA628B3C6D18 /* HTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EAFC325FD18E2FEFE59512966051E /* HTTPHandler.swift */; };
+		9B5C40514054DFD997C072A1DAC3BE5F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078AEE5E1429853A08D49126649544DD /* SwiftyJSON.framework */; };
+		9D861ED0BEE408864EE3AE96FD10C1D6 /* PathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A74D5936E0239E2FF8C655B77B56F49 /* PathElement.swift */; };
+		9DB34FCB089F344CCDFF039881D03120 /* AnyValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB6A7777FD62DE45329B46F6B4AF2B9 /* AnyValueProvider.swift */; };
+		9E20438F2B32B39CE5F72DA29367FACC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11E580D24FA017AE609A91B7630A1E1 /* Images.xcassets */; };
+		A148229FB4689C35AF9C7CD7D75783FD /* AnimationKeypathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9660BCD280D30D6CCCA79851B8DD40E4 /* AnimationKeypathExtension.swift */; };
+		A5584A4DB2F3F8594BDE2608D490B1AA /* WSEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19682E3B15B929733A25805860A64AE /* WSEngine.swift */; };
+		A5B1CB27FD4B9EDEAB8389D8D7631DDF /* SizeValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A74C029C5D410EFEB0A3FBD81F691 /* SizeValueProvider.swift */; };
+		A65756B16DD1FC14A0CC343D85ECF5BF /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B088AB925BCC230F981C6D450A0F5 /* WebSocket.swift */; };
+		A8F168FF13E20514A674C03E7C846C86 /* LayerTransformNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD468A0F69D9CF41DC5C884D3FF2FA20 /* LayerTransformNode.swift */; };
+		A968EC925786790393FB85B7B400128D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECB7DB8C143A390DBADC813F96FB0F1 /* Font.swift */; };
+		AAC2A8D92BD2A80D825C11A195AC28AD /* PolygonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81CFE83FFE201615935099BD7AA6338 /* PolygonNode.swift */; };
+		AB285ABE6D8BA6085ECEACA65680AA9D /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949AD0178A212DB31E21AA946CD707C /* Rectangle.swift */; };
+		ABE066EB885251AAC94FE968D9B67DE5 /* DashPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD387D7856F90BC3E278941CCB0894 /* DashPattern.swift */; };
+		AC6E34AD2C09D43401654F1D4066E076 /* GradientStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E025743DE766819D1697E060B0CBF1 /* GradientStroke.swift */; };
+		AD4B111BEE386718C736A75BBACD0C2A /* ShapeRenderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B00F38060D119D04F47C82DE6083BA /* ShapeRenderLayer.swift */; };
+		B2E6663DBBC0A890060C54642BA13362 /* RectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ABAD4F7C18E75527339914C461F56E /* RectNode.swift */; };
+		B383BBFD2AC81B24B54B96756FFB6DB6 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47FEBFF7122193F74986EB1301D557 /* Engine.swift */; };
+		B4AC4694F2D610F000A1AFE1DB8CD85A /* AnimatorNodeDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD3A9444B7ECF38E8A41D9BB57A7D21 /* AnimatorNodeDebugging.swift */; };
+		B4D5ABF7ED508385DE3F468E692C63E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D137A175DF0FAA7948F73B8230A666 /* CoreGraphics.framework */; };
+		B5021B04C80EA3EF8FC1CF1C92041B4A /* ImInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B0F8825D5A1A2B7076539AF677B4A /* ImInfo.swift */; };
+		B58395C8A9B424DC629018F30A78532A /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7192DBB390FDF7764D4D7C0ADF82C47 /* Star.swift */; };
+		B7199A5896601E841D0672FDA1EEF223 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBAD10C1343A8E4E01A7D7894CEB312 /* Data+Extensions.swift */; };
+		B765EEB30F168B4A1AFFD96E21FE5B1F /* KeyframeInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4991200DF82FF165D9D8C5E4FBC167 /* KeyframeInterpolator.swift */; };
+		B7A4994BF79F3904CDF527D16DE3E555 /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F900CFB1C586588B939F1D1E894B53B /* Starscream-dummy.m */; };
+		B7CC1A4105B213873C60C645985A2CE7 /* CompoundBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D8EC3272ED52E18494037DEEF09DC5 /* CompoundBezierPath.swift */; };
+		B83BDE1BAE547CF11ED38E83F62E40AB /* AnimationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548AE6008757DDB4087682E92C921BF3 /* AnimationContext.swift */; };
+		BAA4FBCB094AC37347FAB95368FE5FA5 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024016A279C6789714FBEF46A6F9C071 /* Security.swift */; };
+		BB49822FF245E7F184804D9A7A003FEE /* TextDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794BFFDDB35C767C3C3FBACACD67422 /* TextDocument.swift */; };
+		BD18FE770C67E470DA6CB3D7F33544BC /* GradientFillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F3D25B61D85F2C8C4922CC1B3C9F2F /* GradientFillNode.swift */; };
+		BE15747BE522DE05725B6540D913F557 /* GroupNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FCFB65B0998CC601026FDDB9B786BA /* GroupNode.swift */; };
+		BF688ED870075EDDDB4CDE6B189308BF /* AnyValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F67BA814AAA1A9082180D9A04E603E /* AnyValueContainer.swift */; };
+		BF76E06AE2C4E39473C347333D8E7E84 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FDCFFFE40CA8C9C65CD10584185058 /* Animation.swift */; };
+		C0167E96DDF230BEDE49509C702809CE /* VectorsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F1E57DC2CB544501667BFC7B8C4AF /* VectorsExtensions.swift */; };
+		C3F4E6C5165D0745E3C7C52E1827B72C /* AnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C75C216344097872354A21F13453F3 /* AnimatorNode.swift */; };
+		C628DD90087F7C9142801DB7CC5324DB /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5441C23BA25AF6CCA43FE0251D9CA /* Shape.swift */; };
+		C660BC67840B5118ED2AA83F96838D00 /* Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09CFB223AFE13FB77878DD260712350 /* Merge.swift */; };
+		C830F6B12BA21451600AF5A099639190 /* PreCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB71F577572F869A876AFA9C51195 /* PreCompositionLayer.swift */; };
+		C9A8AA1901085E8AB899FEAE7315A623 /* NodePropertyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D95E18CAF07007CD82FA8406CC9831E /* NodePropertyMap.swift */; };
+		CA311FA73CDAF1BEF9B0969389D09D54 /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807E5CDB51A1445FC1918660E673366F /* KeyedDecodingContainerExtensions.swift */; };
+		CC2C811C035F2489F77EB510842F82D6 /* PrecompAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261E341EB2503003AC66935524CCB100 /* PrecompAsset.swift */; };
+		CED18703950E2D3F9605C1ECE1123535 /* FoundationTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2813C7E3BC4CE127A8299DD6798EC050 /* FoundationTransport.swift */; };
+		D034A09D29B3CC083DC4F1D7A9B636CC /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A005D1AC6F3CA611948954E61B84428E /* StringExtensions.swift */; };
+		D090BF7FBC0131DC440D525F107AF5BF /* GradientStrokeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B86E9648494EC231A732DDA7CF9CDA /* GradientStrokeNode.swift */; };
+		D1811879EC8DF4B5235F5EF425AC7FF7 /* TCPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3186062C9FA412EBEBB01BE376AEE411 /* TCPTransport.swift */; };
+		D1C8E2FF6999B3A3D0A4AD866929C83C /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB599A3627CDA93382D1331BEFA2B78B /* Compression.swift */; };
+		D350A911634E1333A9D51D5199781081 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B3C5E167812ECECF8B11B9510C0609 /* ImageAsset.swift */; };
+		D43A2CBEA3F4A42D34E11FBF49D7A73B /* ImageCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2395896DD9A5A92E67198F0663A07 /* ImageCompositionLayer.swift */; };
+		D4450DCE9456B67F94B3400A9C4C5864 /* TextAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB60DDAC62C32979D2C9D54F15AE69F /* TextAnimator.swift */; };
+		D4C3D4303EB77B4B7BAD2727B6114959 /* IMChatSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C549AF89287F89906B52E91BAE356B4B /* IMChatSDK-dummy.m */; };
+		D6EF25A8433F0CFC31AE580414116401 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D652D4EDC12646541F4DDAD5E8511806 /* Foundation.framework */; };
+		D72399DEB020A8D8F917D6C2136FF615 /* UnifyDataConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962E72CD6FC7F28C3207391739B1002F /* UnifyDataConfig.swift */; };
+		D766E6F8463251046A82FDADCCD7B66B /* SolidCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C76467B56369721E0B0A9B4B470EF4 /* SolidCompositionLayer.swift */; };
+		D7BEDD8CD2E8EC63605F74A90874B8C9 /* SingleValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694D1D119B0E0E126FD1B1EDD2B3C46 /* SingleValueProvider.swift */; };
+		D857F00E20A2F944B86F7C4DBE3D396D /* ItemsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781F2132A0FA7D4728CA586A5664DA91 /* ItemsExtension.swift */; };
+		D9B93AD66FA39B4C51C1C13E5EBC0DE4 /* Keyframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA2DE051813285E65C2F4AA67C26F9E /* Keyframe.swift */; };
+		DBCE1832BFDBA1C1DABAD16291961282 /* AnimationViewInitializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E8F78B9C96AE0197AEB6B8205B74D8 /* AnimationViewInitializers.swift */; };
+		DF0DE4A9208C22706EDD8C5793916254 /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B09FEC5AAF97A76888A13C9DC6A8B67 /* AnimatedButton.swift */; };
+		DF0DFEA205D17311C6263F018AF8F0D2 /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D4A0D2DAE19B77BF9CBD21690C924 /* WebSocketServer.swift */; };
+		E00A91D31E6603CF64125F76D270D830 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E9EB214648936FE808973AD31179E0 /* Group.swift */; };
+		E00E73AFE16E9B1566E2B105A9A0A0BC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411D818DF82AB7CFA0F8C3AA4EC5CFE /* UIView+Extension.swift */; };
+		E042C1795B848B11DD1D15B5CB66AEBB /* FrameCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D339AD38C85FFB7C67092AAE5E4665C /* FrameCollector.swift */; };
+		E23A959B8D8A91DB39D80BFCD2A3688F /* AnimationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB17F0A8E8BA09CDEE1DA4D13113639 /* AnimationContainer.swift */; };
+		E25C0A152878FE2869C1F0B0576F3F4C /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7669413F33DB0B799C8A2625DDC5B53 /* Asset.swift */; };
+		E52C4873BCBA0EB2E9DD96FAA0851312 /* GradientStrokeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3E797F14DB9EB3ECD17B5B4AFC7365 /* GradientStrokeRenderer.swift */; };
+		E54D24FEF0A4813B1BC4EE053B29AD01 /* GradientValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D8CBF2F8C4158DEA77A9137B7C95B /* GradientValueProvider.swift */; };
+		E6984AE07C5DF9BC6D7F4B1C7325D237 /* FloatValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5D7612FE722C2714276D057378C199 /* FloatValueProvider.swift */; };
+		E6F28A274368B64D8523D3971BE86F84 /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BB48E6BC950422A28901AB82002A10 /* Interpolatable.swift */; };
+		E6F49F107DCFDF42A332D0DC24CFD125 /* LayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041B4D12952093ADA7025210373C315 /* LayerModel.swift */; };
+		E7D0E54881E63264F02EB3E09557EE9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554E9A9B419AC59966331585426EFDF4 /* UIKit.framework */; };
+		E7D809AC5CB2C1AB1EA1880F2A6298BB /* ImDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996FC8874AAB0BC4A036B7F1B3A41A6 /* ImDataAccess.swift */; };
+		E7E16E380ED16BAA9A0671C70D67CFE6 /* StarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99AC9BE11A4D23376073FA6445DA5BC /* StarNode.swift */; };
+		EA29559793B4BDA8ED9CBCB3006C7B26 /* AnimatedSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F924F23A37F92527C73A99E39AAB2A /* AnimatedSwitch.swift */; };
+		EAEDEABB511450A17CEA4FE1BDDE2964 /* AnimationTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA14A8B4ED6BA671055BCE23878BDD /* AnimationTextProvider.swift */; };
+		EC567C930036EF12CE206B42F0DE4F7F /* FoundationHTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8783A64E0C8A13325F70A027ADC47E3E /* FoundationHTTPHandler.swift */; };
+		ECCBDC532A5D65BCDEEAC6DC08D61548 /* RenderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE415255A81E34460C82F52D3AD69600 /* RenderNode.swift */; };
+		ED17A56F0602B9A1D3F64545091DF886 /* KeypathSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E81BBB7638A75B24DDBE5816804FE4 /* KeypathSearchable.swift */; };
+		EF1DD6D5134F62520A9A123060823908 /* IMChatSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8E21F1270FCE029E368C08AEB7C5A5B /* IMChatSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF79D45751CD5AE940875635D0586387 /* WebSocketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F842853E1CE17C41C28E171965EF69DF /* WebSocketHelper.swift */; };
+		F1D3CA68F59ED3F487E6FAF53EBB400F /* MathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9C168056D9E7821D1792E49A486639 /* MathKit.swift */; };
+		F1DC8E9DC8E8C698F36F641ECB421877 /* LayerDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25413BBF152751F71D46349F0F7894C3 /* LayerDebugging.swift */; };
 		F241CF7AE9D086A2308B5E1A09BF9A24 /* Pods-IMChatSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C783F6ED19E8C84479B01826BE8237 /* Pods-IMChatSDK_Tests-dummy.m */; };
-		F2E7507E06BDED750D8621C0743EDB9F /* AnimationTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA14A8B4ED6BA671055BCE23878BDD /* AnimationTextProvider.swift */; };
 		F30FDC381FEE74F51C40303370EE806E /* Pods-IMChatSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2636A3548DDDFB4408D83764F561F730 /* Pods-IMChatSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F36C0F65DF1E9BC188D25F85907B0980 /* ItemsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781F2132A0FA7D4728CA586A5664DA91 /* ItemsExtension.swift */; };
-		F6176AB74DB8F99BC61C9F06B65D83A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554E9A9B419AC59966331585426EFDF4 /* UIKit.framework */; };
-		F83BB810C81861A2FAC57103046A091F /* GradientValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D8CBF2F8C4158DEA77A9137B7C95B /* GradientValueProvider.swift */; };
-		F857DC3DC1D64C0DAFC4D54BC3BFEBF1 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A005D1AC6F3CA611948954E61B84428E /* StringExtensions.swift */; };
-		FA4851D371563F930618CF1805A319CB /* GroupNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FCFB65B0998CC601026FDDB9B786BA /* GroupNode.swift */; };
-		FA9E8DBA453C4E7629589CC586A41476 /* AssetLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DDDD5B4B13BAEC82BFC85BB2A7949 /* AssetLibrary.swift */; };
-		FB6DC50B9CA7374AA8130A69934BBD00 /* ShapeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AF797D66BA7FA91C9B386D7BE1A42 /* ShapeItem.swift */; };
-		FB705D1D72F21E809DA12B243A993DF1 /* CompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B607B697547252BB8CAC470E49B0D /* CompositionLayer.swift */; };
-		FD6B3066BEA30BD0C12A70CFB5702E1B /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411C830D6595EC07AE2710EA204CB6C7 /* UIApplication+Extension.swift */; };
-		FF132FABC2DC199102C7A57DA2142D19 /* SolidLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF2873FDFE78F61ADB8A5ED1B493CE6 /* SolidLayerModel.swift */; };
-		FFBB309CA59259466B8375D6860FFC4E /* UnifyUIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8200541040CE3004A34D4226ECBD62 /* UnifyUIConfig.swift */; };
+		F6BB6AB9CDCDDCDD8C20CE2246823D6B /* AnimationCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5FCA5F46C55AFB7ACE45A700F55C2 /* AnimationCacheProvider.swift */; };
+		F7540B85807F67EE94D2773F29CA5F32 /* MaskContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5768036F45D9D4C2AF0057C469A95D2B /* MaskContainerLayer.swift */; };
+		FF59FC90B8AEFDC50031BE2C62D84DBE /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503B384DCB1DB9285283D607F395F8BA /* Transport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3323C48C168F94B72445B34017161094 /* PBXContainerItemProxy */ = {
+		08E97D9278B3D66F5F3C4B07C3B36861 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
-			remoteInfo = SwiftyJSON;
+			remoteGlobalIDString = C62D5635B813357151F6116033E589F7;
+			remoteInfo = "IMChatSDK-IMChatSDK";
 		};
 		42D4BBC71E5F596D33D9AFEF564B110A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -212,6 +215,13 @@
 			remoteGlobalIDString = 0B967D7F8561D42493EE289EC8D450D1;
 			remoteInfo = "lottie-ios";
 		};
+		4941BB22A5F7693A0DB27E9429097CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
+			remoteInfo = SwiftyJSON;
+		};
 		5D2F7953C7CC48062093B744A69954ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -219,7 +229,7 @@
 			remoteGlobalIDString = 9B78EE4AF6AE03E79D88886319853FF7;
 			remoteInfo = Starscream;
 		};
-		610A84992725F35E992EFD73808F89B2 /* PBXContainerItemProxy */ = {
+		7FC5B271200513B19DB35E1962BED877 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -240,13 +250,6 @@
 			remoteGlobalIDString = CEF189A55436D949FB0FDFCB3CA7B9A2;
 			remoteInfo = "Pods-IMChatSDK_Example";
 		};
-		D2505B950817A270A8C553D8A9F6468C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9B78EE4AF6AE03E79D88886319853FF7;
-			remoteInfo = Starscream;
-		};
 		D7096B99DC73623E058EC12A8DF662FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -254,11 +257,18 @@
 			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
 			remoteInfo = SwiftyJSON;
 		};
+		E88A6DC93F9D288294480F96B020D460 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B78EE4AF6AE03E79D88886319853FF7;
+			remoteInfo = Starscream;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00BCA7752BDC2CF89D099F3E81FD4B76 /* IMChatSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IMChatSDK-Info.plist"; sourceTree = "<group>"; };
 		024016A279C6789714FBEF46A6F9C071 /* Security.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Security.swift; path = Sources/Security/Security.swift; sourceTree = "<group>"; };
+		02AE1E6703B0DAA33403E3D70F469BF3 /* IMChatView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMChatView.swift; path = Source/IMChatView.swift; sourceTree = "<group>"; };
 		054EE0705D379847DCC613CFFBB55C17 /* lottie-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "lottie-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		061B9F893DCA916DA74BC4BB3D8C2D3F /* Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Color.swift; path = "lottie-swift/src/Public/Primitives/Color.swift"; sourceTree = "<group>"; };
 		06978B17E83DB6930CAAC6C48BF69F79 /* BundleImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BundleImageProvider.swift; path = "lottie-swift/src/Public/iOS/BundleImageProvider.swift"; sourceTree = "<group>"; };
@@ -269,8 +279,8 @@
 		09814ABCBEA30333F95BF6837F1D4940 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		0B0886EA44F19D9C3C76CF9E2F085A7F /* CGFloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGFloatExtensions.swift; path = "lottie-swift/src/Private/Utility/Extensions/CGFloatExtensions.swift"; sourceTree = "<group>"; };
 		0C3E797F14DB9EB3ECD17B5B4AFC7365 /* GradientStrokeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStrokeRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/GradientStrokeRenderer.swift"; sourceTree = "<group>"; };
-		0D3D63A3D6BDA1B3C17E6D3AA18E9375 /* IMChatSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IMChatSDK.modulemap; sourceTree = "<group>"; };
 		0EA2DE051813285E65C2F4AA67C26F9E /* Keyframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keyframe.swift; path = "lottie-swift/src/Private/Model/Keyframes/Keyframe.swift"; sourceTree = "<group>"; };
+		0EAB01842CA415F52909F30271BC267B /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Source/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		0F9C168056D9E7821D1792E49A486639 /* MathKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MathKit.swift; path = "lottie-swift/src/Private/Utility/Extensions/MathKit.swift"; sourceTree = "<group>"; };
 		0FB17F0A8E8BA09CDEE1DA4D13113639 /* AnimationContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationContainer.swift; path = "lottie-swift/src/Private/LayerContainers/AnimationContainer.swift"; sourceTree = "<group>"; };
 		0FDAE6AE889F1D84C230235FE6F52C03 /* InterpolatableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InterpolatableExtensions.swift; path = "lottie-swift/src/Private/Utility/Interpolatable/InterpolatableExtensions.swift"; sourceTree = "<group>"; };
@@ -287,7 +297,6 @@
 		1E4A7B810C2772A5B7A6DC11EFBE6B0E /* lottie-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-umbrella.h"; sourceTree = "<group>"; };
 		1E848B2C516EA189CAB8A5783335D35B /* GradientFill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFill.swift; path = "lottie-swift/src/Private/Model/ShapeItems/GradientFill.swift"; sourceTree = "<group>"; };
 		1FEA33A3B5EB867489B794DF945DC008 /* Server.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Server.swift; path = Sources/Server/Server.swift; sourceTree = "<group>"; };
-		24F6BB32568965AD36D53B441181898C /* IMChatSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IMChatSDK.debug.xcconfig; sourceTree = "<group>"; };
 		2528565E60757FF1D3BF92EDEEFA369A /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; };
 		25413BBF152751F71D46349F0F7894C3 /* LayerDebugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerDebugging.swift; path = "lottie-swift/src/Private/Utility/Debugging/LayerDebugging.swift"; sourceTree = "<group>"; };
 		258D8CBF2F8C4158DEA77A9137B7C95B /* GradientValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/GradientValueProvider.swift"; sourceTree = "<group>"; };
@@ -309,64 +318,60 @@
 		31590A1E4D77A8E03A4914D253C19764 /* StrokeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StrokeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/StrokeNode.swift"; sourceTree = "<group>"; };
 		3186062C9FA412EBEBB01BE376AEE411 /* TCPTransport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TCPTransport.swift; path = Sources/Transport/TCPTransport.swift; sourceTree = "<group>"; };
 		334709860E782A2C144FB816F20EDB6E /* Pods-IMChatSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IMChatSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		338A3AE3EA0DA2D6B384A16BA4871399 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		33B6AA153BD9CCDE7E747CA10496A3A1 /* TextCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/TextCompositionLayer.swift"; sourceTree = "<group>"; };
 		35183F08F08F771DB11048BE753F86CD /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		35B86E9648494EC231A732DDA7CF9CDA /* GradientStrokeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStrokeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/GradientStrokeNode.swift"; sourceTree = "<group>"; };
 		363A74C029C5D410EFEB0A3FBD81F691 /* SizeValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/SizeValueProvider.swift"; sourceTree = "<group>"; };
 		3925A660ED623D82E9A69F89CE0F4387 /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorExtension.swift; path = "lottie-swift/src/Private/Utility/Primitives/ColorExtension.swift"; sourceTree = "<group>"; };
 		3986A76F37A9C231807C31700A242654 /* PointValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PointValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/PointValueProvider.swift"; sourceTree = "<group>"; };
+		3B9D5A367F4C0C67D2CBB027CFBCEC20 /* IMChatSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IMChatSDK.debug.xcconfig; sourceTree = "<group>"; };
 		3DBB232DF3BFC89008D272719DAFB47E /* AnimationSubview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationSubview.swift; path = "lottie-swift/src/Public/iOS/AnimationSubview.swift"; sourceTree = "<group>"; };
 		3E287A7BADCE3D1423142D25022CAA34 /* Pods-IMChatSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IMChatSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		3E5F9B9AE425449C095EECFB7B7460EF /* IMChatSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IMChatSDK-dummy.m"; sourceTree = "<group>"; };
+		3F896762BEF9D27A8F7E69F23B3C5ABE /* MessageModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageModel.swift; path = Source/MessageModel.swift; sourceTree = "<group>"; };
 		3FB60DDAC62C32979D2C9D54F15AE69F /* TextAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAnimator.swift; path = "lottie-swift/src/Private/Model/Text/TextAnimator.swift"; sourceTree = "<group>"; };
 		4029ABAD75C2300F24869E5C4301A46A /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		40ABAD4F7C18E75527339914C461F56E /* RectNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RectNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/RectNode.swift"; sourceTree = "<group>"; };
-		411C830D6595EC07AE2710EA204CB6C7 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Extension.swift"; path = "Source/UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		4151D8AE7C9190E1B076B3C3C5B8C994 /* IMTableView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IMTableView+Extension.swift"; path = "Source/IMTableView+Extension.swift"; sourceTree = "<group>"; };
 		41C76467B56369721E0B0A9B4B470EF4 /* SolidCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolidCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/SolidCompositionLayer.swift"; sourceTree = "<group>"; };
-		42255158476F8014862187AB87FFC47A /* IMChatSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = IMChatSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		42A4B1BC9670F5F7C9B54C5ADB560C86 /* Pods-IMChatSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IMChatSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		43E9AB757B9485FDB7029521313D51E6 /* UnifyDataConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnifyDataConfig.swift; path = Source/UnifyDataConfig.swift; sourceTree = "<group>"; };
 		4446C6EC9627E6CC5796A0437413F851 /* ShapeContainerLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeContainerLayer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/RenderLayers/ShapeContainerLayer.swift"; sourceTree = "<group>"; };
 		44BB48E6BC950422A28901AB82002A10 /* Interpolatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Interpolatable.swift; path = "lottie-swift/src/Private/Utility/Interpolatable/Interpolatable.swift"; sourceTree = "<group>"; };
 		4690E97F007E7931C5657F051F2E4DD8 /* AnimationTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationTime.swift; path = "lottie-swift/src/Public/Primitives/AnimationTime.swift"; sourceTree = "<group>"; };
 		47C75C216344097872354A21F13453F3 /* AnimatorNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatorNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/AnimatorNode.swift"; sourceTree = "<group>"; };
 		47F67BA814AAA1A9082180D9A04E603E /* AnyValueContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyValueContainer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/AnyValueContainer.swift"; sourceTree = "<group>"; };
-		48AB4AE13E84D4C0F278531EF15032FF /* IMChatSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IMChatSDK-prefix.pch"; sourceTree = "<group>"; };
 		49A7E79AC7EB4569670F90C5BF967543 /* SwiftyJSON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyJSON-Info.plist"; sourceTree = "<group>"; };
 		4D95E18CAF07007CD82FA8406CC9831E /* NodePropertyMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodePropertyMap.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/NodePropertyMap.swift"; sourceTree = "<group>"; };
 		4E0F1E57DC2CB544501667BFC7B8C4AF /* VectorsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VectorsExtensions.swift; path = "lottie-swift/src/Private/Utility/Primitives/VectorsExtensions.swift"; sourceTree = "<group>"; };
-		4F26DE84C8A2E16F9738E76D7735F555 /* IMChatView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMChatView.swift; path = Source/IMChatView.swift; sourceTree = "<group>"; };
 		503B384DCB1DB9285283D607F395F8BA /* Transport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transport.swift; path = Sources/Transport/Transport.swift; sourceTree = "<group>"; };
 		5041B4D12952093ADA7025210373C315 /* LayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/LayerModel.swift"; sourceTree = "<group>"; };
 		51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Lottie.framework; path = "lottie-ios.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51BB290898075BFB836F1C09D0042FBB /* IMChatSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IMChatSDK-prefix.pch"; sourceTree = "<group>"; };
 		524D570648E3ECDCA68B38D7FFAA718E /* Starscream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Starscream.modulemap; sourceTree = "<group>"; };
 		526B607B697547252BB8CAC470E49B0D /* CompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/CompositionLayer.swift"; sourceTree = "<group>"; };
-		5275203B3501026AE00229B3104650A3 /* IMTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMTableView.swift; path = Source/IMTableView.swift; sourceTree = "<group>"; };
 		548AE6008757DDB4087682E92C921BF3 /* AnimationContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationContext.swift; path = "lottie-swift/src/Private/Utility/Helpers/AnimationContext.swift"; sourceTree = "<group>"; };
 		554E9A9B419AC59966331585426EFDF4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		572052AA3CC3EF43D9A6B26FBD5D9D0D /* IMTableView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IMTableView+Extension.swift"; path = "Source/IMTableView+Extension.swift"; sourceTree = "<group>"; };
 		5768036F45D9D4C2AF0057C469A95D2B /* MaskContainerLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaskContainerLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/MaskContainerLayer.swift"; sourceTree = "<group>"; };
 		5770151DB4DC833BE05C9ED5B638EF27 /* GroupOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/GroupOutputNode.swift"; sourceTree = "<group>"; };
 		5794BFFDDB35C767C3C3FBACACD67422 /* TextDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextDocument.swift; path = "lottie-swift/src/Private/Model/Text/TextDocument.swift"; sourceTree = "<group>"; };
 		57AAB71F577572F869A876AFA9C51195 /* PreCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/PreCompositionLayer.swift"; sourceTree = "<group>"; };
-		593124FAA993F876BABE04DD72C8474C /* IMChatSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IMChatSDK-umbrella.h"; sourceTree = "<group>"; };
-		5992C4935BE0D581D439C63907F0E72D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		5996FC8874AAB0BC4A036B7F1B3A41A6 /* ImDataAccess.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImDataAccess.swift; path = Source/ImDataAccess.swift; sourceTree = "<group>"; };
 		5AB1DED8D602AE9BA7086490F05BFCD4 /* Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = "lottie-swift/src/Private/Model/Objects/Transform.swift"; sourceTree = "<group>"; };
-		5DAA449CE3F190D1F149E409DDCF3593 /* IMChatSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IMChatSDK.release.xcconfig; sourceTree = "<group>"; };
+		5C73084A9C1E8F89147D62B06A99788E /* IMChatSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = IMChatSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5CBC6618734ED1E94B123E75E77AE7DF /* UnifyUIConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnifyUIConfig.swift; path = Source/UnifyUIConfig.swift; sourceTree = "<group>"; };
+		5E477BF9C229CB92E60D6765F5086D16 /* IMTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMTableView.swift; path = Source/IMTableView.swift; sourceTree = "<group>"; };
 		5E4BA6D48FEDA80DF717F2D959EF692A /* Pods-IMChatSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IMChatSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
-		5EAEE4DAF929CE86E7864CA977E2C876 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageTableViewCell.swift; path = Source/MessageTableViewCell.swift; sourceTree = "<group>"; };
 		5FEAE7F9B65B28C05B5BBAB4EE7AC937 /* AnimationPublic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationPublic.swift; path = "lottie-swift/src/Public/Animation/AnimationPublic.swift"; sourceTree = "<group>"; };
+		613A8EAF7525EFC33823A90E713682B5 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageTableViewCell.swift; path = Source/MessageTableViewCell.swift; sourceTree = "<group>"; };
 		623551F418238E962EF317ACE8ECD482 /* AnimationImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationImageProvider.swift; path = "lottie-swift/src/Public/ImageProvider/AnimationImageProvider.swift"; sourceTree = "<group>"; };
+		6544CBF6ED7FD4461B229BD6D509FBA7 /* IMChatSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IMChatSDK-Info.plist"; sourceTree = "<group>"; };
 		66A57321CF02423FD285DBBBB150758F /* NodeProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodeProperty.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/NodeProperty.swift"; sourceTree = "<group>"; };
-		66F5A8C8D596B6DAF44C32F1953DDE3B /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Source/UIView+Extension.swift"; sourceTree = "<group>"; };
 		69E8C13C38AC27D284B0DBBAA690F218 /* ImageLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/ImageLayerModel.swift"; sourceTree = "<group>"; };
 		6A25B844B700697A3B820C88A1888CB6 /* WSCompression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WSCompression.swift; path = Sources/Compression/WSCompression.swift; sourceTree = "<group>"; };
-		6ABB93BCB9D238FDCCA53741C1D73F79 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Source/Constants.swift; sourceTree = "<group>"; };
 		6CBAD10C1343A8E4E01A7D7894CEB312 /* Data+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Extensions.swift"; path = "Sources/DataBytes/Data+Extensions.swift"; sourceTree = "<group>"; };
 		6D339AD38C85FFB7C67092AAE5E4665C /* FrameCollector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrameCollector.swift; path = Sources/Framer/FrameCollector.swift; sourceTree = "<group>"; };
 		6D652FD74EBAA23B672538DF59372F70 /* Pods-IMChatSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IMChatSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
 		6F1F7C5DD5F513184509CE69951D323F /* InvertedMatteLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvertedMatteLayer.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/InvertedMatteLayer.swift"; sourceTree = "<group>"; };
-		6F80D1656B1E22D93EE51BB61567BD5D /* ImInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImInfo.swift; path = Source/ImInfo.swift; sourceTree = "<group>"; };
 		730AB975C71DEF9097AF38DEF9103B58 /* CompatibleAnimationKeypath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationKeypath.swift; path = "lottie-swift/src/Public/iOS/Compatibility/CompatibleAnimationKeypath.swift"; sourceTree = "<group>"; };
 		745CA61617F112FE910D8348C4F4E2D6 /* lottie-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "lottie-ios.release.xcconfig"; sourceTree = "<group>"; };
 		76622B156F80B5F6C1CF311C6144F8F8 /* Pods-IMChatSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IMChatSDK_Example-Info.plist"; sourceTree = "<group>"; };
@@ -379,7 +384,6 @@
 		80D8EC3272ED52E18494037DEEF09DC5 /* CompoundBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompoundBezierPath.swift; path = "lottie-swift/src/Private/Utility/Primitives/CompoundBezierPath.swift"; sourceTree = "<group>"; };
 		815F8D5A52CD0A46B4D246D7116AA28F /* ColorValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/ColorValueProvider.swift"; sourceTree = "<group>"; };
 		81D5441C23BA25AF6CCA43FE0251D9CA /* Shape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Shape.swift"; sourceTree = "<group>"; };
-		877FAE5EB14C734E06B1DCCF5DB7CFD4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Source/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		8783A64E0C8A13325F70A027ADC47E3E /* FoundationHTTPHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationHTTPHandler.swift; path = Sources/Framer/FoundationHTTPHandler.swift; sourceTree = "<group>"; };
 		87EBDA06E893B1C00124385792C90400 /* Starscream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-prefix.pch"; sourceTree = "<group>"; };
 		89125FFC8A0A8300FAF0EC0D661B4EC7 /* CompatibleAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationView.swift; path = "lottie-swift/src/Public/iOS/Compatibility/CompatibleAnimationView.swift"; sourceTree = "<group>"; };
@@ -390,19 +394,26 @@
 		8ABFDC10E41C162D41563EE8974627F7 /* TextLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/TextLayerModel.swift"; sourceTree = "<group>"; };
 		8AF2873FDFE78F61ADB8A5ED1B493CE6 /* SolidLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolidLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/SolidLayerModel.swift"; sourceTree = "<group>"; };
 		8B2438830EC00F9D0BCB6AEC8FDA94A2 /* KeyframeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeExtensions.swift; path = "lottie-swift/src/Private/Utility/Interpolatable/KeyframeExtensions.swift"; sourceTree = "<group>"; };
+		8C00F4100E4FDD620E563B0CF66CE3A7 /* IMChatSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IMChatSDK.modulemap; sourceTree = "<group>"; };
 		8D967BC0B57020F4F919C796277BA0ED /* Pods-IMChatSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IMChatSDK_Example-dummy.m"; sourceTree = "<group>"; };
+		8EEBFA2A768C1CC03AAB9685487F34B1 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Source/Constants.swift; sourceTree = "<group>"; };
 		8FF830377937610CD8FFA0F551E139BF /* Trim.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Trim.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Trim.swift"; sourceTree = "<group>"; };
 		9008AB84F4CEED2D45A735C841F58628 /* SwiftyJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.release.xcconfig; sourceTree = "<group>"; };
+		962E72CD6FC7F28C3207391739B1002F /* UnifyDataConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnifyDataConfig.swift; path = Source/UnifyDataConfig.swift; sourceTree = "<group>"; };
 		9660BCD280D30D6CCCA79851B8DD40E4 /* AnimationKeypathExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationKeypathExtension.swift; path = "lottie-swift/src/Private/Utility/Extensions/AnimationKeypathExtension.swift"; sourceTree = "<group>"; };
 		9B58D922130E4F04C6E2EF9320C69C8C /* BezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BezierPath.swift; path = "lottie-swift/src/Private/Utility/Primitives/BezierPath.swift"; sourceTree = "<group>"; };
 		9BD3A9444B7ECF38E8A41D9BB57A7D21 /* AnimatorNodeDebugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatorNodeDebugging.swift; path = "lottie-swift/src/Private/Utility/Debugging/AnimatorNodeDebugging.swift"; sourceTree = "<group>"; };
 		9C87FF7D011E2948AC28076D66C1ADE9 /* Pods_IMChatSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IMChatSDK_Tests.framework; path = "Pods-IMChatSDK_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C8B0F8825D5A1A2B7076539AF677B4A /* ImInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImInfo.swift; path = Source/ImInfo.swift; sourceTree = "<group>"; };
 		9CF31DC9AD6306E76DC46DE3D1BE7EE0 /* IMChatSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IMChatSDK.framework; path = IMChatSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DA37BA8C128F5545C234E5527C0F347 /* IMChatSDK.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = IMChatSDK.bundle; path = "IMChatSDK-IMChatSDK.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EAD387D7856F90BC3E278941CCB0894 /* DashPattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DashPattern.swift; path = "lottie-swift/src/Private/Model/Objects/DashPattern.swift"; sourceTree = "<group>"; };
 		9F900CFB1C586588B939F1D1E894B53B /* Starscream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Starscream-dummy.m"; sourceTree = "<group>"; };
 		9FAAEA34816822833A8B5FB7ECCB77F2 /* PassThroughOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PassThroughOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/PassThroughOutputNode.swift"; sourceTree = "<group>"; };
 		A005D1AC6F3CA611948954E61B84428E /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = "lottie-swift/src/Private/Utility/Extensions/StringExtensions.swift"; sourceTree = "<group>"; };
+		A0C502F052D6C7B0B89D19C7FE3237A4 /* Int+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Extension.swift"; path = "Source/Int+Extension.swift"; sourceTree = "<group>"; };
+		A11E580D24FA017AE609A91B7630A1E1 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
 		A2B3C5E167812ECECF8B11B9510C0609 /* ImageAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageAsset.swift; path = "lottie-swift/src/Private/Model/Assets/ImageAsset.swift"; sourceTree = "<group>"; };
 		A33F5787646628595E3201E08651A9E1 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		A3ECA9652F6D07DD48808635545FC856 /* lottie-ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-prefix.pch"; sourceTree = "<group>"; };
@@ -411,10 +422,11 @@
 		A7192DBB390FDF7764D4D7C0ADF82C47 /* Star.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Star.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Star.swift"; sourceTree = "<group>"; };
 		A7669413F33DB0B799C8A2625DDC5B53 /* Asset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Asset.swift; path = "lottie-swift/src/Private/Model/Assets/Asset.swift"; sourceTree = "<group>"; };
 		A7B15DA3ACF5C99F17C6884996925372 /* Pods-IMChatSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IMChatSDK_Tests.modulemap"; sourceTree = "<group>"; };
+		A8E21F1270FCE029E368C08AEB7C5A5B /* IMChatSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IMChatSDK-umbrella.h"; sourceTree = "<group>"; };
 		A93F3CBEB3570D60C52DB3E8ABDCB7BB /* Pods-IMChatSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IMChatSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA323495AE050C2BB577E36B5C5635A4 /* GroupInterpolator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupInterpolator.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/GroupInterpolator.swift"; sourceTree = "<group>"; };
+		AAA6DDCDA3BF1319A4F86B4876ABE2F6 /* ResourceBundle-IMChatSDK-IMChatSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-IMChatSDK-IMChatSDK-Info.plist"; sourceTree = "<group>"; };
 		AB599A3627CDA93382D1331BEFA2B78B /* Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compression.swift; path = Sources/Compression/Compression.swift; sourceTree = "<group>"; };
-		AD01C320142D9A312FCA42015EEE223E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		ADB6A7777FD62DE45329B46F6B4AF2B9 /* AnyValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/AnyValueProvider.swift"; sourceTree = "<group>"; };
 		AE4991200DF82FF165D9D8C5E4FBC167 /* KeyframeInterpolator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeInterpolator.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/KeyframeInterpolator.swift"; sourceTree = "<group>"; };
 		AECB7DB8C143A390DBADC813F96FB0F1 /* Font.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Font.swift; path = "lottie-swift/src/Private/Model/Text/Font.swift"; sourceTree = "<group>"; };
@@ -427,8 +439,12 @@
 		B5AA2E1BD10C2BE5B783F71A05B4E6AF /* KeyframeGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeGroup.swift; path = "lottie-swift/src/Private/Model/Keyframes/KeyframeGroup.swift"; sourceTree = "<group>"; };
 		B5D48CE6DE82C733E021006C0C82BEB1 /* Pods_IMChatSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IMChatSDK_Example.framework; path = "Pods-IMChatSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B00F38060D119D04F47C82DE6083BA /* ShapeRenderLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeRenderLayer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/RenderLayers/ShapeRenderLayer.swift"; sourceTree = "<group>"; };
+		B82A43C96DE1DC1DB3A941EC745E4895 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Extension.swift"; path = "Source/UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		BAB5FCA5F46C55AFB7ACE45A700F55C2 /* AnimationCacheProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationCacheProvider.swift; path = "lottie-swift/src/Public/AnimationCache/AnimationCacheProvider.swift"; sourceTree = "<group>"; };
+		BDD9F71E97306A95969857CA681B8C3B /* IMChatSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IMChatSDK.release.xcconfig; sourceTree = "<group>"; };
+		BE5B62EDE488F33D9725A2C8C0995460 /* msgloading.json */ = {isa = PBXFileReference; includeInIndex = 1; name = msgloading.json; path = Resources/msgloading.json; sourceTree = "<group>"; };
 		C3346A285C7C5B1C2E69E5A7DD97E63F /* LottieView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LottieView.swift; path = "lottie-swift/src/Public/iOS/LottieView.swift"; sourceTree = "<group>"; };
+		C549AF89287F89906B52E91BAE356B4B /* IMChatSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IMChatSDK-dummy.m"; sourceTree = "<group>"; };
 		C5FB4C7569FD0521BC9E83744F43F542 /* FoundationSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationSecurity.swift; path = Sources/Security/FoundationSecurity.swift; sourceTree = "<group>"; };
 		C6A2395896DD9A5A92E67198F0663A07 /* ImageCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/ImageCompositionLayer.swift"; sourceTree = "<group>"; };
 		C78AC0B4C017634AFAC5C7567B4E8805 /* LayerImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerImageProvider.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerImageProvider.swift"; sourceTree = "<group>"; };
@@ -441,6 +457,7 @@
 		CF47FEBFF7122193F74986EB1301D557 /* Engine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Engine.swift; path = Sources/Engine/Engine.swift; sourceTree = "<group>"; };
 		D2C783F6ED19E8C84479B01826BE8237 /* Pods-IMChatSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IMChatSDK_Tests-dummy.m"; sourceTree = "<group>"; };
 		D35D4A0D2DAE19B77BF9CBD21690C924 /* WebSocketServer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocketServer.swift; path = Sources/Server/WebSocketServer.swift; sourceTree = "<group>"; };
+		D640E5B2AD6849620266A17E197A6091 /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "Source/String+Extension.swift"; sourceTree = "<group>"; };
 		D652D4EDC12646541F4DDAD5E8511806 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D6A09E34F69BCFC7690FABD219548790 /* Starscream-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Starscream-Info.plist"; sourceTree = "<group>"; };
 		D81CFE83FFE201615935099BD7AA6338 /* PolygonNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PolygonNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/PolygonNode.swift"; sourceTree = "<group>"; };
@@ -449,16 +466,17 @@
 		DA500427F0AFC98DCDBAB9BD3BD58436 /* ValueContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueContainer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueContainer.swift"; sourceTree = "<group>"; };
 		DD92D8AF2F3D8D2865B1186AEF7996AD /* FilepathImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FilepathImageProvider.swift; path = "lottie-swift/src/Public/iOS/FilepathImageProvider.swift"; sourceTree = "<group>"; };
 		DFA75BBED412211618F25B1F5D5F16B0 /* FillRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/FillRenderer.swift"; sourceTree = "<group>"; };
+		DFF050AF8BF6B549EC11CEAC7CEBF58B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		E1D137A175DF0FAA7948F73B8230A666 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27A20FBFEAF8A85860D12D6D2E646DC /* Pods-IMChatSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IMChatSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E411D818DF82AB7CFA0F8C3AA4EC5CFE /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Source/UIView+Extension.swift"; sourceTree = "<group>"; };
 		E694D1D119B0E0E126FD1B1EDD2B3C46 /* SingleValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleValueProvider.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/SingleValueProvider.swift"; sourceTree = "<group>"; };
 		E6CCD1E55D1946624214D6C5A1BBA5E5 /* LayerTextProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerTextProvider.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerTextProvider.swift"; sourceTree = "<group>"; };
 		E733CEEE1AE9DD4C97BCC80D9D8B7E3F /* lottie-ios-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "lottie-ios-Info.plist"; sourceTree = "<group>"; };
 		E949AD0178A212DB31E21AA946CD707C /* Rectangle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rectangle.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Rectangle.swift"; sourceTree = "<group>"; };
 		E9D9600CA51A48D05BA283003C4515EF /* Pods-IMChatSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IMChatSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EAE0ADDFAD14F56A26A784D2962DA949 /* NativeEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NativeEngine.swift; path = Sources/Engine/NativeEngine.swift; sourceTree = "<group>"; };
-		EC8200541040CE3004A34D4226ECBD62 /* UnifyUIConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnifyUIConfig.swift; path = Source/UnifyUIConfig.swift; sourceTree = "<group>"; };
 		ED3B6453D8D5E94CFF8D6B869F0B3CB9 /* AnyNodeProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyNodeProperty.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/AnyNodeProperty.swift"; sourceTree = "<group>"; };
 		ED94425DD4BB1010DBE4D4774698F569 /* StringHTTPHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringHTTPHandler.swift; path = Sources/Framer/StringHTTPHandler.swift; sourceTree = "<group>"; };
 		EE415255A81E34460C82F52D3AD69600 /* RenderNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RenderNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/RenderNode.swift"; sourceTree = "<group>"; };
@@ -470,27 +488,46 @@
 		F6CD4366783C29335AEC0A669BBE415A /* Vectors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Vectors.swift; path = "lottie-swift/src/Public/Primitives/Vectors.swift"; sourceTree = "<group>"; };
 		F6E9EB214648936FE808973AD31179E0 /* Group.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Group.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Group.swift"; sourceTree = "<group>"; };
 		F6F924F23A37F92527C73A99E39AAB2A /* AnimatedSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedSwitch.swift; path = "lottie-swift/src/Public/iOS/AnimatedSwitch.swift"; sourceTree = "<group>"; };
-		F8735117573CA8A38B89367D695AE30D /* WebSocketHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebSocketHelper.swift; sourceTree = "<group>"; };
+		F842853E1CE17C41C28E171965EF69DF /* WebSocketHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebSocketHelper.swift; sourceTree = "<group>"; };
 		F8848A9FC57596B28741C9696B363075 /* GradientFillRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFillRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/GradientFillRenderer.swift"; sourceTree = "<group>"; };
 		F910BFE314438930C4F4F9F08EDAA960 /* Starscream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.release.xcconfig; sourceTree = "<group>"; };
-		F95E5E964AA9E591F27C33414DDFD904 /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "Source/String+Extension.swift"; sourceTree = "<group>"; };
-		F97384BF0B7C034890348FC889598444 /* MessageModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageModel.swift; path = Source/MessageModel.swift; sourceTree = "<group>"; };
 		F998CEAFF1C19BAB563D069F497CFF63 /* lottie-ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "lottie-ios.modulemap"; sourceTree = "<group>"; };
 		F99AC9BE11A4D23376073FA6445DA5BC /* StarNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/StarNode.swift"; sourceTree = "<group>"; };
 		FA03F4A86501DE2C62FE9D5894A31F70 /* Pods-IMChatSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IMChatSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		FB06BF878C9E4C9312668EB53A788402 /* lottie-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "lottie-ios-dummy.m"; sourceTree = "<group>"; };
-		FC5E5F85CAB6BAF29F39B56F4D2324F1 /* ImDataAccess.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImDataAccess.swift; path = Source/ImDataAccess.swift; sourceTree = "<group>"; };
-		FCDD095754CE533F7972F057CFFAD0C3 /* Int+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Extension.swift"; path = "Source/Int+Extension.swift"; sourceTree = "<group>"; };
 		FD468A0F69D9CF41DC5C884D3FF2FA20 /* LayerTransformNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerTransformNode.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerTransformNode.swift"; sourceTree = "<group>"; };
 		FE63AC10C84959ECF710E6D2C9015791 /* ShapeCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/ShapeCompositionLayer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0FC206D8298A29A48774D827397A496F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EF25A8433F0CFC31AE580414116401 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1182F1787F277B3214344D8E1672ECA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2218896631B750D18894B045570FDA90 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				679DC5A62C0186BADCFB2BD2F45C8ED6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A3CE6855C34A2D0164FE7AA5BD938FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0356C2AD677E56407020D034D5AB3A50 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,41 +539,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6CE7103C9DEE0EC2DDC64DCBCF3C0308 /* Frameworks */ = {
+		7D90452905CA06E614741503683242AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80CFC970C10DE351FFAA29C5E6041236 /* Foundation.framework in Frameworks */,
+				B4D5ABF7ED508385DE3F468E692C63E5 /* CoreGraphics.framework in Frameworks */,
+				1965041527EEFB34D9E63BCD5387993B /* Foundation.framework in Frameworks */,
+				4880B9F0FADECBB9ACAE4BE32ABE870F /* QuartzCore.framework in Frameworks */,
+				E7D0E54881E63264F02EB3E09557EE9B /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		71DEAD3A5DEFD144EC66AC41DEFEA4B9 /* Frameworks */ = {
+		D95AFE520E91ACDC88F88409ACDD2BCC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ABB16D7D47FFAA33AF95015A9356263 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7E6C7A1F63E85D5B2AB1D85704B40AD2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D61A12A589FD193725AC79DA9B138DE4 /* Foundation.framework in Frameworks */,
-				EEED9B23205247761B942B110BB5A364 /* Lottie.framework in Frameworks */,
-				975AE3E4ED300ADE2EE8F6E0A3ED67BA /* Starscream.framework in Frameworks */,
-				8E9F104BB63A79E3F862A33057F15E1F /* SwiftyJSON.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F212E85D94A8181416BA1EF8B49AAC42 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				19BE7A363FA00AC51929D3309F7CACED /* CoreGraphics.framework in Frameworks */,
-				670571BE8D4617EA6C8A084C78D5A497 /* Foundation.framework in Frameworks */,
-				16566792BF8D9A0731914EF247EAA033 /* QuartzCore.framework in Frameworks */,
-				F6176AB74DB8F99BC61C9F06B65D83A0 /* UIKit.framework in Frameworks */,
+				0BE8FF3B7EEDB7A2D52133C671DE89C4 /* Foundation.framework in Frameworks */,
+				0CFABDC244B12DCB5F9AA785490D25CF /* Lottie.framework in Frameworks */,
+				286B42BB03BC04074DD0702C86D70E51 /* Starscream.framework in Frameworks */,
+				9B5C40514054DFD997C072A1DAC3BE5F /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,21 +574,40 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		1F32C13980D2DF8F59BF06AF975D324A /* Development Pods */ = {
+		170AF75BC0EE8EF50593A1248724023A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				627A96175028ADA09ECB5345E178F786 /* IMChatSDK */,
+				A11E580D24FA017AE609A91B7630A1E1 /* Images.xcassets */,
+				BE5B62EDE488F33D9725A2C8C0995460 /* msgloading.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1A0F5C37D3678D51E87B2A2F56844A91 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F842853E1CE17C41C28E171965EF69DF /* WebSocketHelper.swift */,
+			);
+			name = Core;
+			path = Source/Core;
+			sourceTree = "<group>";
+		};
+		27E9D37946F6309B8B04800A798E9673 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				500BA344921607F9184ACCBBA50F6118 /* IMChatSDK */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		2296D123C136571F4548CF9D1347BEE4 /* Core */ = {
+		2DD1A6105C3D4841540ECCF3F0FBA591 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				F8735117573CA8A38B89367D695AE30D /* WebSocketHelper.swift */,
+				5C73084A9C1E8F89147D62B06A99788E /* IMChatSDK.podspec */,
+				338A3AE3EA0DA2D6B384A16BA4871399 /* LICENSE */,
+				DFF050AF8BF6B549EC11CEAC7CEBF58B /* README.md */,
 			);
-			name = Core;
-			path = Source/Core;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		36280ADAF60AB7597F1C027C7010E1C6 /* SwiftyJSON */ = {
@@ -600,34 +640,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		40E35A881FE61A6E15B17BAD7F6AC2F6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0D3D63A3D6BDA1B3C17E6D3AA18E9375 /* IMChatSDK.modulemap */,
-				3E5F9B9AE425449C095EECFB7B7460EF /* IMChatSDK-dummy.m */,
-				00BCA7752BDC2CF89D099F3E81FD4B76 /* IMChatSDK-Info.plist */,
-				48AB4AE13E84D4C0F278531EF15032FF /* IMChatSDK-prefix.pch */,
-				593124FAA993F876BABE04DD72C8474C /* IMChatSDK-umbrella.h */,
-				24F6BB32568965AD36D53B441181898C /* IMChatSDK.debug.xcconfig */,
-				5DAA449CE3F190D1F149E409DDCF3593 /* IMChatSDK.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/IMChatSDK";
-			sourceTree = "<group>";
-		};
-		45C392CC5F71CEA18F8B58042F693562 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9CF31DC9AD6306E76DC46DE3D1BE7EE0 /* IMChatSDK.framework */,
-				51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */,
-				B5D48CE6DE82C733E021006C0C82BEB1 /* Pods_IMChatSDK_Example.framework */,
-				9C87FF7D011E2948AC28076D66C1ADE9 /* Pods_IMChatSDK_Tests.framework */,
-				891B2270823847ED23F2ECFC28F935EC /* Starscream.framework */,
-				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		49513B945F615EE9E4D708C0BD7F9ACF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,6 +649,33 @@
 				554E9A9B419AC59966331585426EFDF4 /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		500BA344921607F9184ACCBBA50F6118 /* IMChatSDK */ = {
+			isa = PBXGroup;
+			children = (
+				8EEBFA2A768C1CC03AAB9685487F34B1 /* Constants.swift */,
+				02AE1E6703B0DAA33403E3D70F469BF3 /* IMChatView.swift */,
+				5996FC8874AAB0BC4A036B7F1B3A41A6 /* ImDataAccess.swift */,
+				9C8B0F8825D5A1A2B7076539AF677B4A /* ImInfo.swift */,
+				5E477BF9C229CB92E60D6765F5086D16 /* IMTableView.swift */,
+				4151D8AE7C9190E1B076B3C3C5B8C994 /* IMTableView+Extension.swift */,
+				A0C502F052D6C7B0B89D19C7FE3237A4 /* Int+Extension.swift */,
+				3F896762BEF9D27A8F7E69F23B3C5ABE /* MessageModel.swift */,
+				613A8EAF7525EFC33823A90E713682B5 /* MessageTableViewCell.swift */,
+				D640E5B2AD6849620266A17E197A6091 /* String+Extension.swift */,
+				B82A43C96DE1DC1DB3A941EC745E4895 /* UIApplication+Extension.swift */,
+				0EAB01842CA415F52909F30271BC267B /* UIColor+Extension.swift */,
+				E411D818DF82AB7CFA0F8C3AA4EC5CFE /* UIView+Extension.swift */,
+				962E72CD6FC7F28C3207391739B1002F /* UnifyDataConfig.swift */,
+				5CBC6618734ED1E94B123E75E77AE7DF /* UnifyUIConfig.swift */,
+				1A0F5C37D3678D51E87B2A2F56844A91 /* Core */,
+				2DD1A6105C3D4841540ECCF3F0FBA591 /* Pod */,
+				170AF75BC0EE8EF50593A1248724023A /* Resources */,
+				F94463BC8787FA3630DE5280AC6E5A4A /* Support Files */,
+			);
+			name = IMChatSDK;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		5CB44FCBD451424A792FCCB1A458D407 /* Pods-IMChatSDK_Tests */ = {
@@ -653,32 +692,6 @@
 			);
 			name = "Pods-IMChatSDK_Tests";
 			path = "Target Support Files/Pods-IMChatSDK_Tests";
-			sourceTree = "<group>";
-		};
-		627A96175028ADA09ECB5345E178F786 /* IMChatSDK */ = {
-			isa = PBXGroup;
-			children = (
-				6ABB93BCB9D238FDCCA53741C1D73F79 /* Constants.swift */,
-				4F26DE84C8A2E16F9738E76D7735F555 /* IMChatView.swift */,
-				FC5E5F85CAB6BAF29F39B56F4D2324F1 /* ImDataAccess.swift */,
-				6F80D1656B1E22D93EE51BB61567BD5D /* ImInfo.swift */,
-				5275203B3501026AE00229B3104650A3 /* IMTableView.swift */,
-				572052AA3CC3EF43D9A6B26FBD5D9D0D /* IMTableView+Extension.swift */,
-				FCDD095754CE533F7972F057CFFAD0C3 /* Int+Extension.swift */,
-				F97384BF0B7C034890348FC889598444 /* MessageModel.swift */,
-				5EAEE4DAF929CE86E7864CA977E2C876 /* MessageTableViewCell.swift */,
-				F95E5E964AA9E591F27C33414DDFD904 /* String+Extension.swift */,
-				411C830D6595EC07AE2710EA204CB6C7 /* UIApplication+Extension.swift */,
-				877FAE5EB14C734E06B1DCCF5DB7CFD4 /* UIColor+Extension.swift */,
-				66F5A8C8D596B6DAF44C32F1953DDE3B /* UIView+Extension.swift */,
-				43E9AB757B9485FDB7029521313D51E6 /* UnifyDataConfig.swift */,
-				EC8200541040CE3004A34D4226ECBD62 /* UnifyUIConfig.swift */,
-				2296D123C136571F4548CF9D1347BEE4 /* Core */,
-				BB123EC451BB593E24CA5FFBD015E3C7 /* Pod */,
-				40E35A881FE61A6E15B17BAD7F6AC2F6 /* Support Files */,
-			);
-			name = IMChatSDK;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		6E3485478870187BE285FAA242C7B796 /* Support Files */ = {
@@ -740,6 +753,20 @@
 			path = Starscream;
 			sourceTree = "<group>";
 		};
+		A6748B71F282C3E24A001846316B4137 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DA37BA8C128F5545C234E5527C0F347 /* IMChatSDK.bundle */,
+				9CF31DC9AD6306E76DC46DE3D1BE7EE0 /* IMChatSDK.framework */,
+				51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */,
+				B5D48CE6DE82C733E021006C0C82BEB1 /* Pods_IMChatSDK_Example.framework */,
+				9C87FF7D011E2948AC28076D66C1ADE9 /* Pods_IMChatSDK_Tests.framework */,
+				891B2270823847ED23F2ECFC28F935EC /* Starscream.framework */,
+				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A88B6CF4F3D1DFAD0DF90814AB0A6BBF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -753,16 +780,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/lottie-ios";
-			sourceTree = "<group>";
-		};
-		BB123EC451BB593E24CA5FFBD015E3C7 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				42255158476F8014862187AB87FFC47A /* IMChatSDK.podspec */,
-				AD01C320142D9A312FCA42015EEE223E /* LICENSE */,
-				5992C4935BE0D581D439C63907F0E72D /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		C7036B5FB0D2AD9411AB0FBD54B438AD /* Pods-IMChatSDK_Example */ = {
@@ -922,12 +939,28 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				1F32C13980D2DF8F59BF06AF975D324A /* Development Pods */,
+				27E9D37946F6309B8B04800A798E9673 /* Development Pods */,
 				3EF51E967BC17B9E0F48D76483ACAC94 /* Frameworks */,
 				06D8894524DFF7C180107360A413720D /* Pods */,
-				45C392CC5F71CEA18F8B58042F693562 /* Products */,
+				A6748B71F282C3E24A001846316B4137 /* Products */,
 				391F2BEBD098B3B80A2ABA79BD624F39 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		F94463BC8787FA3630DE5280AC6E5A4A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C00F4100E4FDD620E563B0CF66CE3A7 /* IMChatSDK.modulemap */,
+				C549AF89287F89906B52E91BAE356B4B /* IMChatSDK-dummy.m */,
+				6544CBF6ED7FD4461B229BD6D509FBA7 /* IMChatSDK-Info.plist */,
+				51BB290898075BFB836F1C09D0042FBB /* IMChatSDK-prefix.pch */,
+				A8E21F1270FCE029E368C08AEB7C5A5B /* IMChatSDK-umbrella.h */,
+				3B9D5A367F4C0C67D2CBB027CFBCEC20 /* IMChatSDK.debug.xcconfig */,
+				BDD9F71E97306A95969857CA681B8C3B /* IMChatSDK.release.xcconfig */,
+				AAA6DDCDA3BF1319A4F86B4876ABE2F6 /* ResourceBundle-IMChatSDK-IMChatSDK-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/IMChatSDK";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -941,27 +974,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38EAE8A81091CF555C97DC5953F4AEE7 /* Headers */ = {
+		5EA448E40A055C584682CB92B6E992E6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31DF5648B2AD6E695CB91BC9AC9E2C9B /* SwiftyJSON-umbrella.h in Headers */,
+				49E68852CB4ACE0B963303167E674E44 /* SwiftyJSON-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46FA93023ACAD266D574995BCB4FE20B /* Headers */ = {
+		6B2D0AB3B79A5170BEE068284493B55E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A199AACFB8A909DE2657D006C92C4C43 /* IMChatSDK-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		97A7026C3B49703697DCCCFC2F738292 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				08DFD81B5516D531A1DEAE32BFFFC9D5 /* lottie-ios-umbrella.h in Headers */,
+				098D699A5F3EF3AE24E102E48330055C /* lottie-ios-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -973,11 +998,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCC55169DC32A46A8DE3C919444DDEF2 /* Headers */ = {
+		EE12DEBE887C6B871B658EA89D0ED1E6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0C68C5235F0FF106039B8EC22DFF438 /* Starscream-umbrella.h in Headers */,
+				EF1DD6D5134F62520A9A123060823908 /* IMChatSDK-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFAE1CF16B96DBF1F89D82F966B239C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F84A95F64988C6524AC9F45CD86617B /* Starscream-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -986,12 +1019,12 @@
 /* Begin PBXNativeTarget section */
 		0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE244FD760BBEFA29CFAE93119248890 /* Build configuration list for PBXNativeTarget "lottie-ios" */;
+			buildConfigurationList = F9FEC55069CEA5D4075ACC9F0386F303 /* Build configuration list for PBXNativeTarget "lottie-ios" */;
 			buildPhases = (
-				97A7026C3B49703697DCCCFC2F738292 /* Headers */,
-				C0BB6474816F3975C6D7CA20FDC9E16E /* Sources */,
-				F212E85D94A8181416BA1EF8B49AAC42 /* Frameworks */,
-				8D40203A0C3F927044F6DA8E640D033D /* Resources */,
+				6B2D0AB3B79A5170BEE068284493B55E /* Headers */,
+				FEF3F8A04A4A9B21177D2A60BDD91504 /* Sources */,
+				7D90452905CA06E614741503683242AD /* Frameworks */,
+				C876E7AF1CBBE8B03CBCE9BBC16020F5 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1004,12 +1037,12 @@
 		};
 		9B78EE4AF6AE03E79D88886319853FF7 /* Starscream */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9832132C94EEC358064267E4F910DFE2 /* Build configuration list for PBXNativeTarget "Starscream" */;
+			buildConfigurationList = DF008E687A987BB2144D5F4DB5964819 /* Build configuration list for PBXNativeTarget "Starscream" */;
 			buildPhases = (
-				DCC55169DC32A46A8DE3C919444DDEF2 /* Headers */,
-				6A021E41CE5AE18B4DBE48E85883C581 /* Sources */,
-				71DEAD3A5DEFD144EC66AC41DEFEA4B9 /* Frameworks */,
-				C64572766903742129C6ED2880CC629D /* Resources */,
+				EFAE1CF16B96DBF1F89D82F966B239C3 /* Headers */,
+				EB1B105A50C2EEEA3AFE43E8512CD8FD /* Sources */,
+				2A3CE6855C34A2D0164FE7AA5BD938FA /* Frameworks */,
+				B34657E0391D3D7F2A8884FC75AA2C54 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1019,6 +1052,23 @@
 			productName = Starscream;
 			productReference = 891B2270823847ED23F2ECFC28F935EC /* Starscream.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		C62D5635B813357151F6116033E589F7 /* IMChatSDK-IMChatSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5235CCC41C6992FA084304B23E2F28CF /* Build configuration list for PBXNativeTarget "IMChatSDK-IMChatSDK" */;
+			buildPhases = (
+				A7718326CF2227777A1C8C0BD5E3B78E /* Sources */,
+				1182F1787F277B3214344D8E1672ECA0 /* Frameworks */,
+				7E24977CE3956A8073E28531972CB4FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IMChatSDK-IMChatSDK";
+			productName = "IMChatSDK-IMChatSDK";
+			productReference = 9DA37BA8C128F5545C234E5527C0F347 /* IMChatSDK.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		CEF189A55436D949FB0FDFCB3CA7B9A2 /* Pods-IMChatSDK_Example */ = {
 			isa = PBXNativeTarget;
@@ -1044,12 +1094,12 @@
 		};
 		D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00BB12AEF7A008171F9B76732F20D37C /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildConfigurationList = 2935DADBD7BB5E7E9CFBF3E7E45C73D4 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
 			buildPhases = (
-				38EAE8A81091CF555C97DC5953F4AEE7 /* Headers */,
-				73B6032AD43B0DE850AB2F8692E33F5E /* Sources */,
-				6CE7103C9DEE0EC2DDC64DCBCF3C0308 /* Frameworks */,
-				45C93D79706C25A17B7EC92D1558F115 /* Resources */,
+				5EA448E40A055C584682CB92B6E992E6 /* Headers */,
+				4BBFC93881284B726E27F209C95BB167 /* Sources */,
+				0FC206D8298A29A48774D827397A496F /* Frameworks */,
+				0C89331969502DFA52C5D84B7266FA28 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1081,19 +1131,20 @@
 		};
 		F2A5F6762DFBA1204CEFDAC07BBFAB1C /* IMChatSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C6E9A443A6645B1C296DBCC31E50F517 /* Build configuration list for PBXNativeTarget "IMChatSDK" */;
+			buildConfigurationList = 9AAAD7A4931375942E24068FE9BC2BDA /* Build configuration list for PBXNativeTarget "IMChatSDK" */;
 			buildPhases = (
-				46FA93023ACAD266D574995BCB4FE20B /* Headers */,
-				EE7FE4759AE935FC97032755C9699F70 /* Sources */,
-				7E6C7A1F63E85D5B2AB1D85704B40AD2 /* Frameworks */,
-				2AAA447E25B9416AD70E6B37858534B9 /* Resources */,
+				EE12DEBE887C6B871B658EA89D0ED1E6 /* Headers */,
+				A5A193B023245D3124915CE7CE456033 /* Sources */,
+				D95AFE520E91ACDC88F88409ACDD2BCC /* Frameworks */,
+				EFB3329E6FFA096D6396CEEAF3CB2D0C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C7EEBBBEA66381D5BCB50C64C6AB4CE6 /* PBXTargetDependency */,
-				827AF656CC37C1F5399293D43A0DBE6E /* PBXTargetDependency */,
-				CA99E6818D9E08F5685DB9D2B572EBB7 /* PBXTargetDependency */,
+				EE01E0822CC9F6649A2FDB00BF234F95 /* PBXTargetDependency */,
+				9FA536A40BF9831A9FA1009F9FC0FDAF /* PBXTargetDependency */,
+				8A9ACE1EE5679684B1B024468ED95FAC /* PBXTargetDependency */,
+				0EE6C1815DCBE450B9216DA3D9D60D9F /* PBXTargetDependency */,
 			);
 			name = IMChatSDK;
 			productName = IMChatSDK;
@@ -1118,11 +1169,12 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 45C392CC5F71CEA18F8B58042F693562 /* Products */;
+			productRefGroup = A6748B71F282C3E24A001846316B4137 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F2A5F6762DFBA1204CEFDAC07BBFAB1C /* IMChatSDK */,
+				C62D5635B813357151F6116033E589F7 /* IMChatSDK-IMChatSDK */,
 				0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */,
 				CEF189A55436D949FB0FDFCB3CA7B9A2 /* Pods-IMChatSDK_Example */,
 				D2137AB8DD100E21714B759ADD39D2D0 /* Pods-IMChatSDK_Tests */,
@@ -1133,24 +1185,19 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2AAA447E25B9416AD70E6B37858534B9 /* Resources */ = {
+		0C89331969502DFA52C5D84B7266FA28 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45C93D79706C25A17B7EC92D1558F115 /* Resources */ = {
+		7E24977CE3956A8073E28531972CB4FF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D40203A0C3F927044F6DA8E640D033D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				9E20438F2B32B39CE5F72DA29367FACC /* Images.xcassets in Resources */,
+				943BF03AE2FB3F4CD7A76534D91CE98B /* msgloading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1161,7 +1208,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C64572766903742129C6ED2880CC629D /* Resources */ = {
+		B34657E0391D3D7F2A8884FC75AA2C54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C876E7AF1CBBE8B03CBCE9BBC16020F5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1172,6 +1226,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFB3329E6FFA096D6396CEEAF3CB2D0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D247A77447AA3DF7117B206514D9BF5 /* IMChatSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1194,205 +1256,218 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A021E41CE5AE18B4DBE48E85883C581 /* Sources */ = {
+		4BBFC93881284B726E27F209C95BB167 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77DE398D3FB0AB6AFF3F2E38A5D555A6 /* Compression.swift in Sources */,
-				71FF6196E1ED7855E5C817E9211F08B2 /* Data+Extensions.swift in Sources */,
-				4118B59B2412E31931698B2F8BCE3DD7 /* Engine.swift in Sources */,
-				8F47F233313039E3E699CED33EFF2875 /* FoundationHTTPHandler.swift in Sources */,
-				14F6375348C562AE0EEFABB9A32F301B /* FoundationHTTPServerHandler.swift in Sources */,
-				B1F119B80B1B99855E5F671830046394 /* FoundationSecurity.swift in Sources */,
-				088B22641066F910281ECE420D2A4C16 /* FoundationTransport.swift in Sources */,
-				607E15E12E74B173A9C78AD2AACE455F /* FrameCollector.swift in Sources */,
-				321BD16D9D6E21FF56A6A4021F03687A /* Framer.swift in Sources */,
-				B3A80E97B514A523BB5F324816B88EF6 /* HTTPHandler.swift in Sources */,
-				C9DFE49EECA91AC1A78DB09946026B53 /* NativeEngine.swift in Sources */,
-				DEC87D9152460FEFB4E4B07AA0E5A7B9 /* Security.swift in Sources */,
-				C4FA4846C97F61E8A00772C7A70EF99C /* Server.swift in Sources */,
-				ACCDAE7F9C66388046DEE9EF184DB2ED /* Starscream-dummy.m in Sources */,
-				8D90999DA7D2C6E809DBF396CD56995C /* StringHTTPHandler.swift in Sources */,
-				DB0B89F9AF362579DC81C3E17A9755B2 /* TCPTransport.swift in Sources */,
-				C629CBF853E5D801A301872EFC45ECA5 /* Transport.swift in Sources */,
-				29A325724CFE150227937C61726A9793 /* WebSocket.swift in Sources */,
-				E7AB196A7AF35A9994C7FEED97844EDF /* WebSocketServer.swift in Sources */,
-				8C466472FE7A5A9951772D1D5D579AB2 /* WSCompression.swift in Sources */,
-				B1F2850F71A156D77E6E1FA37ABBD0B0 /* WSEngine.swift in Sources */,
+				08E4042F7A08F1C7C963E9D5950DC5BA /* SwiftyJSON-dummy.m in Sources */,
+				9A92956A759FBDCBCD0E0EC998C8D02F /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		73B6032AD43B0DE850AB2F8692E33F5E /* Sources */ = {
+		A5A193B023245D3124915CE7CE456033 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA4DD97C610BF6451594EEA11BDACD26 /* SwiftyJSON-dummy.m in Sources */,
-				D75228D25E13C801B6D952A98435E90D /* SwiftyJSON.swift in Sources */,
+				487D5D0073FA7D8E3936BFF0E433D44D /* Constants.swift in Sources */,
+				D4C3D4303EB77B4B7BAD2727B6114959 /* IMChatSDK-dummy.m in Sources */,
+				6D18D9291C0D51E8A3FA292A18B9E452 /* IMChatView.swift in Sources */,
+				E7D809AC5CB2C1AB1EA1880F2A6298BB /* ImDataAccess.swift in Sources */,
+				B5021B04C80EA3EF8FC1CF1C92041B4A /* ImInfo.swift in Sources */,
+				361B56BF68438FDA39E3787888936EFD /* IMTableView+Extension.swift in Sources */,
+				382DE5C8EF362FBD78104C1C1933CF13 /* IMTableView.swift in Sources */,
+				50D0E106ABD689E648EAD159F4E2DCAE /* Int+Extension.swift in Sources */,
+				7F18FFCFFE79EBA8AB7FD2757BC7E117 /* MessageModel.swift in Sources */,
+				0733EFA8607688881D24C24325C8F993 /* MessageTableViewCell.swift in Sources */,
+				6D7CF939C7950D9944EBAEB24CD2B4B3 /* String+Extension.swift in Sources */,
+				114D6A9B959CF1ABABACCBEA2F6D8427 /* UIApplication+Extension.swift in Sources */,
+				22162C42EF325FDC13945F0AB14A73C0 /* UIColor+Extension.swift in Sources */,
+				E00E73AFE16E9B1566E2B105A9A0A0BC /* UIView+Extension.swift in Sources */,
+				D72399DEB020A8D8F917D6C2136FF615 /* UnifyDataConfig.swift in Sources */,
+				692A8B1DD33F567688CB370E24FF6127 /* UnifyUIConfig.swift in Sources */,
+				EF79D45751CD5AE940875635D0586387 /* WebSocketHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C0BB6474816F3975C6D7CA20FDC9E16E /* Sources */ = {
+		A7718326CF2227777A1C8C0BD5E3B78E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75F353D013713C05070720C17485834E /* AnimatedButton.swift in Sources */,
-				6DE286D4D74313F23FDF9E2ECD88A54F /* AnimatedControl.swift in Sources */,
-				29946CC2F68FC6EA81F814936DC3E5E3 /* AnimatedSwitch.swift in Sources */,
-				ACEF66E34814A3AA11033C818F24F3C6 /* Animation.swift in Sources */,
-				923AD5D5F0B55162C26DBA2CC10BD7C8 /* AnimationCacheProvider.swift in Sources */,
-				9D65E770D3F96C89D572EC9E8CE9EA4B /* AnimationContainer.swift in Sources */,
-				54B86DCBEE58E3B8B628211DA247D8F9 /* AnimationContext.swift in Sources */,
-				6F74BEB8089F9954AA985C567A72F9D4 /* AnimationImageProvider.swift in Sources */,
-				45D600877EB6FA8EB4729F629990876B /* AnimationKeypath.swift in Sources */,
-				228548A86715FB0F89A34975551734A8 /* AnimationKeypathExtension.swift in Sources */,
-				2D5B8E454F1AF9E5C07F06E5136EDC7A /* AnimationPublic.swift in Sources */,
-				AF16F72530C14C7BF681FD8E375F0DDE /* AnimationSubview.swift in Sources */,
-				F2E7507E06BDED750D8621C0743EDB9F /* AnimationTextProvider.swift in Sources */,
-				CB52C920C78397A46410C4AA488EE65C /* AnimationTime.swift in Sources */,
-				02C3FA5900CF199F67738EE4365B3C78 /* AnimationView.swift in Sources */,
-				0FC068D33F7A9A5381B49DE509529998 /* AnimationViewInitializers.swift in Sources */,
-				2CA19C43D904E5642F0674FB4FEDE4E2 /* AnimatorNode.swift in Sources */,
-				E5C3749898604C505107EDCE2B2F62AA /* AnimatorNodeDebugging.swift in Sources */,
-				9C8A9FDE2FCA113C38BB9DA14135244A /* AnyNodeProperty.swift in Sources */,
-				0F4CDCFF09B20B8B960BA3415D55F271 /* AnyValueContainer.swift in Sources */,
-				9E6A644899132BC3535B98B439A23E56 /* AnyValueProvider.swift in Sources */,
-				4BC7AC04732B8664F68955181C0AADF3 /* Asset.swift in Sources */,
-				FA9E8DBA453C4E7629589CC586A41476 /* AssetLibrary.swift in Sources */,
-				A9C42A0C4B96186119A6DD7F23FC7547 /* BezierPath.swift in Sources */,
-				CE9A2BE9B3322D90F7A55971D1C6BE71 /* BundleImageProvider.swift in Sources */,
-				20030C75FAE29884ACCFEC0369D093A1 /* CGFloatExtensions.swift in Sources */,
-				D6A52D77496F2F066BAE3FE482361AE6 /* Color.swift in Sources */,
-				74C71CC8B577A1B483FEF552301BE0F4 /* ColorExtension.swift in Sources */,
-				327F7447F08BE67AF677A14E7C18016A /* ColorValueProvider.swift in Sources */,
-				469A312C25EBE4CC3999023483420D40 /* CompatibleAnimationKeypath.swift in Sources */,
-				5E9D78ABD7DDCB0C78CB190A128DD56B /* CompatibleAnimationView.swift in Sources */,
-				FB705D1D72F21E809DA12B243A993DF1 /* CompositionLayer.swift in Sources */,
-				6AF7CE305115B45F0DF4AEDB7E95E27E /* CompositionLayersInitializer.swift in Sources */,
-				8D673DA65ABC70BF0B399047A7211B8A /* CompoundBezierPath.swift in Sources */,
-				648B68E04B5363C68A745EC32A92C2F3 /* CurveVertex.swift in Sources */,
-				5C16FFA360F69A51400A003ED2940D27 /* DashPattern.swift in Sources */,
-				3E78CB9E51F790A45DD3706DE776835A /* Ellipse.swift in Sources */,
-				938C78C596B97EE85405DC9E39201083 /* EllipseNode.swift in Sources */,
-				B92D1C60A110EE5E32BCE45E81A94CD5 /* FilepathImageProvider.swift in Sources */,
-				6B758EE5B093EA14FDE3698645BDD396 /* FillI.swift in Sources */,
-				3D0204E94E7F761539FDA58B21A1A2BD /* FillNode.swift in Sources */,
-				C82922623E59D1983D88D047E062FA7B /* FillRenderer.swift in Sources */,
-				C434AD1A8D22DCDC6B358E9CD184FD77 /* FloatValueProvider.swift in Sources */,
-				10672940547ADDD90A7F360350DA92ED /* Font.swift in Sources */,
-				66A6962F0E5A7A17772FF4CDB5A140EB /* Glyph.swift in Sources */,
-				72E31070CFE040BC0DD692449EC59FE4 /* GradientFill.swift in Sources */,
-				A1D175F0D6E3904DF771700CE132D818 /* GradientFillNode.swift in Sources */,
-				29775127C233E9EF98A2EA3079358FD4 /* GradientFillRenderer.swift in Sources */,
-				70A6D37BD75BDC31C083D5B90600B78D /* GradientStroke.swift in Sources */,
-				30E5E2804E71E3CAF9841038357C4542 /* GradientStrokeNode.swift in Sources */,
-				4093089BB348D1421F2B142759546E5D /* GradientStrokeRenderer.swift in Sources */,
-				F83BB810C81861A2FAC57103046A091F /* GradientValueProvider.swift in Sources */,
-				369C4C45C148697AF21ECE4BB14CA7C9 /* Group.swift in Sources */,
-				9C078707DF334C97A4AD940C772E43E4 /* GroupInterpolator.swift in Sources */,
-				FA4851D371563F930618CF1805A319CB /* GroupNode.swift in Sources */,
-				81FB806D7FF88369276ED59734612CBC /* GroupOutputNode.swift in Sources */,
-				DE9C998EF95B30CF440BC2C4C108D17C /* ImageAsset.swift in Sources */,
-				13F0FFBC855A43E35CF45F0FC02A5551 /* ImageCompositionLayer.swift in Sources */,
-				1A70F1D7621843ADAB1230CA06348FBF /* ImageLayerModel.swift in Sources */,
-				91B03976FC1965C33B891860A50D0D88 /* Interpolatable.swift in Sources */,
-				6979F77CE603538AAE77095014FEB038 /* InterpolatableExtensions.swift in Sources */,
-				9060331972FEF7AB8C79106695A06DF7 /* InvertedMatteLayer.swift in Sources */,
-				F36C0F65DF1E9BC188D25F85907B0980 /* ItemsExtension.swift in Sources */,
-				648B171EA2AEDA96778DF910EDBC4401 /* KeyedDecodingContainerExtensions.swift in Sources */,
-				9882322E7FACE3CC85A52EABA532C47F /* Keyframe.swift in Sources */,
-				5E5844B7867781EC282467B9D9D49F95 /* KeyframeExtensions.swift in Sources */,
-				5E486D2F2A3203D25BC928BCD31F17A1 /* KeyframeGroup.swift in Sources */,
-				464FED5E1564583BD19762D8B3B28993 /* KeyframeInterpolator.swift in Sources */,
-				2CF130581115C4B34C7AC2D8C5D46054 /* KeypathSearchable.swift in Sources */,
-				0DB8903BB19F16C75835057B44E3BB79 /* LayerDebugging.swift in Sources */,
-				595F537FBFEB63F4C02955A91B2C2EF9 /* LayerImageProvider.swift in Sources */,
-				EDC2A66FB9762247F6230423F5CF19A6 /* LayerModel.swift in Sources */,
-				599DE8922CE0F3BE9CFA5DE8A95E20D5 /* LayerTextProvider.swift in Sources */,
-				573F3E8823666F3E0FEF56BFFA9F3DB7 /* LayerTransformNode.swift in Sources */,
-				C70EDB17246FB0031BA99785CD6A78D2 /* lottie-ios-dummy.m in Sources */,
-				4F13B37EDE8C538F89CF1B344A32410A /* LottieView.swift in Sources */,
-				F0254F1CF69817C74D7C401AB9D1293F /* LRUAnimationCache.swift in Sources */,
-				86FDC4DA56E0A633B389892DD57255CE /* Marker.swift in Sources */,
-				28A97F35DC3DD6648ACC3E80CE962E65 /* Mask.swift in Sources */,
-				9452E2DAC39303FE9020E23578F1C025 /* MaskContainerLayer.swift in Sources */,
-				A35E06828D1AE4140FD340B64256DA0C /* MathKit.swift in Sources */,
-				B84785383474E42056355ECCF3F97611 /* Merge.swift in Sources */,
-				4CCB7A9702A7CDBE6E55A853FCF8C065 /* NodeProperty.swift in Sources */,
-				EA88B2C48BB2F47B61BDFC4BE5B07A47 /* NodePropertyMap.swift in Sources */,
-				14AB50AEFE3CC6895DEF206530886994 /* NullCompositionLayer.swift in Sources */,
-				01BA39D24255EE1CA4BF5FA2EBC3BB4F /* PassThroughOutputNode.swift in Sources */,
-				D7171CB83941029CB1A0480A61696795 /* PathElement.swift in Sources */,
-				58D67BFC3881B0047967AF82843115BF /* PathNode.swift in Sources */,
-				4EBD391B553A2CE49826225B2B7A9C1C /* PathOutputNode.swift in Sources */,
-				0B2AFC5C6083642F6A74756CAD92E0B5 /* PointValueProvider.swift in Sources */,
-				BE49BD8B7ED962DA57BB67E7D54D0AF5 /* PolygonNode.swift in Sources */,
-				1B985581283C0F5E368D59F52E4D7D48 /* PrecompAsset.swift in Sources */,
-				2A69C447D1DB8945990A310CC37D1BBE /* PreCompLayerModel.swift in Sources */,
-				0748FB9E97A8A72B541BD5F5E84940CB /* PreCompositionLayer.swift in Sources */,
-				759176D287D13DAC8B27D220B496E931 /* Rectangle.swift in Sources */,
-				BE052BED17E5DEA220EDD1EB900C15A7 /* RectNode.swift in Sources */,
-				30B3EA1C160862A846AF431189CD9DDD /* RenderNode.swift in Sources */,
-				51E5101E0A5AEF9202B8FAB98F57E9D1 /* Repeater.swift in Sources */,
-				DD1FBD76B95E58BCF170B402DCB22585 /* Shape.swift in Sources */,
-				BC71DD4F76A616E33D45EF14B29251DF /* ShapeCompositionLayer.swift in Sources */,
-				0B329FD9EFBED848BD27DD703B2380DC /* ShapeContainerLayer.swift in Sources */,
-				FB6DC50B9CA7374AA8130A69934BBD00 /* ShapeItem.swift in Sources */,
-				243F33E43E4B0749F421DF2D07C1B109 /* ShapeLayerModel.swift in Sources */,
-				01CACB7ECBC833C75BE39E9FB22DB18B /* ShapeNode.swift in Sources */,
-				9A0FB2530B4BD3A726D02ABFC361DC16 /* ShapeRenderLayer.swift in Sources */,
-				B0E07DFD0CF34A1FCDFDE844C2BDC319 /* ShapeTransform.swift in Sources */,
-				354C3EEEC1C797206FBC9EE5652AD54E /* SingleValueProvider.swift in Sources */,
-				29D6D3106CD8F9506ABCB2B932EF66E7 /* SizeValueProvider.swift in Sources */,
-				78C1B9FF677BBB7A0C93F7F9260766BE /* SolidCompositionLayer.swift in Sources */,
-				FF132FABC2DC199102C7A57DA2142D19 /* SolidLayerModel.swift in Sources */,
-				BD8A3D9C330B5ED1B526C7CBBEF4DCEA /* Star.swift in Sources */,
-				2027D4CEC0B59DBE2AE3855F93543F65 /* StarNode.swift in Sources */,
-				F857DC3DC1D64C0DAFC4D54BC3BFEBF1 /* StringExtensions.swift in Sources */,
-				76E3D46B94FCE9DCE89AFA3863B7F56E /* Stroke.swift in Sources */,
-				3F6AD7A5795DFC38938B3A9FF8A060ED /* StrokeNode.swift in Sources */,
-				1D3D57E5DD8E6AA596F3F9CAA1625718 /* StrokeRenderer.swift in Sources */,
-				1FBB3C52109B2B5CE18E177E385727EF /* TextAnimator.swift in Sources */,
-				56F68323C1755AA074B2D40C5278D383 /* TextAnimatorNode.swift in Sources */,
-				7FE86CFBFAFBC6984978B3748BF046F8 /* TextCompositionLayer.swift in Sources */,
-				AA78D2E78D0DF53B8211606B353047E8 /* TextDocument.swift in Sources */,
-				BD459B52D3A222069FA573207D886FDC /* TextLayerModel.swift in Sources */,
-				7B1C11472F2B87A8FF2985FD4B0C92D8 /* Transform.swift in Sources */,
-				9E1C0A1FD79A772CBEEB8877060B5A26 /* Trim.swift in Sources */,
-				DC89707DB8015A6763E3B5F1237BC2F2 /* TrimPathNode.swift in Sources */,
-				52E54763F22BBF8C81FC272D988BF1C3 /* UIColorExtension.swift in Sources */,
-				8377C1ED943C46EDFBD78DDEEC8C42DE /* ValueContainer.swift in Sources */,
-				1901653562CF49571C58331DEB9A1ADE /* Vectors.swift in Sources */,
-				B8556FB7ACE6D61A429FA65C091C2EC3 /* VectorsExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EE7FE4759AE935FC97032755C9699F70 /* Sources */ = {
+		EB1B105A50C2EEEA3AFE43E8512CD8FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F23CF04E61C999CCE50053FE877CE0C0 /* Constants.swift in Sources */,
-				7CEC0E142F061C2D045528DD9805D6DA /* IMChatSDK-dummy.m in Sources */,
-				01A626E262ACFD2A702AA8AC1D8A215A /* IMChatView.swift in Sources */,
-				EE31CF76A22CB669D6096232D68DBE08 /* ImDataAccess.swift in Sources */,
-				332F8657DFBEC110021DBFF55D25ED78 /* ImInfo.swift in Sources */,
-				A06A309126451979E8A21AEF99A67A97 /* IMTableView+Extension.swift in Sources */,
-				4207E53B633BEDC9D528158C85FA9621 /* IMTableView.swift in Sources */,
-				D01FC05FF1DEC58B30D2EF32F7093BD3 /* Int+Extension.swift in Sources */,
-				4B375CB93049E5C3F3E24EA1A8635DFE /* MessageModel.swift in Sources */,
-				8ADC6C966D5DBCCD7EF44EC9D6B12C92 /* MessageTableViewCell.swift in Sources */,
-				D05A707838C1A82EA3FAB26C403F04E7 /* String+Extension.swift in Sources */,
-				FD6B3066BEA30BD0C12A70CFB5702E1B /* UIApplication+Extension.swift in Sources */,
-				50FDCFFA8C18DB02DD388143BF1D9939 /* UIColor+Extension.swift in Sources */,
-				1399329A1418E24D68D7EAD04F5BA627 /* UIView+Extension.swift in Sources */,
-				453670CFE11E7BA9428E0D70B5C7BFBC /* UnifyDataConfig.swift in Sources */,
-				FFBB309CA59259466B8375D6860FFC4E /* UnifyUIConfig.swift in Sources */,
-				DDE56591EEBBE26E4804D91ACFF2AF86 /* WebSocketHelper.swift in Sources */,
+				D1C8E2FF6999B3A3D0A4AD866929C83C /* Compression.swift in Sources */,
+				B7199A5896601E841D0672FDA1EEF223 /* Data+Extensions.swift in Sources */,
+				B383BBFD2AC81B24B54B96756FFB6DB6 /* Engine.swift in Sources */,
+				EC567C930036EF12CE206B42F0DE4F7F /* FoundationHTTPHandler.swift in Sources */,
+				2EE2209CA8B2B3CF2D6D9CC27674CFB4 /* FoundationHTTPServerHandler.swift in Sources */,
+				0D2372E2C7D8B1B28F53E3AA6BC4682B /* FoundationSecurity.swift in Sources */,
+				CED18703950E2D3F9605C1ECE1123535 /* FoundationTransport.swift in Sources */,
+				E042C1795B848B11DD1D15B5CB66AEBB /* FrameCollector.swift in Sources */,
+				185A7BF33AE5C3C8F629D6484ED411B2 /* Framer.swift in Sources */,
+				9B1620F4CB1785EE8904EA628B3C6D18 /* HTTPHandler.swift in Sources */,
+				69687411D8AABD0C5D59D90CFB341D28 /* NativeEngine.swift in Sources */,
+				BAA4FBCB094AC37347FAB95368FE5FA5 /* Security.swift in Sources */,
+				3F4BB5223F41A3DF06E84091C5896CFD /* Server.swift in Sources */,
+				B7A4994BF79F3904CDF527D16DE3E555 /* Starscream-dummy.m in Sources */,
+				5A0EA7B89008197751929F868F08EB1B /* StringHTTPHandler.swift in Sources */,
+				D1811879EC8DF4B5235F5EF425AC7FF7 /* TCPTransport.swift in Sources */,
+				FF59FC90B8AEFDC50031BE2C62D84DBE /* Transport.swift in Sources */,
+				A65756B16DD1FC14A0CC343D85ECF5BF /* WebSocket.swift in Sources */,
+				DF0DFEA205D17311C6263F018AF8F0D2 /* WebSocketServer.swift in Sources */,
+				4CF05F283666CA618FB454F468B6F8CF /* WSCompression.swift in Sources */,
+				A5584A4DB2F3F8594BDE2608D490B1AA /* WSEngine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEF3F8A04A4A9B21177D2A60BDD91504 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF0DE4A9208C22706EDD8C5793916254 /* AnimatedButton.swift in Sources */,
+				079FDEFC061F7DE38C9D5BF57140E15C /* AnimatedControl.swift in Sources */,
+				EA29559793B4BDA8ED9CBCB3006C7B26 /* AnimatedSwitch.swift in Sources */,
+				BF76E06AE2C4E39473C347333D8E7E84 /* Animation.swift in Sources */,
+				F6BB6AB9CDCDDCDD8C20CE2246823D6B /* AnimationCacheProvider.swift in Sources */,
+				E23A959B8D8A91DB39D80BFCD2A3688F /* AnimationContainer.swift in Sources */,
+				B83BDE1BAE547CF11ED38E83F62E40AB /* AnimationContext.swift in Sources */,
+				5FDF05B057B0908236D88C67E96B1AC2 /* AnimationImageProvider.swift in Sources */,
+				751AF858F6669469BD29C1BAA2560DB7 /* AnimationKeypath.swift in Sources */,
+				A148229FB4689C35AF9C7CD7D75783FD /* AnimationKeypathExtension.swift in Sources */,
+				47BF657405DAA433D93F5AADCD890298 /* AnimationPublic.swift in Sources */,
+				8F4D1F92BA47D69B1D9FD15A4E6A3AD5 /* AnimationSubview.swift in Sources */,
+				EAEDEABB511450A17CEA4FE1BDDE2964 /* AnimationTextProvider.swift in Sources */,
+				6B9EC27455E3DAF3F62A1616DE810307 /* AnimationTime.swift in Sources */,
+				3FC9BB93EED11CC843B5C3E039B7B9D5 /* AnimationView.swift in Sources */,
+				DBCE1832BFDBA1C1DABAD16291961282 /* AnimationViewInitializers.swift in Sources */,
+				C3F4E6C5165D0745E3C7C52E1827B72C /* AnimatorNode.swift in Sources */,
+				B4AC4694F2D610F000A1AFE1DB8CD85A /* AnimatorNodeDebugging.swift in Sources */,
+				398EC47883684FA7F298539F81ABEB26 /* AnyNodeProperty.swift in Sources */,
+				BF688ED870075EDDDB4CDE6B189308BF /* AnyValueContainer.swift in Sources */,
+				9DB34FCB089F344CCDFF039881D03120 /* AnyValueProvider.swift in Sources */,
+				E25C0A152878FE2869C1F0B0576F3F4C /* Asset.swift in Sources */,
+				5819574A15973376D6306B467EED919E /* AssetLibrary.swift in Sources */,
+				73313F140E778B16D42EAECA13D4ED60 /* BezierPath.swift in Sources */,
+				83AC2683800B704EE8CC0CED99A9EFC8 /* BundleImageProvider.swift in Sources */,
+				0529FAEC8672C429F7F44E4AEA9898D1 /* CGFloatExtensions.swift in Sources */,
+				8611095ADDE29CB274D87E5A9CD8EF74 /* Color.swift in Sources */,
+				6B48EA47B996B604A9E78076F453E604 /* ColorExtension.swift in Sources */,
+				3B1E66DA3F557F21A0FB76851AF8AA04 /* ColorValueProvider.swift in Sources */,
+				246DE749823E4E208C649F2BE894D4ED /* CompatibleAnimationKeypath.swift in Sources */,
+				5D2A74B68F087BADC596A28631B6F1BE /* CompatibleAnimationView.swift in Sources */,
+				693534ECBDC3AA4A6F8BA4625302AA4A /* CompositionLayer.swift in Sources */,
+				77434A3335F5D0DB5C9892458E955999 /* CompositionLayersInitializer.swift in Sources */,
+				B7CC1A4105B213873C60C645985A2CE7 /* CompoundBezierPath.swift in Sources */,
+				26A67341AF0A19DBD974B730DFCC8FF6 /* CurveVertex.swift in Sources */,
+				ABE066EB885251AAC94FE968D9B67DE5 /* DashPattern.swift in Sources */,
+				1B0FDEBB3D240BF65998F4F16F325E78 /* Ellipse.swift in Sources */,
+				9506D6A2F943C2E18FBC504E6EBA85E9 /* EllipseNode.swift in Sources */,
+				9AF75772DA765C735DC9B94430AF3AC6 /* FilepathImageProvider.swift in Sources */,
+				04869AB6736786D36AA750952BC19593 /* FillI.swift in Sources */,
+				7B7C9025490AE6EEF7D9E412283AD9C4 /* FillNode.swift in Sources */,
+				1A5F5F71DD92AD6F6397A7FF85624FC8 /* FillRenderer.swift in Sources */,
+				E6984AE07C5DF9BC6D7F4B1C7325D237 /* FloatValueProvider.swift in Sources */,
+				A968EC925786790393FB85B7B400128D /* Font.swift in Sources */,
+				87411724711AB13CF427990C3E0146DC /* Glyph.swift in Sources */,
+				27F04FA29BF2CEDB45B34B5F54EEA246 /* GradientFill.swift in Sources */,
+				BD18FE770C67E470DA6CB3D7F33544BC /* GradientFillNode.swift in Sources */,
+				73FE731D7E620D937024EE452CC5E1F3 /* GradientFillRenderer.swift in Sources */,
+				AC6E34AD2C09D43401654F1D4066E076 /* GradientStroke.swift in Sources */,
+				D090BF7FBC0131DC440D525F107AF5BF /* GradientStrokeNode.swift in Sources */,
+				E52C4873BCBA0EB2E9DD96FAA0851312 /* GradientStrokeRenderer.swift in Sources */,
+				E54D24FEF0A4813B1BC4EE053B29AD01 /* GradientValueProvider.swift in Sources */,
+				E00A91D31E6603CF64125F76D270D830 /* Group.swift in Sources */,
+				1B34BB624EF07EF5875A7FFCB48A18A9 /* GroupInterpolator.swift in Sources */,
+				BE15747BE522DE05725B6540D913F557 /* GroupNode.swift in Sources */,
+				86862621ABB5F6145EAC261989D27385 /* GroupOutputNode.swift in Sources */,
+				D350A911634E1333A9D51D5199781081 /* ImageAsset.swift in Sources */,
+				D43A2CBEA3F4A42D34E11FBF49D7A73B /* ImageCompositionLayer.swift in Sources */,
+				5E4DF0C41C93376DEF135A91AFEA98D3 /* ImageLayerModel.swift in Sources */,
+				E6F28A274368B64D8523D3971BE86F84 /* Interpolatable.swift in Sources */,
+				5145E237C0FA9F997C46EC8AD5E3C343 /* InterpolatableExtensions.swift in Sources */,
+				3C94A50EEDE757ED915355BB1527E1D1 /* InvertedMatteLayer.swift in Sources */,
+				D857F00E20A2F944B86F7C4DBE3D396D /* ItemsExtension.swift in Sources */,
+				CA311FA73CDAF1BEF9B0969389D09D54 /* KeyedDecodingContainerExtensions.swift in Sources */,
+				D9B93AD66FA39B4C51C1C13E5EBC0DE4 /* Keyframe.swift in Sources */,
+				8BEEE2E9607A08FB912DA85F69F61DFB /* KeyframeExtensions.swift in Sources */,
+				3F719306121B3073D743725D2ADA9BEB /* KeyframeGroup.swift in Sources */,
+				B765EEB30F168B4A1AFFD96E21FE5B1F /* KeyframeInterpolator.swift in Sources */,
+				ED17A56F0602B9A1D3F64545091DF886 /* KeypathSearchable.swift in Sources */,
+				F1DC8E9DC8E8C698F36F641ECB421877 /* LayerDebugging.swift in Sources */,
+				7604516F9BDDEC72E4831AD122CC895A /* LayerImageProvider.swift in Sources */,
+				E6F49F107DCFDF42A332D0DC24CFD125 /* LayerModel.swift in Sources */,
+				5AA515800651A7BFB03507D88E26C076 /* LayerTextProvider.swift in Sources */,
+				A8F168FF13E20514A674C03E7C846C86 /* LayerTransformNode.swift in Sources */,
+				17C18158904B77F2A201F9F164CB3FF4 /* lottie-ios-dummy.m in Sources */,
+				730ADAE11146F2736FCB5033C1A03D37 /* LottieView.swift in Sources */,
+				60893487B4F2737BDFA04DC46B5D4D37 /* LRUAnimationCache.swift in Sources */,
+				1C6D6DE6D2B2D5BDF21EF4C6C9626A99 /* Marker.swift in Sources */,
+				23F8E46508EDA5F65D7D289FEDBC33AB /* Mask.swift in Sources */,
+				F7540B85807F67EE94D2773F29CA5F32 /* MaskContainerLayer.swift in Sources */,
+				F1D3CA68F59ED3F487E6FAF53EBB400F /* MathKit.swift in Sources */,
+				C660BC67840B5118ED2AA83F96838D00 /* Merge.swift in Sources */,
+				93D7B96DDA3CEA587CF03F96FA45E6D9 /* NodeProperty.swift in Sources */,
+				C9A8AA1901085E8AB899FEAE7315A623 /* NodePropertyMap.swift in Sources */,
+				826877460C478D6D55154F792DF68B0D /* NullCompositionLayer.swift in Sources */,
+				20DC7489B60CF0FF1CDFECBB1CEFBD06 /* PassThroughOutputNode.swift in Sources */,
+				9D861ED0BEE408864EE3AE96FD10C1D6 /* PathElement.swift in Sources */,
+				1DD2813D00FDCF33C06C08230CC04BB2 /* PathNode.swift in Sources */,
+				008C4F55B237CA09F35D6FC07264F6CA /* PathOutputNode.swift in Sources */,
+				4F6AC74009011D85D1FAFE134AD6D00F /* PointValueProvider.swift in Sources */,
+				AAC2A8D92BD2A80D825C11A195AC28AD /* PolygonNode.swift in Sources */,
+				CC2C811C035F2489F77EB510842F82D6 /* PrecompAsset.swift in Sources */,
+				48449FD724BF1F9C1BC98EF933BD2B0E /* PreCompLayerModel.swift in Sources */,
+				C830F6B12BA21451600AF5A099639190 /* PreCompositionLayer.swift in Sources */,
+				AB285ABE6D8BA6085ECEACA65680AA9D /* Rectangle.swift in Sources */,
+				B2E6663DBBC0A890060C54642BA13362 /* RectNode.swift in Sources */,
+				ECCBDC532A5D65BCDEEAC6DC08D61548 /* RenderNode.swift in Sources */,
+				5107BC0F4A21D382955C15B33899065D /* Repeater.swift in Sources */,
+				C628DD90087F7C9142801DB7CC5324DB /* Shape.swift in Sources */,
+				2472BA92A1AD4C3D6447872468A6B666 /* ShapeCompositionLayer.swift in Sources */,
+				48A1B9501008424CEB8C73A69178CB45 /* ShapeContainerLayer.swift in Sources */,
+				197A415526E31473333277FFBBE97417 /* ShapeItem.swift in Sources */,
+				28CE819F7B71604EA010DE405FDA2142 /* ShapeLayerModel.swift in Sources */,
+				4D256549CB3E2D523B7406B812DCCAB1 /* ShapeNode.swift in Sources */,
+				AD4B111BEE386718C736A75BBACD0C2A /* ShapeRenderLayer.swift in Sources */,
+				62D3781D7C9FCEA04ADBBB8A74584C72 /* ShapeTransform.swift in Sources */,
+				D7BEDD8CD2E8EC63605F74A90874B8C9 /* SingleValueProvider.swift in Sources */,
+				A5B1CB27FD4B9EDEAB8389D8D7631DDF /* SizeValueProvider.swift in Sources */,
+				D766E6F8463251046A82FDADCCD7B66B /* SolidCompositionLayer.swift in Sources */,
+				1843E0793D23311C185180E6F9894767 /* SolidLayerModel.swift in Sources */,
+				B58395C8A9B424DC629018F30A78532A /* Star.swift in Sources */,
+				E7E16E380ED16BAA9A0671C70D67CFE6 /* StarNode.swift in Sources */,
+				D034A09D29B3CC083DC4F1D7A9B636CC /* StringExtensions.swift in Sources */,
+				39FBA0C8B0C93D9F60A4FA87879AE82E /* Stroke.swift in Sources */,
+				52BEE937A7A18F4616993649F1024E2F /* StrokeNode.swift in Sources */,
+				1AC8089175F09ED293F92A2506F6CFC2 /* StrokeRenderer.swift in Sources */,
+				D4450DCE9456B67F94B3400A9C4C5864 /* TextAnimator.swift in Sources */,
+				6D1A5A8D96CAF022F3B18C6AE8EF4005 /* TextAnimatorNode.swift in Sources */,
+				0C52C0F9ED98B605A75BF6F97B2E4761 /* TextCompositionLayer.swift in Sources */,
+				BB49822FF245E7F184804D9A7A003FEE /* TextDocument.swift in Sources */,
+				271BB1275255203FAE9905551936E5B1 /* TextLayerModel.swift in Sources */,
+				04D227E09D46D65C716CCD69EB76F6E4 /* Transform.swift in Sources */,
+				4F1BC8466FD934F8F46815D87756F30F /* Trim.swift in Sources */,
+				4D9C631D7F0AE9C38D08D3E1828A709A /* TrimPathNode.swift in Sources */,
+				0F4CB09580613C9BCA36FD548EFDFE99 /* UIColorExtension.swift in Sources */,
+				534C7E7E5A7974AB256A9A1256310F8F /* ValueContainer.swift in Sources */,
+				00F12106D48AF5FA155AC552468D39E1 /* Vectors.swift in Sources */,
+				C0167E96DDF230BEDE49509C702809CE /* VectorsExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0EE6C1815DCBE450B9216DA3D9D60D9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "lottie-ios";
+			target = 0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */;
+			targetProxy = 7FC5B271200513B19DB35E1962BED877 /* PBXContainerItemProxy */;
+		};
 		1ED1EE4EB1273595445274C36D32F18F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "lottie-ios";
@@ -1411,11 +1486,11 @@
 			target = F2A5F6762DFBA1204CEFDAC07BBFAB1C /* IMChatSDK */;
 			targetProxy = B0C443459AAC06BB7842AFD2A3691BD0 /* PBXContainerItemProxy */;
 		};
-		827AF656CC37C1F5399293D43A0DBE6E /* PBXTargetDependency */ = {
+		8A9ACE1EE5679684B1B024468ED95FAC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyJSON;
 			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
-			targetProxy = 3323C48C168F94B72445B34017161094 /* PBXContainerItemProxy */;
+			targetProxy = 4941BB22A5F7693A0DB27E9429097CAD /* PBXContainerItemProxy */;
 		};
 		97A7E5BA1BAB2ED725033830B3120AE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1423,56 +1498,41 @@
 			target = CEF189A55436D949FB0FDFCB3CA7B9A2 /* Pods-IMChatSDK_Example */;
 			targetProxy = CC5361D95B7DBF7C4AF4EB6541A74705 /* PBXContainerItemProxy */;
 		};
+		9FA536A40BF9831A9FA1009F9FC0FDAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Starscream;
+			target = 9B78EE4AF6AE03E79D88886319853FF7 /* Starscream */;
+			targetProxy = E88A6DC93F9D288294480F96B020D460 /* PBXContainerItemProxy */;
+		};
 		A1F1E994473095548CD42F373CAF6040 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyJSON;
 			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
 			targetProxy = D7096B99DC73623E058EC12A8DF662FE /* PBXContainerItemProxy */;
 		};
-		C7EEBBBEA66381D5BCB50C64C6AB4CE6 /* PBXTargetDependency */ = {
+		EE01E0822CC9F6649A2FDB00BF234F95 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Starscream;
-			target = 9B78EE4AF6AE03E79D88886319853FF7 /* Starscream */;
-			targetProxy = D2505B950817A270A8C553D8A9F6468C /* PBXContainerItemProxy */;
-		};
-		CA99E6818D9E08F5685DB9D2B572EBB7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "lottie-ios";
-			target = 0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */;
-			targetProxy = 610A84992725F35E992EFD73808F89B2 /* PBXContainerItemProxy */;
+			name = "IMChatSDK-IMChatSDK";
+			target = C62D5635B813357151F6116033E589F7 /* IMChatSDK-IMChatSDK */;
+			targetProxy = 08E97D9278B3D66F5F3C4B07C3B36861 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		09E8E1D43338AAB7C6ECC523A1E879FE /* Release */ = {
+		1025DBD076B9CDE1B56548D73602FCC0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9008AB84F4CEED2D45A735C841F58628 /* SwiftyJSON.release.xcconfig */;
+			baseConfigurationReference = BDD9F71E97306A95969857CA681B8C3B /* IMChatSDK.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyJSON;
-				PRODUCT_NAME = SwiftyJSON;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/IMChatSDK";
+				IBSC_MODULE = IMChatSDK;
+				INFOPLIST_FILE = "Target Support Files/IMChatSDK/ResourceBundle-IMChatSDK-IMChatSDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = IMChatSDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -1540,9 +1600,40 @@
 			};
 			name = Debug;
 		};
-		37C2A74497011797FFDFC7C85C76444A /* Debug */ = {
+		333D5E78E81726545AE2851F6716FE5B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0889C8C474849356BE73316CE5275F04 /* Starscream.debug.xcconfig */;
+			baseConfigurationReference = 054EE0705D379847DCC613CFFBB55C17 /* lottie-ios.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/lottie-ios/lottie-ios.modulemap";
+				PRODUCT_MODULE_NAME = Lottie;
+				PRODUCT_NAME = Lottie;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4EA3FB3AF1E34363B9C9C591AD03BB69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F910BFE314438930C4F4F9F08EDAA960 /* Starscream.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1566,39 +1657,26 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		3CD5455AE21E7AFC9C504EB96800242D /* Debug */ = {
+		54C44693440435CEDDEA0AB78469722C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5FDAE18B9F6EEFBE4F6D465A7941DCB /* SwiftyJSON.debug.xcconfig */;
+			baseConfigurationReference = 3B9D5A367F4C0C67D2CBB027CFBCEC20 /* IMChatSDK.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyJSON;
-				PRODUCT_NAME = SwiftyJSON;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/IMChatSDK";
+				IBSC_MODULE = IMChatSDK;
+				INFOPLIST_FILE = "Target Support Files/IMChatSDK/ResourceBundle-IMChatSDK-IMChatSDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = IMChatSDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -1636,70 +1714,6 @@
 			};
 			name = Debug;
 		};
-		5E0DD401AAA886615A97AB5AEF4982FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 054EE0705D379847DCC613CFFBB55C17 /* lottie-ios.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/lottie-ios/lottie-ios.modulemap";
-				PRODUCT_MODULE_NAME = Lottie;
-				PRODUCT_NAME = Lottie;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		61DC669FBEA16E73F70816C68851757F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DAA449CE3F190D1F149E409DDCF3593 /* IMChatSDK.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/IMChatSDK/IMChatSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IMChatSDK/IMChatSDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/IMChatSDK/IMChatSDK.modulemap";
-				PRODUCT_MODULE_NAME = IMChatSDK;
-				PRODUCT_NAME = IMChatSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		7A5EDF1650A89B4FCA7DEE1ABE0117C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E9D9600CA51A48D05BA283003C4515EF /* Pods-IMChatSDK_Tests.release.xcconfig */;
@@ -1735,9 +1749,9 @@
 			};
 			name = Release;
 		};
-		9439D2D47F575AD2DA143B5722B9B6D3 /* Release */ = {
+		A583B5E8C7AA0ED7BE045C0FCABB0819 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F910BFE314438930C4F4F9F08EDAA960 /* Starscream.release.xcconfig */;
+			baseConfigurationReference = 9008AB84F4CEED2D45A735C841F58628 /* SwiftyJSON.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1748,14 +1762,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
-				PRODUCT_MODULE_NAME = Starscream;
-				PRODUCT_NAME = Starscream;
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1767,7 +1781,72 @@
 			};
 			name = Release;
 		};
-		ADAA5F7F3253FF8D4B163C7E6982786E /* Release */ = {
+		A7275DAF6FF56FCF5E83AF7A06CFA7AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDD9F71E97306A95969857CA681B8C3B /* IMChatSDK.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IMChatSDK/IMChatSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IMChatSDK/IMChatSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IMChatSDK/IMChatSDK.modulemap";
+				PRODUCT_MODULE_NAME = IMChatSDK;
+				PRODUCT_NAME = IMChatSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AA8A8A4680EC75C2CC80DEDB50A2BDBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B9D5A367F4C0C67D2CBB027CFBCEC20 /* IMChatSDK.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IMChatSDK/IMChatSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IMChatSDK/IMChatSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IMChatSDK/IMChatSDK.modulemap";
+				PRODUCT_MODULE_NAME = IMChatSDK;
+				PRODUCT_NAME = IMChatSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AB577E0121C54C3EDDE9A51AC9462286 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 745CA61617F112FE910D8348C4F4E2D6 /* lottie-ios.release.xcconfig */;
 			buildSettings = {
@@ -1859,38 +1938,6 @@
 			};
 			name = Release;
 		};
-		B7D321A99C15CB1CFB08028B4EFFFBC8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24F6BB32568965AD36D53B441181898C /* IMChatSDK.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/IMChatSDK/IMChatSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IMChatSDK/IMChatSDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/IMChatSDK/IMChatSDK.modulemap";
-				PRODUCT_MODULE_NAME = IMChatSDK;
-				PRODUCT_NAME = IMChatSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		DBCA7B52DA167450479FFD9776206869 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A93F3CBEB3570D60C52DB3E8ABDCB7BB /* Pods-IMChatSDK_Tests.debug.xcconfig */;
@@ -1919,6 +1966,37 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E2EF1568A9E459373CDF33EA26D1B781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0889C8C474849356BE73316CE5275F04 /* Starscream.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Starscream-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				PRODUCT_MODULE_NAME = Starscream;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1960,14 +2038,45 @@
 			};
 			name = Release;
 		};
+		F6D7CA00FFB5CA7D5262FF824861F161 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5FDAE18B9F6EEFBE4F6D465A7941DCB /* SwiftyJSON.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00BB12AEF7A008171F9B76732F20D37C /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+		2935DADBD7BB5E7E9CFBF3E7E45C73D4 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3CD5455AE21E7AFC9C504EB96800242D /* Debug */,
-				09E8E1D43338AAB7C6ECC523A1E879FE /* Release */,
+				F6D7CA00FFB5CA7D5262FF824861F161 /* Debug */,
+				A583B5E8C7AA0ED7BE045C0FCABB0819 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1990,29 +2099,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9832132C94EEC358064267E4F910DFE2 /* Build configuration list for PBXNativeTarget "Starscream" */ = {
+		5235CCC41C6992FA084304B23E2F28CF /* Build configuration list for PBXNativeTarget "IMChatSDK-IMChatSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37C2A74497011797FFDFC7C85C76444A /* Debug */,
-				9439D2D47F575AD2DA143B5722B9B6D3 /* Release */,
+				54C44693440435CEDDEA0AB78469722C /* Debug */,
+				1025DBD076B9CDE1B56548D73602FCC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C6E9A443A6645B1C296DBCC31E50F517 /* Build configuration list for PBXNativeTarget "IMChatSDK" */ = {
+		9AAAD7A4931375942E24068FE9BC2BDA /* Build configuration list for PBXNativeTarget "IMChatSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7D321A99C15CB1CFB08028B4EFFFBC8 /* Debug */,
-				61DC669FBEA16E73F70816C68851757F /* Release */,
+				AA8A8A4680EC75C2CC80DEDB50A2BDBC /* Debug */,
+				A7275DAF6FF56FCF5E83AF7A06CFA7AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE244FD760BBEFA29CFAE93119248890 /* Build configuration list for PBXNativeTarget "lottie-ios" */ = {
+		DF008E687A987BB2144D5F4DB5964819 /* Build configuration list for PBXNativeTarget "Starscream" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E0DD401AAA886615A97AB5AEF4982FF /* Debug */,
-				ADAA5F7F3253FF8D4B163C7E6982786E /* Release */,
+				E2EF1568A9E459373CDF33EA26D1B781 /* Debug */,
+				4EA3FB3AF1E34363B9C9C591AD03BB69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2022,6 +2131,15 @@
 			buildConfigurations = (
 				DBCA7B52DA167450479FFD9776206869 /* Debug */,
 				7A5EDF1650A89B4FCA7DEE1ABE0117C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9FEC55069CEA5D4075ACC9F0386F303 /* Build configuration list for PBXNativeTarget "lottie-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				333D5E78E81726545AE2851F6716FE5B /* Debug */,
+				AB577E0121C54C3EDDE9A51AC9462286 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

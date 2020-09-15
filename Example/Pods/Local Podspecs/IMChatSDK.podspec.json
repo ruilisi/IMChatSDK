@@ -34,5 +34,10 @@
     "Source/Core/*.{swift}",
     "Source/*.{swift}"
   ],
+  "resource_bundles": {
+    "IMChatSDK": [
+      "Resources/*"
+    ]
+  },
   "swift_version": "5.0"
 }
