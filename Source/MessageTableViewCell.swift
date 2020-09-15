@@ -35,6 +35,9 @@ class MessageTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        sendBG = UIImage(named: "bgSend", in: Bundle(for: type(of: self)), compatibleWith: nil)
+        receiveBG = UIImage(named: "bgReceive", in: Bundle(for: type(of: self)), compatibleWith: nil)
+        
         addSubview(bgimage)
         addSubview(label)
         addSubview(time)
