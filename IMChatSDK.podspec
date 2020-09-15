@@ -34,7 +34,8 @@ TODO: Add long description of the pod here.
   s.dependency 'SwiftyJSON'
   s.swift_version= '5.0'
 
-  s.source_files = 'Source/Core/*.{swift}'
+  s.source_files = ['Source/Core/*.{swift}',
+                    'Source/*.{swift}']
   
   # s.resource_bundles = {
   #   'IMChatSDK' => ['IMChatSDK/Assets/*.png']

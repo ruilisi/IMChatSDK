@@ -30,6 +30,9 @@
     ]
   },
   "swift_versions": "5.0",
-  "source_files": "Source/Core/*.{swift}",
+  "source_files": [
+    "Source/Core/*.{swift}",
+    "Source/*.{swift}"
+  ],
   "swift_version": "5.0"
 }
