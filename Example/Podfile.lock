@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  IMChatSDK: 72cb5d3e1753afb1ac071fdd639e6a0aca4c7c79
+  IMChatSDK: 12bb3752a9e9cdb88f1c75b31c99d565cc39b2a4
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7

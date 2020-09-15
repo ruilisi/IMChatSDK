@@ -30,8 +30,8 @@ open class IMTableView: UIView {
     public var completeAction: (() -> Void)?
     var dataConfig = UnifyDataConfig()
     
-    var sendBG = UIImage(named: "bgSend")
-    var receiveBG = UIImage(named: "bgReceive")
+    var sendBG = UIImage(named: "bgSend", in: Resources.bundle, compatibleWith: nil)
+    var receiveBG = UIImage(named: "bgReceive", in: Resources.bundle, compatibleWith: nil)
     var sendEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     var receiveEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     
