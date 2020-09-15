@@ -107,6 +107,7 @@
 		8BEEE2E9607A08FB912DA85F69F61DFB /* KeyframeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2438830EC00F9D0BCB6AEC8FDA94A2 /* KeyframeExtensions.swift */; };
 		8F4D1F92BA47D69B1D9FD15A4E6A3AD5 /* AnimationSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB232DF3BFC89008D272719DAFB47E /* AnimationSubview.swift */; };
 		93D7B96DDA3CEA587CF03F96FA45E6D9 /* NodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A57321CF02423FD285DBBBB150758F /* NodeProperty.swift */; };
+		943BF03AE2FB3F4CD7A76534D91CE98B /* msgloading.json in Resources */ = {isa = PBXBuildFile; fileRef = BE5B62EDE488F33D9725A2C8C0995460 /* msgloading.json */; };
 		9506D6A2F943C2E18FBC504E6EBA85E9 /* EllipseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2635D48D84468B4C358BBCB94DEE06A3 /* EllipseNode.swift */; };
 		9A92956A759FBDCBCD0E0EC998C8D02F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528565E60757FF1D3BF92EDEEFA369A /* SwiftyJSON.swift */; };
 		9AB1B21F84150760E36E8AEA7D28335F /* Pods-IMChatSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D967BC0B57020F4F919C796277BA0ED /* Pods-IMChatSDK_Example-dummy.m */; };
@@ -115,6 +116,7 @@
 		9B5C40514054DFD997C072A1DAC3BE5F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078AEE5E1429853A08D49126649544DD /* SwiftyJSON.framework */; };
 		9D861ED0BEE408864EE3AE96FD10C1D6 /* PathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A74D5936E0239E2FF8C655B77B56F49 /* PathElement.swift */; };
 		9DB34FCB089F344CCDFF039881D03120 /* AnyValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB6A7777FD62DE45329B46F6B4AF2B9 /* AnyValueProvider.swift */; };
+		9E20438F2B32B39CE5F72DA29367FACC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11E580D24FA017AE609A91B7630A1E1 /* Images.xcassets */; };
 		A148229FB4689C35AF9C7CD7D75783FD /* AnimationKeypathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9660BCD280D30D6CCCA79851B8DD40E4 /* AnimationKeypathExtension.swift */; };
 		A5584A4DB2F3F8594BDE2608D490B1AA /* WSEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19682E3B15B929733A25805860A64AE /* WSEngine.swift */; };
 		A5B1CB27FD4B9EDEAB8389D8D7631DDF /* SizeValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A74C029C5D410EFEB0A3FBD81F691 /* SizeValueProvider.swift */; };
@@ -140,12 +142,10 @@
 		BAA4FBCB094AC37347FAB95368FE5FA5 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024016A279C6789714FBEF46A6F9C071 /* Security.swift */; };
 		BB49822FF245E7F184804D9A7A003FEE /* TextDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794BFFDDB35C767C3C3FBACACD67422 /* TextDocument.swift */; };
 		BD18FE770C67E470DA6CB3D7F33544BC /* GradientFillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F3D25B61D85F2C8C4922CC1B3C9F2F /* GradientFillNode.swift */; };
-		BD485C23D53D385889435D391B36B6EA /* msgloading.json in Resources */ = {isa = PBXBuildFile; fileRef = 5831FFA940411F638D0C14B253726967 /* msgloading.json */; };
 		BE15747BE522DE05725B6540D913F557 /* GroupNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FCFB65B0998CC601026FDDB9B786BA /* GroupNode.swift */; };
 		BF688ED870075EDDDB4CDE6B189308BF /* AnyValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F67BA814AAA1A9082180D9A04E603E /* AnyValueContainer.swift */; };
 		BF76E06AE2C4E39473C347333D8E7E84 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FDCFFFE40CA8C9C65CD10584185058 /* Animation.swift */; };
 		C0167E96DDF230BEDE49509C702809CE /* VectorsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F1E57DC2CB544501667BFC7B8C4AF /* VectorsExtensions.swift */; };
-		C388F124EC9EB570E160B041FCF39612 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E4FC71F79004258C62B6E401A37DBB5 /* Images.xcassets */; };
 		C3F4E6C5165D0745E3C7C52E1827B72C /* AnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C75C216344097872354A21F13453F3 /* AnimatorNode.swift */; };
 		C628DD90087F7C9142801DB7CC5324DB /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5441C23BA25AF6CCA43FE0251D9CA /* Shape.swift */; };
 		C660BC67840B5118ED2AA83F96838D00 /* Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09CFB223AFE13FB77878DD260712350 /* Merge.swift */; };
@@ -355,7 +355,6 @@
 		5770151DB4DC833BE05C9ED5B638EF27 /* GroupOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/GroupOutputNode.swift"; sourceTree = "<group>"; };
 		5794BFFDDB35C767C3C3FBACACD67422 /* TextDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextDocument.swift; path = "lottie-swift/src/Private/Model/Text/TextDocument.swift"; sourceTree = "<group>"; };
 		57AAB71F577572F869A876AFA9C51195 /* PreCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/PreCompositionLayer.swift"; sourceTree = "<group>"; };
-		5831FFA940411F638D0C14B253726967 /* msgloading.json */ = {isa = PBXFileReference; includeInIndex = 1; name = msgloading.json; path = Resources/msgloading.json; sourceTree = "<group>"; };
 		5996FC8874AAB0BC4A036B7F1B3A41A6 /* ImDataAccess.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImDataAccess.swift; path = Source/ImDataAccess.swift; sourceTree = "<group>"; };
 		5AB1DED8D602AE9BA7086490F05BFCD4 /* Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = "lottie-swift/src/Private/Model/Objects/Transform.swift"; sourceTree = "<group>"; };
 		5C73084A9C1E8F89147D62B06A99788E /* IMChatSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = IMChatSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -381,7 +380,6 @@
 		79E8F78B9C96AE0197AEB6B8205B74D8 /* AnimationViewInitializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationViewInitializers.swift; path = "lottie-swift/src/Public/Animation/AnimationViewInitializers.swift"; sourceTree = "<group>"; };
 		7BD031DD2841C56DB1EA6A7A0F9BB877 /* Marker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Marker.swift; path = "lottie-swift/src/Private/Model/Objects/Marker.swift"; sourceTree = "<group>"; };
 		7C8485EEC8D8487DAB5F31E35E431192 /* ShapeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/ShapeNode.swift"; sourceTree = "<group>"; };
-		7E4FC71F79004258C62B6E401A37DBB5 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
 		807E5CDB51A1445FC1918660E673366F /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedDecodingContainerExtensions.swift; path = "lottie-swift/src/Private/Model/Extensions/KeyedDecodingContainerExtensions.swift"; sourceTree = "<group>"; };
 		80D8EC3272ED52E18494037DEEF09DC5 /* CompoundBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompoundBezierPath.swift; path = "lottie-swift/src/Private/Utility/Primitives/CompoundBezierPath.swift"; sourceTree = "<group>"; };
 		815F8D5A52CD0A46B4D246D7116AA28F /* ColorValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/ColorValueProvider.swift"; sourceTree = "<group>"; };
@@ -415,6 +413,7 @@
 		9FAAEA34816822833A8B5FB7ECCB77F2 /* PassThroughOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PassThroughOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/PassThroughOutputNode.swift"; sourceTree = "<group>"; };
 		A005D1AC6F3CA611948954E61B84428E /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = "lottie-swift/src/Private/Utility/Extensions/StringExtensions.swift"; sourceTree = "<group>"; };
 		A0C502F052D6C7B0B89D19C7FE3237A4 /* Int+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Extension.swift"; path = "Source/Int+Extension.swift"; sourceTree = "<group>"; };
+		A11E580D24FA017AE609A91B7630A1E1 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
 		A2B3C5E167812ECECF8B11B9510C0609 /* ImageAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageAsset.swift; path = "lottie-swift/src/Private/Model/Assets/ImageAsset.swift"; sourceTree = "<group>"; };
 		A33F5787646628595E3201E08651A9E1 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		A3ECA9652F6D07DD48808635545FC856 /* lottie-ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-prefix.pch"; sourceTree = "<group>"; };
@@ -443,6 +442,7 @@
 		B82A43C96DE1DC1DB3A941EC745E4895 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Extension.swift"; path = "Source/UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		BAB5FCA5F46C55AFB7ACE45A700F55C2 /* AnimationCacheProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationCacheProvider.swift; path = "lottie-swift/src/Public/AnimationCache/AnimationCacheProvider.swift"; sourceTree = "<group>"; };
 		BDD9F71E97306A95969857CA681B8C3B /* IMChatSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IMChatSDK.release.xcconfig; sourceTree = "<group>"; };
+		BE5B62EDE488F33D9725A2C8C0995460 /* msgloading.json */ = {isa = PBXFileReference; includeInIndex = 1; name = msgloading.json; path = Resources/msgloading.json; sourceTree = "<group>"; };
 		C3346A285C7C5B1C2E69E5A7DD97E63F /* LottieView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LottieView.swift; path = "lottie-swift/src/Public/iOS/LottieView.swift"; sourceTree = "<group>"; };
 		C549AF89287F89906B52E91BAE356B4B /* IMChatSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IMChatSDK-dummy.m"; sourceTree = "<group>"; };
 		C5FB4C7569FD0521BC9E83744F43F542 /* FoundationSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationSecurity.swift; path = Sources/Security/FoundationSecurity.swift; sourceTree = "<group>"; };
@@ -574,6 +574,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		170AF75BC0EE8EF50593A1248724023A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A11E580D24FA017AE609A91B7630A1E1 /* Images.xcassets */,
+				BE5B62EDE488F33D9725A2C8C0995460 /* msgloading.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		1A0F5C37D3678D51E87B2A2F56844A91 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,15 +608,6 @@
 				DFF050AF8BF6B549EC11CEAC7CEBF58B /* README.md */,
 			);
 			name = Pod;
-			sourceTree = "<group>";
-		};
-		35514B8AF75DFC59C876E00C7452258B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7E4FC71F79004258C62B6E401A37DBB5 /* Images.xcassets */,
-				5831FFA940411F638D0C14B253726967 /* msgloading.json */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		36280ADAF60AB7597F1C027C7010E1C6 /* SwiftyJSON */ = {
@@ -671,7 +671,7 @@
 				5CBC6618734ED1E94B123E75E77AE7DF /* UnifyUIConfig.swift */,
 				1A0F5C37D3678D51E87B2A2F56844A91 /* Core */,
 				2DD1A6105C3D4841540ECCF3F0FBA591 /* Pod */,
-				35514B8AF75DFC59C876E00C7452258B /* Resources */,
+				170AF75BC0EE8EF50593A1248724023A /* Resources */,
 				F94463BC8787FA3630DE5280AC6E5A4A /* Support Files */,
 			);
 			name = IMChatSDK;
@@ -1059,7 +1059,7 @@
 			buildPhases = (
 				A7718326CF2227777A1C8C0BD5E3B78E /* Sources */,
 				1182F1787F277B3214344D8E1672ECA0 /* Frameworks */,
-				BFE45BEF8CF3799CE404065833D188AA /* Resources */,
+				7E24977CE3956A8073E28531972CB4FF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1192,6 +1192,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7E24977CE3956A8073E28531972CB4FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E20438F2B32B39CE5F72DA29367FACC /* Images.xcassets in Resources */,
+				943BF03AE2FB3F4CD7A76534D91CE98B /* msgloading.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B0DE9F280E61A6A836485ACE7BE09D38 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1203,15 +1212,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BFE45BEF8CF3799CE404065833D188AA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C388F124EC9EB570E160B041FCF39612 /* Images.xcassets in Resources */,
-				BD485C23D53D385889435D391B36B6EA /* msgloading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

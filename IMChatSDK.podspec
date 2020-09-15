@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IMChatSDK'
-  s.version          = '1.0.6'
+  s.version          = '1.0.7'
   s.summary          = 'Connect to custom service'
 
 # This description is used to generate tags and improve search results.
@@ -38,8 +38,7 @@ TODO: Add long description of the pod here.
                     'Source/*.{swift}']
   
   s.resource_bundles = {
-    'IMChatSDK' => ['Resources/**/*.{xcassets}',
-                    'Resources/**/*.{json}']
+    'IMChatSDK' => ['Resources/*']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
