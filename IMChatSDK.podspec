@@ -37,9 +37,9 @@ TODO: Add long description of the pod here.
   s.source_files = ['Source/Core/*.{swift}',
                     'Source/*.{swift}']
   
-  s.resource_bundles = {
-    'IMChatSDK' => ['Resources/*']
-  }
+  # s.resource_bundles = {
+  #  'IMChatSDK' => ['Resources/*']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
