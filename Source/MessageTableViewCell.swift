@@ -22,8 +22,9 @@ class MessageTableViewCell: UITableViewCell {
     let windowSize = UIScreen.main.bounds
     let windowWidth = screenSize.width
 
-    var sendBG = UIImage(named: "bgSend")
-    var receiveBG = UIImage(named: "bgReceive")
+    var sendBG = UIImage(named: "bgSend", in: Resources.bundle, compatibleWith: nil)
+    var receiveBG = UIImage(named: "bgReceive", in: Resources.bundle, compatibleWith: nil)
+    
     var sendEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     var receiveEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     
@@ -34,9 +35,6 @@ class MessageTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        sendBG = UIImage(named: "bgSend", in: Bundle(for: type(of: self)), compatibleWith: nil)
-        receiveBG = UIImage(named: "bgReceive", in: Bundle(for: type(of: self)), compatibleWith: nil)
         
         addSubview(bgimage)
         addSubview(label)
