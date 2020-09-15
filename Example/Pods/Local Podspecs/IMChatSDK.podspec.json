@@ -1,6 +1,6 @@
 {
   "name": "IMChatSDK",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "summary": "Connect to custom service",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Thisismy0312/IMChatSDK",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Thisismy0312/IMChatSDK.git",
-    "tag": "1.0.0"
+    "tag": "1.0.1"
   },
   "platforms": {
     "ios": "10.0"
@@ -30,6 +30,6 @@
     ]
   },
   "swift_versions": "5.0",
-  "source_files": "Source/**/*.{m,h,swift}",
+  "source_files": "Source/Core/*.{swift}",
   "swift_version": "5.0"
 }
