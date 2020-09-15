@@ -46,6 +46,8 @@ class ViewController: UIViewController {
             .setBottomColor(color: UIColor(hex: 0x242433))
             .setButtonColor(color: UIColor(hex: 0x494766))
             .setPlaceHolderColor(color: UIColor(hex: 0x9696B5))
+            .setSendBG(image: UIImage(named: "testImg"), edge: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
+            .setReceiveBG(image: UIImage(named: "testImg2"), edge: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
         
         self.chatView.buildUI(config: uiConfig)
         

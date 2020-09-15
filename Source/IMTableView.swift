@@ -108,8 +108,8 @@ open class IMTableView: UIView {
     }
     
     public func setSendBG(img: UIImage?, edge: UIEdgeInsets) {
-        receiveBG = img
-        receiveEdge = edge
+        sendBG = img
+        sendEdge = edge
     }
     
     // MARK: - 载入历史
