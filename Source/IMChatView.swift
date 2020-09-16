@@ -27,7 +27,7 @@ open class IMChatView: UIView {
     private var placeHoderColor: UIColor = .lightGray
     private var textColor: UIColor = .white
     
-    public var completeAction: (() -> Void)? {
+    var completeAction: (() -> Void)? {
         get {
             return messageTable.completeAction
         }
@@ -214,9 +214,13 @@ public extension IMChatView {
      配置连接
      - parameters:
         - config: 配置信息
+        - onSuccess: 连接成功回调
+        - onFailer: 连接失败回调
      */
-    func buildConnection(config: UnifyDataConfig) {
+    func buildConnection(config: UnifyDataConfig, onSuccess: (() -> Void)? = nil, onFailer: (() -> Void)? = nil) {
         messageTable.build(config: config)
+        completeAction = onSuccess
+        messageTable.errorAction = onFailer
     }
     
     /**

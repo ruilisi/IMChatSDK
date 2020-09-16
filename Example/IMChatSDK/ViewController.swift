@@ -77,11 +77,18 @@ extension ViewController {
             .setLoadHistoryCount(count: 7)
             .setPerLoadHistoryCount(count: 2)
         
-        self.chatView.buildConnection(config: dataconfig)
-        
-        self.chatView.completeAction = {
+        self.chatView.buildConnection(config: dataconfig, onSuccess: {
             self.removeSpinner()
-        }
+        }, onFailer: {
+            self.alertMessage(title: "连接失败")
+        })
+    }
+    
+    func alertMessage(title: String? = nil, message: String? = nil) {
+        let controller = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        controller.addAction(okAction)
+        present(controller, animated: true, completion: nil)
     }
 }
 

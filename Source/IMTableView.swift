@@ -10,7 +10,7 @@ import UIKit
 import Starscream
 import SwiftyJSON
 
-public enum HistoryTimeInterval {
+enum HistoryTimeInterval {
     case latest
     case none
 }
@@ -27,7 +27,7 @@ class IMTableView: UIView {
     var historyDatas: [MessageModel] = []
     var cells: [MessageTableViewCell] = []
     var errorAction: (() -> Void)?
-    public var completeAction: (() -> Void)?
+    var completeAction: (() -> Void)?
     var dataConfig = UnifyDataConfig()
     
     var sendBG = UIImage(named: "bgSend", in: Resources.bundle, compatibleWith: nil)
