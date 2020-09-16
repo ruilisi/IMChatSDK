@@ -116,6 +116,7 @@ class IMTableView: UIView {
     func historyLoad() {
         guard !historyData.isEmpty else { return }
         self.cells = []
+        
         for item in historyDatas {
             let cell = MessageTableViewCell()
             
@@ -132,6 +133,13 @@ class IMTableView: UIView {
             cell.setContent(msgID: item.msgID, name: item.name, message: item.message, timeInterval: timeinterval, isSelf: item.bySelf)
             cell.setLoading(isLoading: false)
             cells.append(cell)
+            
+            if cells.count > 1 {
+                let times = cells[(cells.count - 2)..<cells.count].map{ $0.timeInt }
+                if times[1] - times[0] < 600 {
+                    cell.hideTime = true
+                }
+            }
         }
         messageTable.reloadData()
         
@@ -161,6 +169,14 @@ class IMTableView: UIView {
         
         if !desc {
             cells.append(cell)
+            
+            if cells.count > 1 {
+                let times = cells[(cells.count - 2)..<cells.count].map{ $0.timeInt }
+                if times[1] - times[0] < 600 {
+                    cell.hideTime = true
+                }
+            }
+            
             messageTable.insertRows(at: [IndexPath(row: cells.count - 1, section: 0)], with: .automatic)
         } else {
             cells.insert(cell, at: 0)

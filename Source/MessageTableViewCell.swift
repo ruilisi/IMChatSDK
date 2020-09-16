@@ -28,6 +28,17 @@ class MessageTableViewCell: UITableViewCell {
     var sendEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     var receiveEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     
+    private var hideTimex: Bool = false
+    var hideTime: Bool {
+        get {
+            return hideTimex
+        }
+        set {
+            hideTimex = newValue
+            time.isHidden = newValue
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -131,7 +142,7 @@ class MessageTableViewCell: UITableViewCell {
     }
     
     func setLoading(isLoading: Bool = true) {
-        time.isHidden = isLoading
+        time.isHidden = hideTime ? true : isLoading
         loadingLottie.isHidden = !isLoading
         
         if isLoading {
