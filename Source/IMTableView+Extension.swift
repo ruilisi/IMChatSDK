@@ -12,7 +12,7 @@ import SwiftyJSON
 
 // MARK: - WebSocket Handler
 extension IMTableView: WebSocketDelegate {
-    public func didReceive(event: WebSocketEvent, client: WebSocket) {
+    func didReceive(event: WebSocketEvent, client: WebSocket) {
         switch event {
         case .connected(let headers):
             socket.isConnected = true
@@ -58,12 +58,12 @@ extension IMTableView: WebSocketDelegate {
     }
     
     // MARK: - 连接失败
-    public func disconnect() {
+    func disconnect() {
         socket.disconnectFromServer()
     }
     
     // MARK: - 消息处理
-    public func handleMessage(_ msg: String) {
+    func handleMessage(_ msg: String) {
         let jsondata = JSON(parseJSON: msg)
         
         let type = jsondata["msg"].stringValue
@@ -92,7 +92,7 @@ extension IMTableView: WebSocketDelegate {
         lossTimeInterval = 0
         
         var datalist: [MessageModel] = []
-
+        
         for item in list {
             let message = MessageModel(
                 msgID: item["_id"].stringValue,
@@ -109,92 +109,92 @@ extension IMTableView: WebSocketDelegate {
         }
         
         print("Missing Message: \(datalist)")
-                            
+        
         for item in data {
             insertRow(message: item)
         }
     }
     
-        // MARK: - 历史消息处理
-        func historyHandel(list: [JSON]) {
-            
-            var datalist: [MessageModel] = []
-
-            for item in list {
-                let message = MessageModel(
-                    msgID: item["_id"].stringValue,
-                    name: item["u"]["name"].stringValue,
-                    message: item["msg"].stringValue,
-                    timeInterval: item["_updatedAt"]["$date"].intValue,
-                    roomID: item["rid"].stringValue,
-                    bySelf: item["u"]["_id"].stringValue == dataConfig.userID)
-                datalist.append(message)
-            }
-            
-            if historyData.isEmpty {
-                print("history count: \(historyData.count)")
-                if !datalist.isEmpty {
-                    if let finish = completeAction { finish() }
-                    historyData = datalist.sorted {
-                        $0.timeInterval < $1.timeInterval
-                    }
-                } else {
-                    historyData.append(
-                        MessageModel(
-                            msgID: "",
-                            name: "",
-                            message: dataConfig.welcomText,
-                            timeInterval: Int(Date().timeIntervalSince1970) * 1000,
-                            roomID: dataConfig.roomID,
-                            bySelf: false))
-                }
-            } else {    // 拉取更多历史
-                if datalist.isEmpty {   //没有更多历史
-                    refreshControl.endRefreshing()
-                    return
-                }
-
-                let data = datalist.sorted {
-                    $0.timeInterval > $1.timeInterval
-                }
-                                    
-                for item in data {
-                    insertRow(message: item, desc: true)
-                }
-                
-                refreshControl.endRefreshing()
-            }
-        }
+    // MARK: - 历史消息处理
+    func historyHandel(list: [JSON]) {
         
-        func sendNext() {
-            if !sendingList.isEmpty {
-                self.socket.sendMsg(sendingList[0][0], sendingList[0][1], dataConfig.roomID)
-            }
-        }
+        var datalist: [MessageModel] = []
         
-        // MARK: - 信息发送成功回调
-        func sendComplete(msgjson: JSON) {
+        for item in list {
             let message = MessageModel(
-                msgID: msgjson["_id"].stringValue,
-                name: msgjson["u"]["name"].stringValue,
-                message: msgjson["msg"].stringValue,
-                timeInterval: msgjson["ts"]["$date"].intValue,
-                roomID: msgjson["rid"].stringValue,
-                bySelf: msgjson["u"]["_id"].stringValue == dataConfig.userID)
-            
-            if let index = sendingList.firstIndex(of: [message.msgID, message.message]) {
-                sendingList.remove(at: index)
-            }
-            
-            print("afterSendingList:\(sendingList)")
-    //        rxSendingList.accept(sendingList)
-            sendNext()
-            
-            let cell = cells.first(where: { $0.messageID == message.msgID })
-            
-            cell?.setLoading(isLoading: false)
+                msgID: item["_id"].stringValue,
+                name: item["u"]["name"].stringValue,
+                message: item["msg"].stringValue,
+                timeInterval: item["_updatedAt"]["$date"].intValue,
+                roomID: item["rid"].stringValue,
+                bySelf: item["u"]["_id"].stringValue == dataConfig.userID)
+            datalist.append(message)
         }
         
+        if historyData.isEmpty {
+            print("history count: \(historyData.count)")
+            if !datalist.isEmpty {
+                if let finish = completeAction { finish() }
+                historyData = datalist.sorted {
+                    $0.timeInterval < $1.timeInterval
+                }
+            } else {
+                historyData.append(
+                    MessageModel(
+                        msgID: "",
+                        name: "",
+                        message: dataConfig.welcomText,
+                        timeInterval: Int(Date().timeIntervalSince1970) * 1000,
+                        roomID: dataConfig.roomID,
+                        bySelf: false))
+            }
+        } else {    // 拉取更多历史
+            if datalist.isEmpty {   //没有更多历史
+                refreshControl.endRefreshing()
+                return
+            }
+            
+            let data = datalist.sorted {
+                $0.timeInterval > $1.timeInterval
+            }
+            
+            for item in data {
+                insertRow(message: item, desc: true)
+            }
+            
+            refreshControl.endRefreshing()
+        }
+    }
+    
+    func sendNext() {
+        if !sendingList.isEmpty {
+            self.socket.sendMsg(sendingList[0][0], sendingList[0][1], dataConfig.roomID)
+        }
+    }
+    
+    // MARK: - 信息发送成功回调
+    func sendComplete(msgjson: JSON) {
+        let message = MessageModel(
+            msgID: msgjson["_id"].stringValue,
+            name: msgjson["u"]["name"].stringValue,
+            message: msgjson["msg"].stringValue,
+            timeInterval: msgjson["ts"]["$date"].intValue,
+            roomID: msgjson["rid"].stringValue,
+            bySelf: msgjson["u"]["_id"].stringValue == dataConfig.userID)
+        
+        if let index = sendingList.firstIndex(of: [message.msgID, message.message]) {
+            sendingList.remove(at: index)
+        }
+        
+        print("afterSendingList:\(sendingList)")
+        //        rxSendingList.accept(sendingList)
+        sendNext()
+        
+        let cell = cells.first(where: { $0.messageID == message.msgID })
+        
+        cell?.setLoading(isLoading: false)
+    }
+    
     // MARK: - 收到消息
     func receiveMessage(data: JSON) {
         if let msgs = data["args"].array, !msgs.isEmpty {

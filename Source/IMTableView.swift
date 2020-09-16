@@ -15,7 +15,7 @@ public enum HistoryTimeInterval {
     case none
 }
 
-open class IMTableView: UIView {
+class IMTableView: UIView {
     
     var socket = WebSocketHelper()
     let messageTable = UITableView()
@@ -52,7 +52,7 @@ open class IMTableView: UIView {
         }
     }
     
-    public var bgColor: UIColor? {
+    var bgColor: UIColor? {
         get {
             return messageTable.backgroundColor
         }
@@ -62,7 +62,7 @@ open class IMTableView: UIView {
         }
     }
     
-    public var separatorColor: UIColor? {
+    var separatorColor: UIColor? {
         get {
             return messageTable.separatorColor
         }
@@ -72,7 +72,7 @@ open class IMTableView: UIView {
         }
     }
     
-    public override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(messageTable)
         messageTable.refreshControl = refreshControl
@@ -87,13 +87,13 @@ open class IMTableView: UIView {
     }
     
     // MARK: - 初始化SOCKET
-    public func build(config: UnifyDataConfig) {
+    func build(config: UnifyDataConfig) {
         dataConfig = config
         socket = WebSocketHelper(baseurl: dataConfig.baseUrl)
         socket.delegate = self
     }
     
-    public func setTable() {
+    func setTable() {
         messageTable.delegate = self
         messageTable.dataSource = self
         messageTable.backgroundView = nil
@@ -102,18 +102,18 @@ open class IMTableView: UIView {
         messageTable.reloadData()
     }
     
-    public func setReceiveBG(img: UIImage?, edge: UIEdgeInsets) {
+    func setReceiveBG(img: UIImage?, edge: UIEdgeInsets) {
         receiveBG = img
         receiveEdge = edge
     }
     
-    public func setSendBG(img: UIImage?, edge: UIEdgeInsets) {
+    func setSendBG(img: UIImage?, edge: UIEdgeInsets) {
         sendBG = img
         sendEdge = edge
     }
     
     // MARK: - 载入历史
-    public func historyLoad() {
+    func historyLoad() {
         guard !historyData.isEmpty else { return }
         self.cells = []
         for item in historyDatas {
@@ -139,7 +139,7 @@ open class IMTableView: UIView {
     }
     
     // MARK: - 插入行
-    public func insertRow(message: MessageModel, desc: Bool = false, send: Bool = false) {
+    func insertRow(message: MessageModel, desc: Bool = false, send: Bool = false) {
         let cell = MessageTableViewCell()
         var timeinterval = TimeInterval(message.timeInterval / 1000)
         if message.timeInterval == 0 {
@@ -173,7 +173,7 @@ open class IMTableView: UIView {
     }
     
     // MARK: - 连接服务器
-    public func connectionToServer(token: String? = nil) {
+    func connectionToServer(token: String? = nil) {
         if let value = token {
             dataConfig.userToken = value
         }
@@ -183,7 +183,7 @@ open class IMTableView: UIView {
     }
     
     // MARK: - 按数量获取历史消息
-    public func getHistory(type: HistoryTimeInterval, count: Int) {
+    func getHistory(type: HistoryTimeInterval, count: Int) {
         
         var timeInterval: Int?
         
@@ -199,7 +199,7 @@ open class IMTableView: UIView {
     }
     
     // MARK: - 随机生成ID
-    public func createID(_ seed: String = unmistakableChars) -> String {
+    func createID(_ seed: String = unmistakableChars) -> String {
         let count = seed.count
         var result = ""
         for _ in 0 ..< 17 {
@@ -210,7 +210,7 @@ open class IMTableView: UIView {
     }
     
     // MARK: - 发送消息
-    public func sendMessage(message: String) {
+    func sendMessage(message: String) {
         
         let msgID = createID()
         
@@ -234,13 +234,13 @@ open class IMTableView: UIView {
     }
     
     // MARK: - 清空历史
-    public func cleanHistory() {
+    func cleanHistory() {
         historyData = []
         cells = []
         self.messageTable.reloadData()
     }
     
-    required public init?(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
@@ -254,15 +254,15 @@ extension IMTableView {
 
 // MARK: - TBALE代理
 extension IMTableView: UITableViewDelegate, UITableViewDataSource {
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cells.count
     }
     
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cells[indexPath.row].bgimage.frame.height + 20
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = cells[indexPath.row]
         cell.selectionStyle = .none
@@ -270,7 +270,7 @@ extension IMTableView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
 //        superview?.endEditing(true)
     }
 }

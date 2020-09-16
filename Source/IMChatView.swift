@@ -70,14 +70,7 @@ open class IMChatView: UIView {
     }
 }
 
-public extension IMChatView {
-    
-    func setFrame(_ rect: CGRect) {
-        self.frame = rect
-        setBottomView()
-        setMsgView()
-    }
-    
+private extension IMChatView {
     func setBottomView() {
         let bottomViewWidth = frame.width
         let bottomViewHeight = 57.flo
@@ -202,18 +195,35 @@ extension IMChatView: UITextViewDelegate {
 }
 
 public extension IMChatView {
+    /**
+     清除历史记录
+     */
     func cleanHistory() {
         messageTable.cleanHistory()
     }
     
+    /**
+     断开连接
+     */
     func disconnect() {
         messageTable.disconnect()
     }
     
+    
+    /**
+     配置连接
+     - parameters:
+        - config: 配置信息
+     */
     func buildConnection(config: UnifyDataConfig) {
         messageTable.build(config: config)
     }
     
+    /**
+     配置UI信息
+     - parameters:
+        - config: UI配置
+     */
     func buildUI(config: UnifyUIConfig) {
         
         if config.backgroundColor != nil {
