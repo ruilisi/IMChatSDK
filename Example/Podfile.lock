@@ -1,5 +1,5 @@
 PODS:
-  - IMChatSDK (1.1.4):
+  - IMChatSDK (1.1.5):
     - lottie-ios
     - Starscream
     - SwiftyJSON
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  IMChatSDK: 6b6b8b0f55b31df5e51d2a840577a4ee31b24dd2
+  IMChatSDK: cbc1e6d7439c50933dbbf676a50e303b5db5a95a
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
