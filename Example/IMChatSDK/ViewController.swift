@@ -43,7 +43,7 @@ class ViewController: UIViewController {
             .setSendBG(image: UIImage(named: "testImg"), edge: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
             .setReceiveBG(image: UIImage(named: "testImg2"), edge: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
         
-        self.chatView.buildUI(config: uiConfig)
+        chatView.buildUI(config: uiConfig)
         
         view.addSubview(chatView)
         
