@@ -16,6 +16,7 @@ open class UnifyDataConfig {
     var welcomText = "Welocm to the room!"
     var loadCount = 20
     var perCount = 10
+    var timespan = 600
     
     public init() {
     }
@@ -81,7 +82,6 @@ open class UnifyDataConfig {
         return self
     }
     
-    
     /**
      设置每次载入的历史数量
      - parameters:
@@ -89,6 +89,16 @@ open class UnifyDataConfig {
      */
     public func setPerLoadHistoryCount(count: Int) -> UnifyDataConfig {
         perCount = count
+        return self
+    }
+    
+    /**
+     设置显示时间的间隔时长
+     - parameters:
+        - timeinterval: 时长(秒)
+     */
+    public func setTimeSpan(timeinterval: Int) -> UnifyDataConfig {
+        timespan = timeinterval
         return self
     }
 }

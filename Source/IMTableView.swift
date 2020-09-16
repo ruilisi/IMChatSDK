@@ -183,16 +183,12 @@ class IMTableView: UIView {
     
     func needHide(timeInterval: Int) -> Bool {
         var hidetime = false
-        
         if cells.count >= 1 {
             let time = cells[cells.count - 1].timeInt
-            print("time1: \(timeInterval) - time2: \(time) = \(timeInterval - time)")
-            
-            if timeInterval - time < 10 {
+            if timeInterval - time < dataConfig.timespan {
                 hidetime = true
             }
         }
-        
         return hidetime
     }
     

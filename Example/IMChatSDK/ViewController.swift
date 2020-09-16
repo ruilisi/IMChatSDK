@@ -76,6 +76,7 @@ extension ViewController {
             .setWelcome(text: "你好")
             .setLoadHistoryCount(count: 7)
             .setPerLoadHistoryCount(count: 2)
+            .setTimeSpan(timeinterval: 60)
         
         self.chatView.buildConnection(config: dataconfig, onSuccess: {
             self.removeSpinner()
