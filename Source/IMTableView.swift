@@ -248,7 +248,7 @@ open class IMTableView: UIView {
 // MARK: - ACTIONS
 extension IMTableView {
     @objc private func refreshWeatherData(_ sender: Any) {
-        getHistory(type: .latest, count: 10)
+        getHistory(type: .latest, count: dataConfig.perCount)
     }
 }
 

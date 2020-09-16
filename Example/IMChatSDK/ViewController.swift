@@ -22,20 +22,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "客服聊天"
         if #available(iOS 11.0, *) {
             if let window = UIApplication.shared.keyWindow {
                 safeAreaTop = window.safeAreaInsets.top
                 safeAreaBottom = window.safeAreaInsets.bottom
             }
         }
-        let gradientLayer = CAGradientLayer.init()
-        gradientLayer.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
-        gradientLayer.colors = [UIColor(red: 34.color, green: 31.color, blue: 51.color, alpha: 1).cgColor, UIColor(red: 10.color, green: 10.color, blue: 26.color, alpha: 1).cgColor]
-        gradientLayer.locations = [0.5, 1]
-        gradientLayer.startPoint = CGPoint.init(x: 1, y: 0)
-        gradientLayer.endPoint = CGPoint.init(x: 1, y: 1)
-        view.layer.addSublayer(gradientLayer)
+        
+        view.backgroundColor = .gray
         
         chatView = IMChatView(frame: CGRect(x: 0, y: 20, width: screenWidth, height: screenHeight - 20))
         
@@ -80,7 +74,8 @@ extension ViewController {
             .setUserID(uid: "aYZNyFk9YAkvx5gSX")
             .setToken(token: "bJMFJEWqUPym2BjDPHWRarL6qgQ6EBRM-jKScr5Hmie")
             .setWelcome(text: "你好")
-            .setPreLoadHistoryCount(count: 10)
+            .setLoadHistoryCount(count: 7)
+            .setPerLoadHistoryCount(count: 2)
         
         self.chatView.buildConnection(config: dataconfig)
         
