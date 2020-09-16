@@ -156,9 +156,7 @@ class IMTableView: UIView {
         
         var hidetime = false
         
-        if !desc {
-            hidetime = needHide(timeInterval: Int(timeinterval))
-        }
+        hidetime = needHide(timeInterval: Int(timeinterval), desc: desc)
         
         cell.setContent(msgID: message.msgID, name: message.name, message: message.message, timeInterval: timeinterval, isSelf: message.bySelf, ishideTime: hidetime)
         
@@ -181,12 +179,19 @@ class IMTableView: UIView {
         messageTable.scrollToRow(at: IndexPath(row: !desc ? cells.count - 1 : 0, section: 0), at: !desc ? .bottom : .top, animated: true)
     }
     
-    func needHide(timeInterval: Int) -> Bool {
+    func needHide(timeInterval: Int, desc: Bool = false) -> Bool {
         var hidetime = false
         if cells.count >= 1 {
-            let time = cells[cells.count - 1].timeInt
-            if timeInterval - time < dataConfig.timespan {
-                hidetime = true
+            if !desc {
+                let time = cells[cells.count - 1].timeInt
+                if timeInterval - time < dataConfig.timespan {
+                    hidetime = true
+                }
+            } else {
+                let time = cells[0].timeInt
+                if time - timeInterval < dataConfig.timespan {
+                    hidetime = true
+                }
             }
         }
         return hidetime
