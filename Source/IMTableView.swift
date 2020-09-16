@@ -130,16 +130,11 @@ class IMTableView: UIView {
                 timeinterval = Date().timeIntervalSince1970
             }
             
-            cell.setContent(msgID: item.msgID, name: item.name, message: item.message, timeInterval: timeinterval, isSelf: item.bySelf)
+            let hidetime = needHide(timeInterval: Int(timeinterval))
+            
+            cell.setContent(msgID: item.msgID, name: item.name, message: item.message, timeInterval: timeinterval, isSelf: item.bySelf, ishideTime: hidetime)
             cell.setLoading(isLoading: false)
             cells.append(cell)
-            
-            if cells.count > 1 {
-                let times = cells[(cells.count - 2)..<cells.count].map{ $0.timeInt }
-                if times[1] - times[0] < 600 {
-                    cell.hideTime = true
-                }
-            }
         }
         messageTable.reloadData()
         
@@ -159,7 +154,13 @@ class IMTableView: UIView {
         cell.sendBG = sendBG
         cell.receiveBG = receiveBG
         
-        cell.setContent(msgID: message.msgID, name: message.name, message: message.message, timeInterval: timeinterval, isSelf: message.bySelf)
+        var hidetime = false
+        
+        if !desc {
+            hidetime = needHide(timeInterval: Int(timeinterval))
+        }
+        
+        cell.setContent(msgID: message.msgID, name: message.name, message: message.message, timeInterval: timeinterval, isSelf: message.bySelf, ishideTime: hidetime)
         
         if message.bySelf, send {
             cell.setLoading(isLoading: true)
@@ -169,14 +170,6 @@ class IMTableView: UIView {
         
         if !desc {
             cells.append(cell)
-            
-            if cells.count > 1 {
-                let times = cells[(cells.count - 2)..<cells.count].map{ $0.timeInt }
-                if times[1] - times[0] < 600 {
-                    cell.hideTime = true
-                }
-            }
-            
             messageTable.insertRows(at: [IndexPath(row: cells.count - 1, section: 0)], with: .automatic)
         } else {
             cells.insert(cell, at: 0)
@@ -186,6 +179,21 @@ class IMTableView: UIView {
         messageTable.endUpdates()
         
         messageTable.scrollToRow(at: IndexPath(row: !desc ? cells.count - 1 : 0, section: 0), at: !desc ? .bottom : .top, animated: true)
+    }
+    
+    func needHide(timeInterval: Int) -> Bool {
+        var hidetime = false
+        
+        if cells.count >= 1 {
+            let time = cells[cells.count - 1].timeInt
+            print("time1: \(timeInterval) - time2: \(time) = \(timeInterval - time)")
+            
+            if timeInterval - time < 10 {
+                hidetime = true
+            }
+        }
+        
+        return hidetime
     }
     
     // MARK: - 连接服务器
@@ -275,7 +283,8 @@ extension IMTableView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return cells[indexPath.row].bgimage.frame.height + 20
+        print("RowHeight: \(cells[indexPath.row].rowHeight)")
+        return cells[indexPath.row].rowHeight
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

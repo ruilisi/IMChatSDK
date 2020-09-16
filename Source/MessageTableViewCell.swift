@@ -28,16 +28,9 @@ class MessageTableViewCell: UITableViewCell {
     var sendEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     var receiveEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     
-    private var hideTimex: Bool = false
-    var hideTime: Bool {
-        get {
-            return hideTimex
-        }
-        set {
-            hideTimex = newValue
-            time.isHidden = newValue
-        }
-    }
+    var rowHeight = CGFloat()
+    
+    private var hideTime: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -75,7 +68,7 @@ class MessageTableViewCell: UITableViewCell {
     }
     
     // MARK: - Set Content
-    func setContent(msgID: String, name: String, message: String, timeInterval: TimeInterval, isSelf: Bool = false) {
+    func setContent(msgID: String, name: String, message: String, timeInterval: TimeInterval, isSelf: Bool = false, ishideTime: Bool = false) {
         messageID = msgID
         timeInt = Int(timeInterval)
         label.text = "\(message)"
@@ -89,18 +82,23 @@ class MessageTableViewCell: UITableViewCell {
         let bgWidth = labelWidth + 40
         let bgHeight = CGFloat.maximum(labelHeight + 24, 44)
         
-        self.frame = CGRect(x: 0, y: 0, width: windowWidth, height: bgHeight + 10)
-        
         print("size of :\"\(message)\" is : Width \(labelWidth) Height: \(labelHeight)")
         
         time.text = getTimeStringByCurrentDate(timeInterval: timeInterval)
         time.translatesAutoresizingMaskIntoConstraints = false
+        
+        hideTime = ishideTime
+        
+        if ishideTime {
+            self.time.isHidden = hideTime
+        }
         
         if !isSelf {
             bgimage.image = receiveBG?.resizableImage(withCapInsets: receiveEdge, resizingMode: .stretch)
             
             bgimage.frame = CGRect(x: 10, y: 0, width: bgWidth, height: bgHeight)
             label.frame = CGRect(x: 30, y: (bgimage.bounds.height - labelHeight) * 0.5, width: labelWidth, height: labelHeight)
+            rowHeight = bgimage.vHeight + 20.0
             
             self.addConstraints([
                 .init(item: time, attribute: .bottom, relatedBy: .equal, toItem: bgimage, attribute: .bottom, multiplier: 1, constant: 0),
@@ -110,6 +108,7 @@ class MessageTableViewCell: UITableViewCell {
             
             bgimage.frame = CGRect(x: windowWidth - bgWidth - 10, y: 0, width: bgWidth, height: bgHeight)
             label.frame = CGRect(x: bgimage.frame.origin.x + 20, y: (bgimage.bounds.height - labelHeight) * 0.5, width: labelWidth, height: labelHeight)
+            rowHeight = bgimage.vHeight + 20.0
             
             self.addConstraints([
                 .init(item: time, attribute: .bottom, relatedBy: .equal, toItem: bgimage, attribute: .bottom, multiplier: 1, constant: 0),
