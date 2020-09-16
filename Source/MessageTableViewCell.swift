@@ -42,7 +42,6 @@ class MessageTableViewCell: UITableViewCell {
         
         addSubview(bgimage)
         addSubview(label)
-        addSubview(time)
         addSubview(loadingLottie)
         loadingLottie.isHidden = true
         loadingLottie.loopMode = .loop
@@ -78,41 +77,35 @@ class MessageTableViewCell: UITableViewCell {
         
         let labelWidth = label.frame.width
         let labelHeight = label.frame.height
+        var timebottom: CGFloat = 0
         
         let bgWidth = labelWidth + 40
         let bgHeight = CGFloat.maximum(labelHeight + 24, 44)
         
         print("size of :\"\(message)\" is : Width \(labelWidth) Height: \(labelHeight)")
         
-        time.text = getTimeStringByCurrentDate(timeInterval: timeInterval)
-        time.translatesAutoresizingMaskIntoConstraints = false
-        
         hideTime = ishideTime
         
-        if ishideTime {
-            self.time.isHidden = hideTime
+        if !ishideTime {
+            addSubview(time)
+            time.text = getTimeStringByCurrentDate(timeInterval: timeInterval)
+            time.frame = CGRect(x: 0, y: 0, width: windowWidth, height: 15)
+            time.textAlignment = .center
+            timebottom = 17
         }
         
         if !isSelf {
             bgimage.image = receiveBG?.resizableImage(withCapInsets: receiveEdge, resizingMode: .stretch)
             
-            bgimage.frame = CGRect(x: 10, y: 0, width: bgWidth, height: bgHeight)
-            label.frame = CGRect(x: 30, y: (bgimage.bounds.height - labelHeight) * 0.5, width: labelWidth, height: labelHeight)
-            rowHeight = bgimage.vHeight + 20.0
-            
-            self.addConstraints([
-                .init(item: time, attribute: .bottom, relatedBy: .equal, toItem: bgimage, attribute: .bottom, multiplier: 1, constant: 0),
-                .init(item: time, attribute: .leading, relatedBy: .equal, toItem: bgimage, attribute: .trailing, multiplier: 1, constant: 10)])
+            bgimage.frame = CGRect(x: 10, y: timebottom, width: bgWidth, height: bgHeight)
+            label.frame = CGRect(x: 30, y: (bgimage.bounds.height - labelHeight) * 0.5 + timebottom, width: labelWidth, height: labelHeight)
+            rowHeight = bgimage.bottom + 20.0
         } else {
             bgimage.image = sendBG?.resizableImage(withCapInsets: sendEdge, resizingMode: .stretch)
             
-            bgimage.frame = CGRect(x: windowWidth - bgWidth - 10, y: 0, width: bgWidth, height: bgHeight)
-            label.frame = CGRect(x: bgimage.frame.origin.x + 20, y: (bgimage.bounds.height - labelHeight) * 0.5, width: labelWidth, height: labelHeight)
-            rowHeight = bgimage.vHeight + 20.0
-            
-            self.addConstraints([
-                .init(item: time, attribute: .bottom, relatedBy: .equal, toItem: bgimage, attribute: .bottom, multiplier: 1, constant: 0),
-                .init(item: time, attribute: .trailing, relatedBy: .equal, toItem: bgimage, attribute: .leading, multiplier: 1, constant: -10)])
+            bgimage.frame = CGRect(x: windowWidth - bgWidth - 10, y: timebottom, width: bgWidth, height: bgHeight)
+            label.frame = CGRect(x: bgimage.frame.origin.x + 20, y: (bgimage.bounds.height - labelHeight) * 0.5 + timebottom, width: labelWidth, height: labelHeight)
+            rowHeight = bgimage.bottom + 20.0
             
             loadingLottie.translatesAutoresizingMaskIntoConstraints = false
             self.addConstraints([
