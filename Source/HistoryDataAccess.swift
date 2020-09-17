@@ -38,7 +38,7 @@ class HistoryDataAccess {
         }
     }
     
-    static func insertMessage(message: MessageModel) {
+    static func appendMessage(message: MessageModel) {
         historyData.append(message)
         
         if historyData.count > 10 {
@@ -46,6 +46,12 @@ class HistoryDataAccess {
         }
         
         print("History Count: \(historyData.count)")
+    }
+    
+    static func insertMessage(messag: MessageModel) {
+        if historyData.count < 10 {
+            historyData.insert(messag, at: 0)
+        }
     }
     
     static func historyInitial() -> HistoryList {

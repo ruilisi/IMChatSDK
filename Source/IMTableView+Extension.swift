@@ -42,6 +42,8 @@ extension IMTableView: WebSocketDelegate {
             return
         } else {
             connectionToServer()
+
+            if let action = completeAction { action() }
             
             if lossConnect {
                 socket.getMissHistory(dataConfig.roomID, lossTimeInterval)
@@ -89,6 +91,7 @@ extension IMTableView: WebSocketDelegate {
         return
     }
     
+    // MARK: - 插入丢失新的信息
     func insertMissingMessage(list: [JSON]) {
         lossConnect = false
         lossTimeInterval = 0
@@ -104,7 +107,6 @@ extension IMTableView: WebSocketDelegate {
                 roomID: item["rid"].stringValue,
                 bySelf: item["u"]["_id"].stringValue == dataConfig.userID)
             datalist.append(message)
-            HistoryDataAccess.insertMessage(message: message)
         }
         
         let data = datalist.sorted {
@@ -115,6 +117,7 @@ extension IMTableView: WebSocketDelegate {
         
         for item in data {
             insertRow(message: item)
+            HistoryDataAccess.appendMessage(message: item)
         }
     }
     
@@ -134,37 +137,36 @@ extension IMTableView: WebSocketDelegate {
             datalist.append(message)
         }
         
-        if !HistoryDataAccess.historyData.isEmpty { // 拉取更多历史
-            if datalist.isEmpty {   //没有更多历史
-                refreshControl.endRefreshing()
-                return
-            }
-            
-            let data = datalist.sorted {
-                $0.timeInterval > $1.timeInterval
-            }
-            
-            for item in data {
-                insertRow(message: item, desc: true)
-            }
-            
-            refreshControl.endRefreshing()
-        } else {
-            if !datalist.isEmpty {
-                HistoryDataAccess.historyData = datalist.sorted {
-                    $0.timeInterval < $1.timeInterval
-                }
-            } else {
-                HistoryDataAccess.insertMessage(
-                    message: MessageModel(
-                        msgID: "",
-                        name: "",
-                        message: dataConfig.welcomText,
-                        timeInterval: Int(Date().timeIntervalSince1970) * 1000,
-                        roomID: dataConfig.roomID,
-                        bySelf: false))
-            }
-            historyLoad()
+        var data: [MessageModel] = []
+        
+        if datalist.isEmpty {
+            let defaultmessage = MessageModel(
+                msgID: "",
+                name: "",
+                message: dataConfig.welcomText,
+                timeInterval: Int(Date().timeIntervalSince1970) * 1000,
+                roomID: dataConfig.roomID,
+                bySelf: false)
+            data.append(defaultmessage)
+        }
+        
+        data = datalist.sorted {
+            $0.timeInterval > $1.timeInterval
+        }
+        
+        for item in data {
+            insertRow(message: item, desc: true)    //插入到第0行
+            HistoryDataAccess.insertMessage(messag: item)
+        }
+        
+        refreshControl.endRefreshing()
+        return
+    }
+    
+    // MARK: - 在第一行处插入信息
+    func insertHistory(data: [MessageModel]) {
+        for item in data {
+            insertRow(message: item)    //插入到第0行
         }
     }
     
@@ -190,7 +192,7 @@ extension IMTableView: WebSocketDelegate {
             sendingList.remove(at: index)
         }
         
-        HistoryDataAccess.insertMessage(message: message)
+        HistoryDataAccess.appendMessage(message: message)
         
         print("afterSendingList:\(sendingList)")
         //        rxSendingList.accept(sendingList)
@@ -213,7 +215,7 @@ extension IMTableView: WebSocketDelegate {
                     roomID: item["payload"]["rid"].stringValue,
                     bySelf: item["payload"]["sender"]["_id"].stringValue == dataConfig.userID)
                 
-                HistoryDataAccess.insertMessage(message: message)
+                HistoryDataAccess.appendMessage(message: message)
                 insertRow(message: message)
             }
         }

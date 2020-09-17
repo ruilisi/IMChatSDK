@@ -24,7 +24,6 @@ class IMTableView: UIView {
     var lossConnect: Bool = false
     var lossTimeInterval: Int = 0
     let refreshControl = UIRefreshControl()
-//    var historyDatas: [MessageModel] = []
     var cells: [MessageTableViewCell] = []
     var errorAction: (() -> Void)?
     var completeAction: (() -> Void)?
@@ -34,18 +33,6 @@ class IMTableView: UIView {
     var receiveBG = UIImage(named: "bgReceive", in: Resources.bundle, compatibleWith: nil)
     var sendEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     var receiveEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-//
-//    var historyData: [MessageModel] {
-//        get {
-//            return historyDatas
-//        }
-//
-//        set {
-//            historyDatas = newValue
-//            historyLoad()
-//        }
-//    }
-//
     var emptyHeight: CGFloat {
         get {
             return CGFloat.maximum(0, vHeight - messageTable.contentSize.height)
@@ -96,8 +83,10 @@ class IMTableView: UIView {
             HistoryDataAccess.historyData = []
         }
         
-        if !HistoryDataAccess.historyData.isEmpty {
-            historyLoad()
+        if !HistoryDataAccess.historyData.isEmpty, cells.isEmpty {
+            insertHistory(data: HistoryDataAccess.historyData)
+        } else {
+            
         }
         
         socket = WebSocketHelper(baseurl: dataConfig.baseUrl)
@@ -150,8 +139,6 @@ class IMTableView: UIView {
         messageTable.reloadData()
         
         guard !cells.isEmpty else { return }
-
-        if let complete = completeAction { complete() }
         
         messageTable.scrollToRow(at: IndexPath(row: cells.count - 1, section: 0), at: .none, animated: true)
     }
