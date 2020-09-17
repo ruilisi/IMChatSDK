@@ -92,6 +92,7 @@ class IMTableView: UIView {
         dataConfig = config
         
         if dataConfig.userID != HistoryDataAccess.userID {
+            HistoryDataAccess.userID = dataConfig.userID
             HistoryDataAccess.historyData = []
         }
         

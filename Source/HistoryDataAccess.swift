@@ -14,7 +14,7 @@ let USERKEY = "UserKey"
 class HistoryDataAccess {
     
     static private var historyDatas: HistoryList = historyInitial()
-    static var userID: String = useridInitial()
+    static private var userIDs: String = useridInitial()
     static var historyData: HistoryList {
         get {
             return historyDatas
@@ -24,6 +24,17 @@ class HistoryDataAccess {
             let data = try? JSONEncoder().encode(newValue)
             UserDefaults.standard.set(data, forKey: HISTORYKEY)
             historyDatas = newValue
+        }
+    }
+    
+    static var userID: String {
+        get {
+            return userIDs
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: USERKEY)
+            userIDs = newValue
         }
     }
     
