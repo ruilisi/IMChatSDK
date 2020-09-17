@@ -90,6 +90,10 @@ class IMTableView: UIView {
     func build(config: UnifyDataConfig) {
         dataConfig = config
         
+        if dataConfig.userID != HistoryDataAccess.userID {
+            HistoryDataAccess.historyData = []
+        }
+        
         if !HistoryDataAccess.historyData.isEmpty {
             historyLoad()
         }

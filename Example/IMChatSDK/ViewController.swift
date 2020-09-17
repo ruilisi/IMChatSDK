@@ -70,9 +70,9 @@ extension ViewController {
         
         let dataconfig = UnifyDataConfig()
             .setUrl(url: url)
-            .setRoomID(rid: "WjEe8fuy7tv3c33wvaYZNyFk9YAkvx5gSX")
-            .setUserID(uid: "aYZNyFk9YAkvx5gSX")
-            .setToken(token: "bJMFJEWqUPym2BjDPHWRarL6qgQ6EBRM-jKScr5Hmie")
+            .setRoomID(rid: "JfyzSJhC7iEkCbXneWjEe8fuy7tv3c33wv")
+            .setUserID(uid: "JfyzSJhC7iEkCbXne")
+            .setToken(token: "-m3aNdAN1kRpNVsPnXoVNm8R9i-SSy7sht9IqH1Xq3v")
             .setWelcome(text: "你好")
             .setLoadHistoryCount(count: 7)
             .setPerLoadHistoryCount(count: 2)
