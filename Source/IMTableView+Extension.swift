@@ -46,10 +46,12 @@ extension IMTableView: WebSocketDelegate {
             if lossConnect {
                 socket.getMissHistory(dataConfig.roomID, lossTimeInterval)
             } else {
-                getHistory(type: .none, count: dataConfig.loadCount)
+                if HistoryDataAccess.historyData.isEmpty {
+                    getHistory(type: .none, count: dataConfig.loadCount)
+                } else {
+                    socket.getMissHistory(dataConfig.roomID, HistoryDataAccess.historyData.last?.timeInterval ?? 0)
+                }
             }
-            
-            if let action = completeAction { action() }
             
             if !sendingList.isEmpty {
                 socket.sendMsg(sendingList[0][0], sendingList[0][1], dataConfig.roomID)
@@ -102,6 +104,7 @@ extension IMTableView: WebSocketDelegate {
                 roomID: item["rid"].stringValue,
                 bySelf: item["u"]["_id"].stringValue == dataConfig.userID)
             datalist.append(message)
+            HistoryDataAccess.insertMessage(message: message)
         }
         
         let data = datalist.sorted {
@@ -131,24 +134,7 @@ extension IMTableView: WebSocketDelegate {
             datalist.append(message)
         }
         
-        if historyData.isEmpty {
-            print("history count: \(historyData.count)")
-            if !datalist.isEmpty {
-                if let finish = completeAction { finish() }
-                historyData = datalist.sorted {
-                    $0.timeInterval < $1.timeInterval
-                }
-            } else {
-                historyData.append(
-                    MessageModel(
-                        msgID: "",
-                        name: "",
-                        message: dataConfig.welcomText,
-                        timeInterval: Int(Date().timeIntervalSince1970) * 1000,
-                        roomID: dataConfig.roomID,
-                        bySelf: false))
-            }
-        } else {    // 拉取更多历史
+        if !HistoryDataAccess.historyData.isEmpty { // 拉取更多历史
             if datalist.isEmpty {   //没有更多历史
                 refreshControl.endRefreshing()
                 return
@@ -163,6 +149,22 @@ extension IMTableView: WebSocketDelegate {
             }
             
             refreshControl.endRefreshing()
+        } else {
+            if !datalist.isEmpty {
+                HistoryDataAccess.historyData = datalist.sorted {
+                    $0.timeInterval < $1.timeInterval
+                }
+            } else {
+                HistoryDataAccess.insertMessage(
+                    message: MessageModel(
+                        msgID: "",
+                        name: "",
+                        message: dataConfig.welcomText,
+                        timeInterval: Int(Date().timeIntervalSince1970) * 1000,
+                        roomID: dataConfig.roomID,
+                        bySelf: false))
+            }
+            historyLoad()
         }
     }
     
@@ -182,9 +184,13 @@ extension IMTableView: WebSocketDelegate {
             roomID: msgjson["rid"].stringValue,
             bySelf: msgjson["u"]["_id"].stringValue == dataConfig.userID)
         
+        guard !message.msgID.isEmpty else { return }
+        
         if let index = sendingList.firstIndex(of: [message.msgID, message.message]) {
             sendingList.remove(at: index)
         }
+        
+        HistoryDataAccess.insertMessage(message: message)
         
         print("afterSendingList:\(sendingList)")
         //        rxSendingList.accept(sendingList)
@@ -207,6 +213,7 @@ extension IMTableView: WebSocketDelegate {
                     roomID: item["payload"]["rid"].stringValue,
                     bySelf: item["payload"]["sender"]["_id"].stringValue == dataConfig.userID)
                 
+                HistoryDataAccess.insertMessage(message: message)
                 insertRow(message: message)
             }
         }
@@ -216,7 +223,7 @@ extension IMTableView: WebSocketDelegate {
     func reconnectServer() {
         retryCount += 1
         print("Connection Faild, reconnecting: \(retryCount)")
-        historyDatas = []
+        HistoryDataAccess.historyData = []
         socket = WebSocketHelper(baseurl: dataConfig.baseUrl)
         socket.delegate = self
     }

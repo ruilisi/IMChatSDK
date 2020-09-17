@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         self.automaticallyAdjustsScrollViewInsets = false
         
         self.showSpinner(onView: self.view)
-        chatView.cleanHistory()
+//        chatView.cleanHistory()
         requestService()
         didDisapper = false
     }

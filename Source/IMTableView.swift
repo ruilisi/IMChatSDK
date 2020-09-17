@@ -24,7 +24,7 @@ class IMTableView: UIView {
     var lossConnect: Bool = false
     var lossTimeInterval: Int = 0
     let refreshControl = UIRefreshControl()
-    var historyDatas: [MessageModel] = []
+//    var historyDatas: [MessageModel] = []
     var cells: [MessageTableViewCell] = []
     var errorAction: (() -> Void)?
     var completeAction: (() -> Void)?
@@ -34,18 +34,18 @@ class IMTableView: UIView {
     var receiveBG = UIImage(named: "bgReceive", in: Resources.bundle, compatibleWith: nil)
     var sendEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     var receiveEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-    
-    var historyData: [MessageModel] {
-        get {
-            return historyDatas
-        }
-        
-        set {
-            historyDatas = newValue
-            historyLoad()
-        }
-    }
-    
+//
+//    var historyData: [MessageModel] {
+//        get {
+//            return historyDatas
+//        }
+//
+//        set {
+//            historyDatas = newValue
+//            historyLoad()
+//        }
+//    }
+//
     var emptyHeight: CGFloat {
         get {
             return CGFloat.maximum(0, vHeight - messageTable.contentSize.height)
@@ -89,6 +89,11 @@ class IMTableView: UIView {
     // MARK: - 初始化SOCKET
     func build(config: UnifyDataConfig) {
         dataConfig = config
+        
+        if !HistoryDataAccess.historyData.isEmpty {
+            historyLoad()
+        }
+        
         socket = WebSocketHelper(baseurl: dataConfig.baseUrl)
         socket.delegate = self
     }
@@ -114,10 +119,10 @@ class IMTableView: UIView {
     
     // MARK: - 载入历史
     func historyLoad() {
-        guard !historyData.isEmpty else { return }
+        guard !HistoryDataAccess.historyData.isEmpty else { return }
         self.cells = []
         
-        for item in historyDatas {
+        for item in HistoryDataAccess.historyData {
             let cell = MessageTableViewCell()
             
             cell.sendEdge = sendEdge
@@ -137,6 +142,10 @@ class IMTableView: UIView {
             cells.append(cell)
         }
         messageTable.reloadData()
+        
+        guard !cells.isEmpty else { return }
+
+        if let complete = completeAction { complete() }
         
         messageTable.scrollToRow(at: IndexPath(row: cells.count - 1, section: 0), at: .none, animated: true)
     }
@@ -260,7 +269,7 @@ class IMTableView: UIView {
     
     // MARK: - 清空历史
     func cleanHistory() {
-        historyData = []
+        HistoryDataAccess.historyData = []
         cells = []
         self.messageTable.reloadData()
     }

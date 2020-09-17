@@ -218,9 +218,9 @@ public extension IMChatView {
         - onFailer: 连接失败回调
      */
     func buildConnection(config: UnifyDataConfig, onSuccess: (() -> Void)? = nil, onFailer: (() -> Void)? = nil) {
-        messageTable.build(config: config)
-        completeAction = onSuccess
+        messageTable.completeAction = onSuccess
         messageTable.errorAction = onFailer
+        messageTable.build(config: config)
     }
     
     /**
