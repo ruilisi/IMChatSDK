@@ -88,7 +88,7 @@ class IMTableView: UIView {
     
     // MARK: - 初始化SOCKET
     func build(config: UnifyDataConfig) {
-        guard socket.isConnected else { return }
+        guard !socket.isConnected else { return }
         dataConfig = config
         
         if dataConfig.userID != HistoryDataAccess.userID {
