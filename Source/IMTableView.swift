@@ -77,7 +77,6 @@ class IMTableView: UIView {
     func build(config: UnifyDataConfig) {
         guard !socket.isConnected else { return }
         dataConfig = config
-        
         if HistoryDataAccess.userID != dataConfig.userID {
             HistoryDataAccess.userID = dataConfig.userID
             HistoryDataAccess.historyData = []
