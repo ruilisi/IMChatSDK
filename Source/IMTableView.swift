@@ -78,15 +78,16 @@ class IMTableView: UIView {
         guard !socket.isConnected else { return }
         dataConfig = config
         
-        if dataConfig.userID != HistoryDataAccess.userID {
+        if HistoryDataAccess.userID != dataConfig.userID {
             HistoryDataAccess.userID = dataConfig.userID
             HistoryDataAccess.historyData = []
-        }
-        
-        if !HistoryDataAccess.historyData.isEmpty, cells.isEmpty {
-            insertHistory(data: HistoryDataAccess.historyData)
-        } else {
-            
+            cleanHistory()
+        } else if !HistoryDataAccess.historyData.isEmpty {
+            if cells.isEmpty {
+                insertHistory(data: HistoryDataAccess.historyData)
+            } else {
+                if let action = completeAction { action() }
+            }
         }
         
         socket = WebSocketHelper(baseurl: dataConfig.baseUrl)

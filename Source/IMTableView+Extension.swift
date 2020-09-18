@@ -41,10 +41,13 @@ extension IMTableView: WebSocketDelegate {
             if let error = errorAction { error() }
             return
         } else {
-            connectionToServer()
 
-            if let action = completeAction { action() }
+            if let action = completeAction {
+                print("Connect Complete")
+                action()
+            }
             
+            connectionToServer()
             if lossConnect {
                 socket.getMissHistory(dataConfig.roomID, lossTimeInterval)
             } else {
