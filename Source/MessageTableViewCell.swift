@@ -125,7 +125,7 @@ class MessageTableViewCell: UITableViewCell {
         if calender.isDateInYesterday(dateVar) {
             dateFormatter.dateFormat = "昨天 hh:mm"
         } else if calender.isDateInToday(dateVar) {
-            dateFormatter.dateFormat = "今天 hh:mm"
+            dateFormatter.dateFormat = "今天 hh:mm:ss"
         } else {
             dateFormatter.dateFormat = "yyyy年MM月dd日"
         }

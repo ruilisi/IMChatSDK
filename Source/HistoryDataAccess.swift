@@ -41,7 +41,7 @@ class HistoryDataAccess {
     static func appendMessage(message: MessageModel) {
         historyData.append(message)
         
-        if historyData.count > 10 {
+        if historyData.count > 100 {
             historyData.remove(at: 0)
         }
         
@@ -49,7 +49,7 @@ class HistoryDataAccess {
     }
     
     static func insertMessage(messag: MessageModel) {
-        if historyData.count < 10 {
+        if historyData.count < 100 {
             historyData.insert(messag, at: 0)
         }
     }

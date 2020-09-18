@@ -31,10 +31,27 @@ extension IMTableView: WebSocketDelegate {
         case .error(let error):
             socket.isConnected = false
             handleError(error)
+        case .viabilityChanged(let state):
+            viabilityChange(state: state)
         default:
             break
         }
     }
+    
+    func viabilityChange(state: Bool) {
+        print("WebSocket State:\(state)")
+        if !state {
+            lossConnect = true
+            if lossTimeInterval == 0 {
+                lossTimeInterval = Int(Date().timeIntervalSince1970) * 1000
+            }
+        } else {
+            if lossConnect {
+                connectionToServer()
+            }
+        }
+    }
+    
     // MARK: - 成功连接
     func connected() {
         if socket.socket == nil {
@@ -171,6 +188,9 @@ extension IMTableView: WebSocketDelegate {
         for item in data {
             insertRow(message: item)    //插入到第0行
         }
+        
+//        messageTable.scrollToRow(at: IndexPath(row: cells.count - 1, section: 0), at: .bottom, animated: true)
+        messageTable.scrollToBottom(animated: true)
     }
     
     func sendNext() {
@@ -228,18 +248,19 @@ extension IMTableView: WebSocketDelegate {
     func reconnectServer() {
         retryCount += 1
         print("Connection Faild, reconnecting: \(retryCount)")
-        HistoryDataAccess.historyData = []
         socket = WebSocketHelper(baseurl: dataConfig.baseUrl)
         socket.delegate = self
     }
     // MARK: - 处理异常
     func handleError(_ error: Error?) {
-        
+        print("WebSocket Error: \(error)")
         guard let err = error else { return }
         let errordata = err as NSError
         print("IM Error Message Code: \"\(errordata.code)\", Reason: \"\(errordata.localizedFailureReason ?? "nil")\"")
         
-        if let action = errorAction { action() }
+        if ![0, 1, 2, 3].contains(errordata.code) {
+            if let action = errorAction { action() }
+        }
         
         if errordata.code == 50 {
             lossConnect = true

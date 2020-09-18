@@ -305,6 +305,8 @@ extension IMTableView: UITableViewDelegate, UITableViewDataSource {
 
 extension UIScrollView {
     func scrollToBottom(animated: Bool) {
+        self.setNeedsLayout()
+        self.layoutIfNeeded()
         var originy: CGFloat = 0.0
         let height = self.frame.size.height
         if self.contentSize.height > height {
