@@ -259,7 +259,7 @@ extension IMTableView: WebSocketDelegate {
         print("IM Error Message Code: \"\(errordata.code)\", Reason: \"\(errordata.localizedFailureReason ?? "nil")\"")
         
         if ![0, 1, 2, 3].contains(errordata.code) {
-            if let action = errorAction { action() }
+//            if let action = errorAction { action() }
         }
         
         if errordata.code == 50 {
