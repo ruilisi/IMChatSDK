@@ -22,6 +22,7 @@ class IMTableView: UIView {
     var retryCount = 0
     var sendingList: [[String]] = []
     var lossConnect: Bool = false
+    var isAlive: Bool = false
     var lossTimeInterval: Int = 0
     let refreshControl = UIRefreshControl()
     var cells: [MessageTableViewCell] = []
@@ -75,8 +76,9 @@ class IMTableView: UIView {
     
     // MARK: - 初始化SOCKET
     func build(config: UnifyDataConfig) {
-        guard !socket.isConnected else { return }
         dataConfig = config
+        isAlive = true
+        print("isAlive: \(isAlive)")
         if HistoryDataAccess.userID != dataConfig.userID {
             HistoryDataAccess.userID = dataConfig.userID
             HistoryDataAccess.historyData = []

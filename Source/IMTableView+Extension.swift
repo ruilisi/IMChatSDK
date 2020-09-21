@@ -83,6 +83,8 @@ extension IMTableView: WebSocketDelegate {
     
     // MARK: - 连接失败
     func disconnect() {
+        isAlive = false
+        print("isAlive:\(isAlive)")
         socket.disconnectFromServer()
     }
     
@@ -183,14 +185,14 @@ extension IMTableView: WebSocketDelegate {
         return
     }
     
-    // MARK: - 在第一行处插入信息
+    // MARK: - 插入历史消息
     func insertHistory(data: [MessageModel]) {
         for item in data {
             insertRow(message: item)    //插入到第0行
         }
         
-//        messageTable.scrollToRow(at: IndexPath(row: cells.count - 1, section: 0), at: .bottom, animated: true)
-        messageTable.scrollToBottom(animated: true)
+        messageTable.scrollToRow(at: IndexPath(row: cells.count - 1, section: 0), at: .bottom, animated: true)
+//        messageTable.scrollToBottom(animated: true)
     }
     
     func sendNext() {
@@ -262,10 +264,6 @@ extension IMTableView: WebSocketDelegate {
 //            if let action = errorAction { action() }
         }
         
-        if #available(iOS 11.0, *) {
-            print("IOS 11.0")
-        }
-        
         if errordata.code == 50 {
             lossConnect = true
             
@@ -273,6 +271,8 @@ extension IMTableView: WebSocketDelegate {
                 lossTimeInterval = Int(Date().timeIntervalSince1970) * 1000
             }
         }
+        
+        guard isAlive else { return }
         
         let seconds = 1.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
