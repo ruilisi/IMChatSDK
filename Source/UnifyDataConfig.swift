@@ -14,51 +14,45 @@ open class UnifyDataConfig {
     var userID = String()
     var userToken = String()
     var welcomText = "Welocm to the room!"
+    var wait = 0
     var loadCount = 20
     var perCount = 10
     var timespan = 600
     
+    var apiKey = String()
+    var departmentid = String()
+    var username = String()
+    
     public init() {
     }
     
-    
     /**
-     设置服务端地址
+     设置API Key
      - parameters:
-        - url: 服务端地址(wss://.../websocket)
+        - key: API Key
      */
-    public func setUrl(url: String) -> UnifyDataConfig {
-        baseUrl = url
+    public func setApiKey(key: String) -> UnifyDataConfig {
+        apiKey = key
         return self
     }
     
     /**
-     设置服务坐席ID
+     设置部门ID
      - parameters:
-        - rid: 坐席编号
+        - did: 部门ID
      */
-    public func setRoomID(rid: String) -> UnifyDataConfig {
-        roomID = rid
+    public func setDepartmentID(did: String) -> UnifyDataConfig {
+        departmentid = did
         return self
     }
     
     /**
-     设置用户的唯一ID
+     设置用户的名称
      - parameters:
-        - uid: 用户ID
+        - uname: 用户名称
      */
-    public func setUserID(uid: String) -> UnifyDataConfig {
-        userID = uid
-        return self
-    }
-    
-    /**
-     设置用户的Token
-     - parameters:
-        - token: 用户Token
-     */
-    public func setToken(token: String) -> UnifyDataConfig {
-        userToken = token
+    public func setUserName(uname: String) -> UnifyDataConfig {
+        username = uname
         return self
     }
     

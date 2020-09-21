@@ -4,4 +4,10 @@ extension String {
         let endIndex = self.index(startIndex, offsetBy: 1)
         return String(self[startIndex..<endIndex])
     }
+    
+    var webSocketURL: String {
+        var url = self.replacingOccurrences(of: "https://", with: "wss://")
+        url += "/websocket"
+        return url
+    }
 }

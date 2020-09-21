@@ -79,6 +79,28 @@ class IMTableView: UIView {
         dataConfig = config
         isAlive = true
         print("isAlive: \(isAlive)")
+        
+        HttpUtil.post("https://api.chatsdk.io/customers/client_connect",
+                     params: ["name": config.username,
+                              "api_key": config.apiKey,
+                              "department_id": config.departmentid],
+                     header: [:],
+                     onFailure: { value in
+                        print(value)
+        },
+                     onSuccess: { value in
+                        print(value)
+                        
+                        self.dataConfig.baseUrl = value["base"].stringValue.webSocketURL
+                        self.dataConfig.userToken = value["token"].stringValue
+                        self.dataConfig.roomID = value["rid"].stringValue
+                        self.dataConfig.userID = value["id"].stringValue
+                        self.dataConfig.wait = value["wait"].intValue
+                        self.connectToWebSocket()
+        })
+    }
+    
+    func connectToWebSocket() {
         if HistoryDataAccess.userID != dataConfig.userID {
             HistoryDataAccess.userID = dataConfig.userID
             HistoryDataAccess.historyData = []
