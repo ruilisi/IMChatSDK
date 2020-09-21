@@ -27,12 +27,16 @@
     ],
     "SwiftyJSON": [
 
+    ],
+    "Alamofire": [
+      "4.8.0"
     ]
   },
   "swift_versions": "5.0",
   "source_files": [
     "Source/Core/*.{swift}",
-    "Source/*.{swift}"
+    "Source/*.{swift}",
+    "Source/Http/*.{swift}"
   ],
   "resource_bundles": {
     "IMChatSDK": [
