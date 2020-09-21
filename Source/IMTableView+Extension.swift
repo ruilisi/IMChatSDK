@@ -262,6 +262,10 @@ extension IMTableView: WebSocketDelegate {
 //            if let action = errorAction { action() }
         }
         
+        if #available(iOS 11.0, *) {
+            print("IOS 11.0")
+        }
+        
         if errordata.code == 50 {
             lossConnect = true
             

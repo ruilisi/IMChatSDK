@@ -45,6 +45,7 @@ class MessageTableViewCell: UITableViewCell {
         addSubview(loadingLottie)
         loadingLottie.isHidden = true
         loadingLottie.loopMode = .loop
+        loadingLottie.backgroundBehavior = .pauseAndRestore
         
         selectionStyle = .none
         
@@ -125,7 +126,7 @@ class MessageTableViewCell: UITableViewCell {
         if calender.isDateInYesterday(dateVar) {
             dateFormatter.dateFormat = "昨天 hh:mm"
         } else if calender.isDateInToday(dateVar) {
-            dateFormatter.dateFormat = "今天 hh:mm:ss"
+            dateFormatter.dateFormat = "今天 hh:mm"
         } else {
             dateFormatter.dateFormat = "yyyy年MM月dd日"
         }

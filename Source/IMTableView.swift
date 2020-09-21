@@ -82,10 +82,9 @@ class IMTableView: UIView {
             HistoryDataAccess.historyData = []
             cleanHistory()
         } else if !HistoryDataAccess.historyData.isEmpty {
+            if let action = completeAction { action() }
             if cells.isEmpty {
                 insertHistory(data: HistoryDataAccess.historyData)
-            } else {
-                if let action = completeAction { action() }
             }
         }
         
