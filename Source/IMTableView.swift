@@ -170,7 +170,7 @@ class IMTableView: UIView {
     }
     
     // MARK: - 插入行
-    func insertRow(message: MessageModel, desc: Bool = false, send: Bool = false) {
+    func insertRow(message: MessageModel, desc: Bool = false, send: Bool = false, needhide: Bool = true) {
         let cell = MessageTableViewCell()
         var timeinterval = TimeInterval(message.timeInterval / 1000)
         if message.timeInterval == 0 {
@@ -184,7 +184,7 @@ class IMTableView: UIView {
         
         var hidetime = false
         
-        hidetime = needHide(timeInterval: Int(timeinterval), desc: desc)
+        hidetime = !needhide ? needhide : needHide(timeInterval: Int(timeinterval), desc: desc)
         
         cell.setContent(msgID: message.msgID, name: message.name, message: message.message, timeInterval: timeinterval, isSelf: message.bySelf, ishideTime: hidetime)
         

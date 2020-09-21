@@ -180,8 +180,8 @@ extension IMTableView: WebSocketDelegate {
             }
         }
         
-        for item in data {
-            insertRow(message: item, desc: true)    //插入到第0行
+        for (index, item) in data.enumerated() {
+            insertRow(message: item, desc: true, needhide: index != data.count - 1)    //插入到第0行
             HistoryDataAccess.insertMessage(messag: item)
         }
         
