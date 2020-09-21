@@ -63,15 +63,18 @@ class IMTableView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(messageTable)
-        messageTable.refreshControl = refreshControl
         messageTable.translatesAutoresizingMaskIntoConstraints = false
-        refreshControl.addTarget(self, action: #selector(refreshWeatherData(_:)), for: .valueChanged)
         self.addConstraints([
             .init(item: messageTable, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0),
             .init(item: messageTable, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0),
             .init(item: messageTable, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 1, constant: 0),
             .init(item: messageTable, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 1, constant: 0)])
         setTable()
+    }
+    
+    func setRefresh() {
+        messageTable.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshWeatherData(_:)), for: .valueChanged)
     }
     
     // MARK: - 初始化SOCKET

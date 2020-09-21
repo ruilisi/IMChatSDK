@@ -110,6 +110,10 @@ extension IMTableView: WebSocketDelegate {
             receiveMessage(data: data)
         }
         
+        if type == "pong" {
+            setRefresh()
+        }
+        
         return
     }
     
@@ -161,7 +165,7 @@ extension IMTableView: WebSocketDelegate {
         
         var data: [MessageModel] = []
         
-        if datalist.isEmpty {
+        if datalist.isEmpty, cells.isEmpty {
             let defaultmessage = MessageModel(
                 msgID: "",
                 name: "",
