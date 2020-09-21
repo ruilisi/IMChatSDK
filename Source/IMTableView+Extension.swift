@@ -170,10 +170,10 @@ extension IMTableView: WebSocketDelegate {
                 roomID: dataConfig.roomID,
                 bySelf: false)
             data.append(defaultmessage)
-        }
-        
-        data = datalist.sorted {
-            $0.timeInterval > $1.timeInterval
+        } else {
+            data = datalist.sorted {
+                $0.timeInterval > $1.timeInterval
+            }
         }
         
         for item in data {
