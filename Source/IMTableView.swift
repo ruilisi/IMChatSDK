@@ -84,7 +84,7 @@ class IMTableView: UIView {
         print("isAlive: \(isAlive)")
         
         // 用户不一致，token过期
-        if dataConfig.username != HistoryDataAccess.userName || timeNow - HistoryDataAccess.timeRecord > 10000 {
+        if dataConfig.username != HistoryDataAccess.userName || timeNow - HistoryDataAccess.timeRecord > 10000000 {
             getData()
         } else {
             connectToWebSocket()
