@@ -125,7 +125,7 @@ private extension IMChatView {
 
 extension IMChatView {
     @objc func sendMsg() {
-        if let msg = textView.text {
+        if let msg = textView.text, !msg.isEmpty {
             messageTable.sendMessage(message: msg)
             self.textView.text = ""
             self.textViewDidChange(textView)
@@ -153,6 +153,7 @@ extension IMChatView {
         
         UIView.animate(withDuration: 0.1, animations: {
             self.bottomView.originY = self.frame.height - self.bottomView.vHeight - tmp - (tmp > 0 ? 0 : self.safeareaBottom)
+            self.layoutIfNeeded()
         })
     }
 }
