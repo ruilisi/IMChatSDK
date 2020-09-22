@@ -83,10 +83,16 @@ class IMTableView: UIView {
         isAlive = true
         print("isAlive: \(isAlive)")
         
+        if config.username != HistoryDataAccess.userName {
+            getData()
+        }
+    }
+    
+    func getData() {
         HttpUtil.post("https://api.chatsdk.io/customers/client_connect",
-                     params: ["name": config.username,
-                              "api_key": config.apiKey,
-                              "department_id": config.departmentid],
+                     params: ["name": dataConfig.username,
+                              "api_key": dataConfig.apiKey,
+                              "department_id": dataConfig.departmentid],
                      header: [:],
                      onFailure: { value in
                         print(value)

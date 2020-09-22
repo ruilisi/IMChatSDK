@@ -8,13 +8,18 @@
 import Foundation
 
 typealias HistoryList = [MessageModel]
-let HISTORYKEY = "HistoryKey"
-let USERKEY = "UserKey"
+let HISTORYKEY = "CHAT.HistoryKey"
+let USERKEY = "CHAT.UserKey"
+let USERNAME = "CHAT.UserName"
+let TIMEKEY = "CHAT.TimeKey"
 
 class HistoryDataAccess {
     
     static private var historyDatas: HistoryList = historyInitial()
     static private var userIDs: String = useridInitial()
+    static private var userNames: String = usernameInitial()
+    static private var timeRecords: Int = timerecordInitial()
+    
     static var historyData: HistoryList {
         get {
             return historyDatas
@@ -35,6 +40,28 @@ class HistoryDataAccess {
         set {
             UserDefaults.standard.set(newValue, forKey: USERKEY)
             userIDs = newValue
+        }
+    }
+    
+    static var userName: String {
+        get {
+            return userNames
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: USERNAME)
+            userNames = newValue
+        }
+    }
+    
+    static var timeRecord: Int {
+        get {
+            return timeRecords
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: TIMEKEY)
+            timeRecords = newValue
         }
     }
     
@@ -63,5 +90,15 @@ class HistoryDataAccess {
     static func useridInitial() -> String {
         guard let userID = UserDefaults.standard.string(forKey: USERKEY) else { return "" }
         return userID
+    }
+    
+    static func usernameInitial() -> String {
+        guard let userName = UserDefaults.standard.string(forKey: USERNAME) else { return "" }
+        return userName
+    }
+    
+    static func timerecordInitial() -> Int {
+        let tick = UserDefaults.standard.integer(forKey: TIMEKEY)
+        return tick
     }
 }
