@@ -9,14 +9,12 @@ import Foundation
 
 typealias HistoryList = [MessageModel]
 let HISTORYKEY = "CHAT.HistoryKey"
-let USERKEY = "CHAT.UserKey"
 let USERNAME = "CHAT.UserName"
 let TIMEKEY = "CHAT.TimeKey"
 
 class HistoryDataAccess {
     
     static private var historyDatas: HistoryList = historyInitial()
-    static private var userIDs: String = useridInitial()
     static private var userNames: String = usernameInitial()
     static private var timeRecords: Int = timerecordInitial()
     
@@ -29,17 +27,6 @@ class HistoryDataAccess {
             let data = try? JSONEncoder().encode(newValue)
             UserDefaults.standard.set(data, forKey: HISTORYKEY)
             historyDatas = newValue
-        }
-    }
-    
-    static var userID: String {
-        get {
-            return userIDs
-        }
-        
-        set {
-            UserDefaults.standard.set(newValue, forKey: USERKEY)
-            userIDs = newValue
         }
     }
     
@@ -85,11 +72,6 @@ class HistoryDataAccess {
         guard let data = UserDefaults.standard.data(forKey: HISTORYKEY) else { return [] }
         guard let historyList = try? JSONDecoder().decode(HistoryList.self, from: data) else { return [] }
         return historyList
-    }
-    
-    static func useridInitial() -> String {
-        guard let userID = UserDefaults.standard.string(forKey: USERKEY) else { return "" }
-        return userID
     }
     
     static func usernameInitial() -> String {

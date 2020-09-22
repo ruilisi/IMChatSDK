@@ -83,8 +83,11 @@ class IMTableView: UIView {
         isAlive = true
         print("isAlive: \(isAlive)")
         
-        if config.username != HistoryDataAccess.userName {
+        // 用户不一致，token过期
+        if dataConfig.username != HistoryDataAccess.userName || timeNow - HistoryDataAccess.timeRecord > 10000 {
             getData()
+        } else {
+            connectToWebSocket()
         }
     }
     
@@ -99,22 +102,26 @@ class IMTableView: UIView {
         },
                      onSuccess: { value in
                         print(value)
+                        HistoryDataAccess.userName = self.dataConfig.username
+                        
+                        // 用户变更
+                        if value["id"].stringValue != self.dataConfig.userID {
+                            HistoryDataAccess.historyData = []
+                            self.cleanHistory()
+                        }
                         
                         self.dataConfig.baseUrl = value["base"].stringValue.webSocketURL
                         self.dataConfig.userToken = value["token"].stringValue
                         self.dataConfig.roomID = value["rid"].stringValue
                         self.dataConfig.userID = value["id"].stringValue
                         self.dataConfig.wait = value["wait"].intValue
+                        HistoryDataAccess.timeRecord = timeNow
                         self.connectToWebSocket()
         })
     }
     
     func connectToWebSocket() {
-        if HistoryDataAccess.userID != dataConfig.userID {
-            HistoryDataAccess.userID = dataConfig.userID
-            HistoryDataAccess.historyData = []
-            cleanHistory()
-        } else if !HistoryDataAccess.historyData.isEmpty {
+        if !HistoryDataAccess.historyData.isEmpty {
             if let action = completeAction { action() }
             if cells.isEmpty {
                 insertHistory(data: HistoryDataAccess.historyData)

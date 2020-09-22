@@ -8,11 +8,13 @@
 
 import Foundation
 
+let URLKEY = "CHAT.UrlKey"
+let USERKEY = "CHAT.UserKey"
+let ROOMKEY = "CHAT.RoomKey"
+let TOKENKEY = "CHAT.TokenKey"
+
 open class UnifyDataConfig {
-    var baseUrl = String()
-    var roomID = String()
-    var userID = String()
-    var userToken = String()
+    
     var welcomText = "Welocm to the room!"
     var wait = 0
     var loadCount = 20
@@ -22,6 +24,43 @@ open class UnifyDataConfig {
     var apiKey = String()
     var departmentid = String()
     var username = String()
+    
+    var baseUrl: String {
+        get {
+            return urlInitial()
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: URLKEY)
+        }
+    }
+    var roomID: String {
+        get {
+            return roomInitial()
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: ROOMKEY)
+        }
+    }
+    var userToken: String {
+        get {
+            return tokenInitial()
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: TOKENKEY)
+        }
+    }
+    var userID: String {
+        get {
+            return userIDInitial()
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: USERKEY)
+        }
+    }
     
     public init() {
     }
@@ -94,5 +133,25 @@ open class UnifyDataConfig {
     public func setTimeSpan(timeinterval: Int) -> UnifyDataConfig {
         timespan = timeinterval
         return self
+    }
+    
+    private func urlInitial() -> String {
+        guard let url = UserDefaults.standard.string(forKey: URLKEY) else { return "" }
+        return url
+    }
+    
+    private func roomInitial() -> String {
+        guard let rid = UserDefaults.standard.string(forKey: ROOMKEY) else { return "" }
+        return rid
+    }
+    
+    private func tokenInitial() -> String {
+        guard let token = UserDefaults.standard.string(forKey: TOKENKEY) else { return "" }
+        return token
+    }
+    
+    private func userIDInitial() -> String {
+        guard let token = UserDefaults.standard.string(forKey: USERKEY) else { return "" }
+        return token
     }
 }
