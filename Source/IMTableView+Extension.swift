@@ -224,6 +224,7 @@ extension IMTableView: WebSocketDelegate {
         HistoryDataAccess.appendMessage(message: message)
         
         print("afterSendingList:\(sendingList)")
+        print("send Complete- ts:\(msgjson["ts"]["$date"].intValue), update:\(msgjson["_updatedAt"]["$date"].intValue), difference:\(msgjson["ts"]["$date"].intValue - msgjson["_updatedAt"]["$date"].intValue)")
         //        rxSendingList.accept(sendingList)
         sendNext()
         

@@ -24,6 +24,9 @@ open class IMChatView: UIView {
     var safeareaTop = CGFloat()
     var safeareaBottom = CGFloat()
     
+    var selfY = CGFloat()
+    var animtp = 0
+    
     private var placeHoderColor: UIColor = .lightGray
     private var textColor: UIColor = .white
     
@@ -40,6 +43,7 @@ open class IMChatView: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
+        selfY = frame.origin.y        
         if #available(iOS 11.0, *) {
             if let window = UIApplication.shared.keyWindow {
                 safeareaTop = window.safeAreaInsets.top
@@ -85,7 +89,7 @@ private extension IMChatView {
         bottomView.backgroundColor = .clear
         bottomHeight = bottomView.vHeight
         
-        bottomSafeArea.frame = CGRect(x: 0, y: frame.height - bottomViewHeight - safeareaBottom, width: frame.width, height: safeareaBottom + bottomViewHeight)
+        bottomSafeArea.frame = CGRect(x: 0, y: frame.height - bottomViewHeight - safeareaBottom, width: bottomViewWidth, height: safeareaBottom + bottomViewHeight)
         bottomSafeArea.backgroundColor = .clear
         
         textviewHeight = bottomViewHeight * 0.66
@@ -139,20 +143,36 @@ extension IMChatView {
     
     @objc func keyboardNotification(notification: NSNotification) {
         var tmp: CGFloat = 0
+        var keyboardH: CGFloat = 0
         //UIKeyboardFrameEndUserInfoKey
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let endFrameY = keyboardRectangle.origin.y
+            keyboardH = keyboardRectangle.size.height
             
             if endFrameY >= UIScreen.main.bounds.size.height {
                 tmp = 0.0
             } else {
-                tmp = keyboardRectangle.size.height
+                tmp = keyboardH
             }
         }
         
         UIView.animate(withDuration: 0.1, animations: {
-            self.bottomView.originY = self.frame.height - self.bottomView.vHeight - tmp - (tmp > 0 ? 0 : self.safeareaBottom)
+            
+            guard self.messageTable.contentHeight + self.messageTable.viewHeight != 0 else { return }
+            if self.messageTable.contentHeight < self.messageTable.viewHeight - keyboardH || self.animtp == 1 {
+                
+                self.bottomView.originY = self.frame.height - self.bottomView.vHeight - tmp - (tmp > 0 ? 0 : self.safeareaBottom)
+                
+                if tmp == 0 {
+                    self.animtp = 0
+                } else {
+                    self.animtp = 1
+                }
+            } else {
+                self.originY =  self.selfY - tmp
+            }
+            
             self.layoutIfNeeded()
         })
     }

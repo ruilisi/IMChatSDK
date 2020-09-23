@@ -40,6 +40,17 @@ class IMTableView: UIView {
         }
     }
     
+    var contentHeight: CGFloat {
+        messageTable.layoutIfNeeded()
+
+        return messageTable.contentSize.height
+    }
+    
+    var viewHeight: CGFloat {
+        self.layoutIfNeeded()
+        return self.vHeight
+    }
+    
     var bgColor: UIColor? {
         get {
             return messageTable.backgroundColor
