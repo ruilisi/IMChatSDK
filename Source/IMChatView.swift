@@ -170,7 +170,7 @@ extension IMChatView {
                     self.animtp = 1
                 }
             } else {
-                self.originY =  self.selfY - tmp
+                self.originY =  self.selfY - tmp + (tmp > 0 ? self.safeareaBottom : 0)
             }
             
             self.layoutIfNeeded()

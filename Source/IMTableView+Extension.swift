@@ -57,9 +57,9 @@ extension IMTableView: WebSocketDelegate {
         if let value = token {
             dataConfig.userToken = value
         }
-        socket.connectServer()
-        socket.loginServer(dataConfig.userToken)
-        socket.subServer(createID(), dataConfig.roomID)
+        socket.connectServer(config: dataConfig)
+        socket.loginServer()
+        socket.subServer()
     }
     
     // MARK: - 成功连接
