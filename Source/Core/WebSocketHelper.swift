@@ -101,8 +101,8 @@ open class WebSocketHelper {
         guard let websocket = socket else { return }
         let dict = ["id": id,
                     "msg": "sub",
-                    "name": "stream-notify-user",
-                    "params": ["\(myID)/notification", [
+                    "name": "stream-room-messages",
+                    "params": ["\(myID)", [
                         "args": [],
                         "useCollection": false
                         ]]] as [String: Any]

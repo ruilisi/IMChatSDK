@@ -52,6 +52,16 @@ extension IMTableView: WebSocketDelegate {
         }
     }
     
+    // MARK: - 连接服务器
+    func connectionToServer(token: String? = nil) {
+        if let value = token {
+            dataConfig.userToken = value
+        }
+        socket.connectServer()
+        socket.loginServer(dataConfig.userToken)
+        socket.subServer(createID(), dataConfig.roomID)
+    }
+    
     // MARK: - 成功连接
     func connected() {
         if socket.socket == nil {
@@ -99,9 +109,9 @@ extension IMTableView: WebSocketDelegate {
                 historyHandel(list: list)
             } else if let list = jsondata["result"].array {
                 insertMissingMessage(list: list)
-            } else {
-                let msgjson = jsondata["result"]
-                sendComplete(msgjson: msgjson)
+//            } else {
+//                let msgjson = jsondata["result"]
+//                sendComplete(msgjson: msgjson)
             }
         }
         
@@ -238,16 +248,32 @@ extension IMTableView: WebSocketDelegate {
         if let msgs = data["args"].array, !msgs.isEmpty {
             for item in msgs {
                 let message = MessageModel(
-                    msgID: item["payload"]["_id"].stringValue,
-                    name: item["payload"]["sender"]["username"].stringValue,
-                    message: item["payload"]["message"]["msg"].stringValue,
-                    timeInterval: Int(Date().timeIntervalSince1970 * 1000),
-                    roomID: item["payload"]["rid"].stringValue,
-                    bySelf: item["payload"]["sender"]["_id"].stringValue == dataConfig.userID)
+                    msgID: item["_id"].stringValue,
+                    name: item["u"]["username"].stringValue,
+                    message: item["msg"].stringValue,
+                    timeInterval: item["ts"]["$date"].intValue,
+                    roomID: item["rid"].stringValue,
+                    bySelf: item["u"]["_id"].stringValue == dataConfig.userID)
                 
                 HistoryDataAccess.appendMessage(message: message)
-                insertRow(message: message)
+                guard !message.msgID.isEmpty else { return }
+                
+                if let index = sendingList.firstIndex(of: [message.msgID, message.message]) {
+                    sendingList.remove(at: index)
+                }
+                
+                print("afterSendingList:\(sendingList)")
+                
+                let cell = cells.first(where: { $0.messageID == message.msgID })
+                if let msgcell = cell {
+                    msgcell.setLoading(isLoading: false)
+                } else {
+                    insertRow(message: message)
+                }
+                
             }
+            
+            sendNext()
         }
     }
     

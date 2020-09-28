@@ -249,15 +249,6 @@ class IMTableView: UIView {
         return hidetime
     }
     
-    // MARK: - 连接服务器
-    func connectionToServer(token: String? = nil) {
-        if let value = token {
-            dataConfig.userToken = value
-        }
-        socket.connectServer()
-        socket.loginServer(dataConfig.userToken)
-        socket.subServer(createID(), dataConfig.userID)
-    }
     
     // MARK: - 按数量获取历史消息
     func getHistory(type: HistoryTimeInterval, count: Int) {
