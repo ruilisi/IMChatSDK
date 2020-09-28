@@ -61,6 +61,7 @@ open class WebSocketHelper {
     
     // MARK: - 连接服务器
     public func connectServer(config: UnifyDataConfig) {
+        self.config = config
         guard let websocket = socket else { return }
         let dict = [
             "msg": "connect",
@@ -185,6 +186,13 @@ open class WebSocketHelper {
             return
         }
         print("Send text: \(cmd)")
+        
+        if pingCount > 1 {
+            connectServer(config: self.config)
+            loginServer()
+            subServer()
+        }
+        
         self.socket?.write(string: cmd, completion: {
             print("\(self.pingCount) ping Success")
             self.pingCount += 1

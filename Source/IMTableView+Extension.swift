@@ -215,34 +215,6 @@ extension IMTableView: WebSocketDelegate {
         }
     }
     
-    // MARK: - 信息发送成功回调
-    func sendComplete(msgjson: JSON) {
-        let message = MessageModel(
-            msgID: msgjson["_id"].stringValue,
-            name: msgjson["u"]["name"].stringValue,
-            message: msgjson["msg"].stringValue,
-            timeInterval: msgjson["ts"]["$date"].intValue,
-            roomID: msgjson["rid"].stringValue,
-            bySelf: msgjson["u"]["_id"].stringValue == dataConfig.userID)
-        
-        guard !message.msgID.isEmpty else { return }
-        
-        if let index = sendingList.firstIndex(of: [message.msgID, message.message]) {
-            sendingList.remove(at: index)
-        }
-        
-        HistoryDataAccess.appendMessage(message: message)
-        
-        print("afterSendingList:\(sendingList)")
-        print("send Complete- ts:\(msgjson["ts"]["$date"].intValue), update:\(msgjson["_updatedAt"]["$date"].intValue), difference:\(msgjson["ts"]["$date"].intValue - msgjson["_updatedAt"]["$date"].intValue)")
-        //        rxSendingList.accept(sendingList)
-        sendNext()
-        
-        let cell = cells.first(where: { $0.messageID == message.msgID })
-        
-        cell?.setLoading(isLoading: false)
-    }
-    
     // MARK: - 收到消息
     func receiveMessage(data: JSON) {
         if let msgs = data["args"].array, !msgs.isEmpty {
