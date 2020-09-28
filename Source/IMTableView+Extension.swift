@@ -109,9 +109,6 @@ extension IMTableView: WebSocketDelegate {
                 historyHandel(list: list)
             } else if let list = jsondata["result"].array {
                 insertMissingMessage(list: list)
-//            } else {
-//                let msgjson = jsondata["result"]
-//                sendComplete(msgjson: msgjson)
             }
         }
         
