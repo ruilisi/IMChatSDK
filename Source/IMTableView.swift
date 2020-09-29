@@ -196,6 +196,13 @@ class IMTableView: UIView {
     
     // MARK: - 插入行
     func insertRow(message: MessageModel, desc: Bool = false, send: Bool = false, needhide: Bool = true) {
+        
+        let filcell = cells.filter {
+            return $0.messageID == message.msgID
+        }
+        
+        guard filcell.isEmpty else { return }
+        
         let cell = MessageTableViewCell()
         var timeinterval = TimeInterval(message.timeInterval / 1000)
         if message.timeInterval == 0 {
@@ -207,15 +214,23 @@ class IMTableView: UIView {
         cell.sendBG = sendBG
         cell.receiveBG = receiveBG
         
-        var hidetime = false
-        
-        hidetime = !needhide ? needhide : needHide(timeInterval: Int(timeinterval), desc: desc)
-        
-        cell.setContent(msgID: message.msgID, name: message.name, message: message.message, timeInterval: timeinterval, isSelf: message.bySelf, ishideTime: hidetime)
-        
-        if message.bySelf, send {
-            cell.setLoading(isLoading: true)
+        DispatchQueue.main.async {
+            
+            var hidetime = false
+            
+            hidetime = !needhide ? needhide : self.needHide(timeInterval: Int(timeinterval), desc: desc)
+            
+            cell.setContent(msgID: message.msgID, name: message.name, message: message.message, timeInterval: timeinterval, isSelf: message.bySelf, ishideTime: hidetime)
+            
+            if message.bySelf, send {
+                cell.setLoading(isLoading: true)
+            }
+            
+            self.addCellRow(cell: cell, desc: desc, byself: message.bySelf)
         }
+    }
+    
+    func addCellRow(cell: MessageTableViewCell, desc: Bool, byself: Bool) {
         
         messageTable.beginUpdates()
         
@@ -229,7 +244,7 @@ class IMTableView: UIView {
         
         messageTable.endUpdates()
         
-        messageTable.scrollToRow(at: IndexPath(row: !desc ? cells.count - 1 : 0, section: 0), at: !desc ? .bottom : .top, animated: true)
+        self.messageTable.scrollToRow(at: IndexPath(row: !desc ? self.cells.count - 1 : 0, section: 0), at: !desc ? .bottom : .top, animated: true)
     }
     
     func needHide(timeInterval: Int, desc: Bool = false) -> Bool {

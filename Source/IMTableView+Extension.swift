@@ -201,9 +201,6 @@ extension IMTableView: WebSocketDelegate {
         for item in data {
             insertRow(message: item)    //插入到第0行
         }
-        
-        messageTable.scrollToRow(at: IndexPath(row: cells.count - 1, section: 0), at: .bottom, animated: true)
-//        messageTable.scrollToBottom(animated: true)
     }
     
     func sendNext() {

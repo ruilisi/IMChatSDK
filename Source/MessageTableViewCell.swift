@@ -52,7 +52,7 @@ class MessageTableViewCell: UITableViewCell {
         backgroundColor = .clear
         contentView.backgroundColor = .clear
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 20, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         time.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
         time.font = UIFont.systemFont(ofSize: 13, weight: .regular)
     }
@@ -72,41 +72,42 @@ class MessageTableViewCell: UITableViewCell {
         messageID = msgID
         timeInt = Int(timeInterval)
         label.text = "\(message)"
-        
-        label.frame = getLabelSize(text: message, attributes: [.font: UIFont.systemFont(ofSize: 20, weight: .regular)], textWidth: Int(windowWidth * 0.6))
         label.numberOfLines = 0
-        
-        let labelWidth = label.frame.width
-        let labelHeight = label.frame.height
-        var timebottom: CGFloat = 0
-        
-        let bgWidth = labelWidth + 40
-        let bgHeight = CGFloat.maximum(labelHeight + 24, 44)
-        
-        print("size of :\"\(message)\" is : Width \(labelWidth) Height: \(labelHeight)")
         
         hideTime = ishideTime
         
         if !ishideTime {
             addSubview(time)
+//            time.frame = CGRect(x: 0, y: 0, width: windowWidth, height: 15)
             time.text = getTimeStringByCurrentDate(timeInterval: timeInterval)
-            time.frame = CGRect(x: 0, y: 0, width: windowWidth, height: 15)
-            time.textAlignment = .center
-            timebottom = 17
+            time.translatesAutoresizingMaskIntoConstraints = false
+            time.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            time.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+            time.layoutIfNeeded()
         }
+        
+        
+        label.frame = getLabelSize(text: message, attributes: [.font: UIFont.systemFont(ofSize: 20, weight: .regular)], textWidth: Int(windowWidth * 0.6))
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true
+        label.centerXAnchor.constraint(equalTo: bgimage.centerXAnchor).isActive = true
+        label.widthAnchor.constraint(equalToConstant: label.frame.width).isActive = true
+        label.layoutIfNeeded()
+        
+        bgimage.translatesAutoresizingMaskIntoConstraints = false
+        bgimage.widthAnchor.constraint(equalTo: label.widthAnchor, constant: 25).isActive = true
+        bgimage.heightAnchor.constraint(equalTo: label.heightAnchor, constant: 25).isActive = true
+        bgimage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
         
         if !isSelf {
             bgimage.image = receiveBG?.resizableImage(withCapInsets: receiveEdge, resizingMode: .stretch)
+            bgimage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
             
-            bgimage.frame = CGRect(x: 10, y: timebottom, width: bgWidth, height: bgHeight)
-            label.frame = CGRect(x: 30, y: (bgimage.bounds.height - labelHeight) * 0.5 + timebottom, width: labelWidth, height: labelHeight)
             rowHeight = bgimage.bottom + 20.0
         } else {
             bgimage.image = sendBG?.resizableImage(withCapInsets: sendEdge, resizingMode: .stretch)
-            
-            bgimage.frame = CGRect(x: windowWidth - bgWidth - 10, y: timebottom, width: bgWidth, height: bgHeight)
-            label.frame = CGRect(x: bgimage.frame.origin.x + 20, y: (bgimage.bounds.height - labelHeight) * 0.5 + timebottom, width: labelWidth, height: labelHeight)
-            rowHeight = bgimage.bottom + 20.0
+            bgimage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
             
             loadingLottie.translatesAutoresizingMaskIntoConstraints = false
             self.addConstraints([
@@ -115,6 +116,9 @@ class MessageTableViewCell: UITableViewCell {
                 .init(item: loadingLottie, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 25),
                 .init(item: loadingLottie, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 25)])
         }
+        bgimage.layoutIfNeeded()
+        
+        rowHeight = bgimage.frame.height + time.frame.height + 20
     }
     
     func getTimeStringByCurrentDate(timeInterval: TimeInterval) -> String {
