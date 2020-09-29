@@ -93,23 +93,24 @@ private extension IMChatView {
         bottomSafeArea.backgroundColor = .clear
         
         textviewHeight = bottomViewHeight * 0.66
-        textView.frame = CGRect(x: frame.width * 0.05, y: bottomViewHeight * 0.16, width: inputWidth, height: textviewHeight)
+        textView.frame = CGRect(x: frame.width * 0.06, y: bottomViewHeight * 0.16, width: inputWidth, height: textviewHeight)
         textView.backgroundColor = .white
         textView.delegate = self
         textView.textColor = placeHoderColor
         textView.text = "说点什么吧"
-        textView.layer.cornerRadius = 4
+        textView.layer.cornerRadius = 3
         textView.textContainer.lineFragmentPadding = 10
         textView.font = UIFont.systemFont(ofSize: textView.vHeight * 0.45, weight: .regular)
         
         sendButton.translatesAutoresizingMaskIntoConstraints = false
         bottomView.addConstraints([
             .init(item: sendButton, attribute: .centerY, relatedBy: .equal, toItem: textView, attribute: .centerY, multiplier: 1, constant: 0),
-            .init(item: sendButton, attribute: .trailing, relatedBy: .equal, toItem: bottomView, attribute: .trailing, multiplier: 1, constant: -frame.width * 0.05),
+            .init(item: sendButton, attribute: .trailing, relatedBy: .equal, toItem: bottomView, attribute: .trailing, multiplier: 1, constant: -frame.width * 0.06),
             .init(item: sendButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: btnWidth),
             .init(item: sendButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: bottomViewHeight * 0.55)])
         sendButton.setTitle("发送", for: .normal)
-        sendButton.layer.cornerRadius = 4
+        sendButton.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        sendButton.layer.cornerRadius = 3
         sendButton.backgroundColor = .white
         sendButton.addTarget(self, action: #selector(sendMsg), for: .touchUpInside)
     }
