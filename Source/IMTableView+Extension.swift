@@ -225,7 +225,7 @@ extension IMTableView: WebSocketDelegate {
                 guard sameMSG.isEmpty else { continue }
                 
                 HistoryDataAccess.appendMessage(message: message)
-                guard !message.msgID.isEmpty else { return }
+                guard !message.msgID.isEmpty else { continue }
                 
                 if let index = sendingList.firstIndex(of: [message.msgID, message.message]) {
                     sendingList.remove(at: index)
