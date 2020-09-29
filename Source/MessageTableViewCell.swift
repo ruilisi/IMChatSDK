@@ -71,7 +71,7 @@ class MessageTableViewCell: UITableViewCell {
     func setContent(msgID: String, name: String, message: String, timeInterval: TimeInterval, isSelf: Bool = false, ishideTime: Bool = false) {
         messageID = msgID
         timeInt = Int(timeInterval)
-        label.text = "\(message)"
+        label.text = message
         label.numberOfLines = 0
         
         hideTime = ishideTime
@@ -85,21 +85,28 @@ class MessageTableViewCell: UITableViewCell {
             time.layoutIfNeeded()
         }
         
-        
-        label.frame = getLabelSize(text: message, attributes: [.font: UIFont.systemFont(ofSize: label.font.pointSize, weight: .regular)], textWidth: Int(windowWidth * 0.6))
-        
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true
         label.centerXAnchor.constraint(equalTo: bgimage.centerXAnchor).isActive = true
-        label.widthAnchor.constraint(equalToConstant: label.frame.width).isActive = true
+        
+        if label.intrinsicContentSize.width > windowWidth * 0.6 {
+            label.widthAnchor.constraint(equalToConstant: windowWidth * 0.6).isActive = true
+        }
+        
         label.layoutIfNeeded()
         
         bgimage.translatesAutoresizingMaskIntoConstraints = false
         
+        if message == "nikie" {
+            print("")
+        } else if message == "nike" {
+            print("")
+        }
+        
         if label.frame.width + 30.0 < 50 {
             bgimage.widthAnchor.constraint(equalToConstant: 50).isActive = true
         } else {
-            bgimage.widthAnchor.constraint(equalTo: label.widthAnchor, constant: 30).isActive = true
+            bgimage.widthAnchor.constraint(equalTo: label.widthAnchor, constant: 35).isActive = true
         }
         
         bgimage.heightAnchor.constraint(equalTo: label.heightAnchor, constant: 25).isActive = true
