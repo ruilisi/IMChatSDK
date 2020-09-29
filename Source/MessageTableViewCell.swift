@@ -87,7 +87,7 @@ class MessageTableViewCell: UITableViewCell {
         }
         
         
-        label.frame = getLabelSize(text: message, attributes: [.font: UIFont.systemFont(ofSize: 20, weight: .regular)], textWidth: Int(windowWidth * 0.6))
+        label.frame = getLabelSize(text: message, attributes: [.font: UIFont.systemFont(ofSize: label.font.pointSize, weight: .regular)], textWidth: Int(windowWidth * 0.6))
         
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true

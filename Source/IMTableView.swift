@@ -197,11 +197,6 @@ class IMTableView: UIView {
     // MARK: - 插入行
     func insertRow(message: MessageModel, desc: Bool = false, send: Bool = false, needhide: Bool = true) {
         
-        let filcell = cells.filter {
-            return $0.messageID == message.msgID
-        }
-        
-        guard filcell.isEmpty else { return }
         
         let cell = MessageTableViewCell()
         var timeinterval = TimeInterval(message.timeInterval / 1000)
@@ -215,6 +210,11 @@ class IMTableView: UIView {
         cell.receiveBG = receiveBG
         
         DispatchQueue.main.async {
+            let filcell = self.cells.filter {
+                return $0.messageID == message.msgID
+            }
+            
+            guard filcell.isEmpty else { return }
             
             var hidetime = false
             

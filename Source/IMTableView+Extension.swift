@@ -221,6 +221,9 @@ extension IMTableView: WebSocketDelegate {
                     roomID: item["rid"].stringValue,
                     bySelf: item["u"]["_id"].stringValue == dataConfig.userID)
                 
+                let sameMSG = HistoryDataAccess.historyData.filter{ $0.msgID == message.msgID }
+                guard sameMSG.isEmpty else { continue }
+                
                 HistoryDataAccess.appendMessage(message: message)
                 guard !message.msgID.isEmpty else { return }
                 
