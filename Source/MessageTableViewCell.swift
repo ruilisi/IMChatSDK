@@ -78,7 +78,6 @@ class MessageTableViewCell: UITableViewCell {
         
         if !ishideTime {
             addSubview(time)
-//            time.frame = CGRect(x: 0, y: 0, width: windowWidth, height: 15)
             time.text = getTimeStringByCurrentDate(timeInterval: timeInterval)
             time.translatesAutoresizingMaskIntoConstraints = false
             time.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
@@ -96,7 +95,13 @@ class MessageTableViewCell: UITableViewCell {
         label.layoutIfNeeded()
         
         bgimage.translatesAutoresizingMaskIntoConstraints = false
-        bgimage.widthAnchor.constraint(equalTo: label.widthAnchor, constant: 25).isActive = true
+        
+        if label.frame.width + 30.0 < 50 {
+            bgimage.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        } else {
+            bgimage.widthAnchor.constraint(equalTo: label.widthAnchor, constant: 30).isActive = true
+        }
+        
         bgimage.heightAnchor.constraint(equalTo: label.heightAnchor, constant: 25).isActive = true
         bgimage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
         
