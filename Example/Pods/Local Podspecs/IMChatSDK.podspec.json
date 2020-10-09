@@ -27,9 +27,6 @@
     ],
     "SwiftyJSON": [
 
-    ],
-    "Alamofire": [
-      "4.8.0"
     ]
   },
   "swift_versions": "5.0",

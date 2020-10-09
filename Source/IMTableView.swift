@@ -103,32 +103,31 @@ class IMTableView: UIView {
     }
     
     func getData() {
-        HttpUtil.post("https://api.chatsdk.io/customers/client_connect",
-                     params: ["name": dataConfig.username,
-                              "api_key": dataConfig.apiKey,
-                              "department_id": dataConfig.departmentid],
-                     header: [:],
-                     onFailure: { value in
-                        print(value)
-        },
-                     onSuccess: { value in
-                        print(value)
-                        HistoryDataAccess.userName = self.dataConfig.username
-                        
-                        // 用户变更
-                        if value["id"].stringValue != self.dataConfig.userID {
-                            HistoryDataAccess.historyData = []
-                            self.cleanHistory()
-                        }
-                        
-                        self.dataConfig.baseUrl = value["base"].stringValue.webSocketURL
-                        self.dataConfig.userToken = value["token"].stringValue
-                        self.dataConfig.roomID = value["rid"].stringValue
-                        self.dataConfig.userID = value["id"].stringValue
-                        self.dataConfig.wait = value["wait"].intValue
-                        HistoryDataAccess.timeRecord = timeNow
-                        self.connectToWebSocket()
-        })
+        HttpRequest.httpPost(baseUrl: "https://api.chatsdk.io/customers/client_connect",
+                             params: ["name": dataConfig.username,
+                                      "api_key": dataConfig.apiKey,
+                                      "department_id": dataConfig.departmentid],
+                             onSuccess: { value in
+                                print(value)
+                                HistoryDataAccess.userName = self.dataConfig.username
+                                
+                                // 用户变更
+                                if value["id"].stringValue != self.dataConfig.userID {
+                                    HistoryDataAccess.historyData = []
+                                    self.cleanHistory()
+                                }
+                                
+                                self.dataConfig.baseUrl = value["base"].stringValue.webSocketURL
+                                self.dataConfig.userToken = value["token"].stringValue
+                                self.dataConfig.roomID = value["rid"].stringValue
+                                self.dataConfig.userID = value["id"].stringValue
+                                self.dataConfig.wait = value["wait"].intValue
+                                HistoryDataAccess.timeRecord = timeNow
+                                self.connectToWebSocket()
+                             },
+                             onFailure: { value in
+                                print(value)
+                             })
     }
     
     func connectToWebSocket() {
