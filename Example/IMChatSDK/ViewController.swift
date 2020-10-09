@@ -68,14 +68,13 @@ extension ViewController {
         let url = "wss://chat.esheeps.com/websocket"
         
         let dataconfig = UnifyDataConfig()
-            .setUrl(url: url)
-            .setRoomID(rid: "JfyzSJhC7iEkCbXneWjEe8fuy7tv3c33wv")
-            .setUserID(uid: "JfyzSJhC7iEkCbXne")
-            .setToken(token: "-m3aNdAN1kRpNVsPnXoVNm8R9i-SSy7sht9IqH1Xq3v")
-            .setWelcome(text: "你好")
-            .setLoadHistoryCount(count: 7)
+            .setApiKey(key: "f6e873f72d5a465fae785d6143adb985")
+            .setDepartmentID(did: "369d2d2b-f68b-4cf3-ba36-c588013fc511")
+            .setUserName(uname: "TestUserName")
+            .setWelcome(text: "Welcom to eSheep")
+            .setLoadHistoryCount(count: 10)
             .setPerLoadHistoryCount(count: 2)
-            .setTimeSpan(timeinterval: 60)
+            .setTimeSpan(timeinterval: 200)
         
         self.chatView.buildConnection(config: dataconfig, onSuccess: {
             self.removeSpinner()
