@@ -132,7 +132,6 @@ class IMTableView: UIView {
     }
     
     func connectToWebSocket() {
-        connectionconfig = self.dataConfig
         if !HistoryDataAccess.historyData.isEmpty {
             if let action = completeAction { action() }
             if cells.isEmpty {

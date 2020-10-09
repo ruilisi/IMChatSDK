@@ -118,6 +118,7 @@ extension IMTableView: WebSocketDelegate {
         }
         
         if type == "pong" {
+            pingCount = 0
             setRefresh()
         }
         
