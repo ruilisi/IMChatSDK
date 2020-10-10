@@ -20,6 +20,7 @@ open class UnifyDataConfig {
     var loadCount = 20
     var perCount = 10
     var timespan = 600
+    var timeout = 200
     
     var apiKey = String()
     var departmentid = String()

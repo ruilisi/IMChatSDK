@@ -127,6 +127,8 @@ class IMTableView: UIView {
                                 self.dataConfig.roomID = value["rid"].stringValue
                                 self.dataConfig.userID = value["id"].stringValue
                                 self.dataConfig.wait = value["wait"].intValue
+                                self.dataConfig.welcomText = value["template"].stringValue
+                                self.dataConfig.timeout = value["timeout"].intValue
                                 HistoryDataAccess.timeRecord = timeNow
                                 self.connectToWebSocket()
                              },
