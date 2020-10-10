@@ -14,7 +14,9 @@ class MessageTableViewCell: UITableViewCell {
     let label = UILabel()
     let time = UILabel()
     let bgimage = UIImageView()
-    let loadingLottie = AnimationView(name: "msgloading", bundle: Resources.bundle, imageProvider: nil, animationCache: nil)
+    var anim: Animation? = nil
+//    let loadingLottie = AnimationView(name: "msgloading", bundle: Resources.bundle, imageProvider: nil, animationCache: nil)
+    let loadingLottie = AnimationView()
     
     var timeInt = Int()
     var messageID = String()
@@ -27,6 +29,11 @@ class MessageTableViewCell: UITableViewCell {
     
     var sendEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     var receiveEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    
+    var receiveColor: UIColor = .white
+    var sendColor: UIColor = .white
+    
+    var timeColor: UIColor = .white
     
     var rowHeight = CGFloat()
     
@@ -51,9 +58,8 @@ class MessageTableViewCell: UITableViewCell {
         
         backgroundColor = .clear
         contentView.backgroundColor = .clear
-        label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
-        time.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
+        time.alpha = 0.5
         time.font = UIFont.systemFont(ofSize: 13, weight: .regular)
     }
     
@@ -74,14 +80,21 @@ class MessageTableViewCell: UITableViewCell {
         label.text = message
         label.numberOfLines = 0
         
+        if let lottie = anim {
+            loadingLottie.animation = lottie
+        } else {
+            loadingLottie.animation = Animation.named("msgloading", bundle: Resources.bundle, subdirectory: nil, animationCache: nil)
+        }
+        
         hideTime = ishideTime
         
         if !ishideTime {
             addSubview(time)
+            time.textColor = timeColor
             time.text = getTimeStringByCurrentDate(timeInterval: timeInterval)
             time.translatesAutoresizingMaskIntoConstraints = false
             time.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-            time.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+            time.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
             time.layoutIfNeeded()
         }
         
@@ -113,11 +126,13 @@ class MessageTableViewCell: UITableViewCell {
         bgimage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
         
         if !isSelf {
+            label.textColor = receiveColor
             bgimage.image = receiveBG?.resizableImage(withCapInsets: receiveEdge, resizingMode: .stretch)
             bgimage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
             
             rowHeight = bgimage.bottom + 20.0
         } else {
+            label.textColor = sendColor
             bgimage.image = sendBG?.resizableImage(withCapInsets: sendEdge, resizingMode: .stretch)
             bgimage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
             
@@ -130,7 +145,7 @@ class MessageTableViewCell: UITableViewCell {
         }
         bgimage.layoutIfNeeded()
         
-        rowHeight = bgimage.frame.height + time.frame.height + 20
+        rowHeight = bgimage.frame.height + time.frame.height + 30
     }
     
     func getTimeStringByCurrentDate(timeInterval: TimeInterval) -> String {

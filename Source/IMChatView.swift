@@ -23,6 +23,7 @@ open class IMChatView: UIView {
     var textviewHeight = CGFloat()
     var safeareaTop = CGFloat()
     var safeareaBottom = CGFloat()
+    var placeHolder: String = "说点什么吧"
     
     var selfY = CGFloat()
     var animtp = 0
@@ -97,7 +98,7 @@ private extension IMChatView {
         textView.backgroundColor = .white
         textView.delegate = self
         textView.textColor = placeHoderColor
-        textView.text = "说点什么吧"
+        textView.text = placeHolder
         textView.layer.cornerRadius = 3
         textView.textContainer.lineFragmentPadding = 10
         textView.font = UIFont.systemFont(ofSize: textView.vHeight * 0.45, weight: .regular)
@@ -210,7 +211,7 @@ extension IMChatView: UITextViewDelegate {
     
     public func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "说点什么吧"
+            textView.text = placeHolder
             textView.textColor = placeHoderColor
         }
     }
@@ -284,6 +285,31 @@ public extension IMChatView {
         
         if let img = config.receiveBG, let edge = config.receiveEdge {
             messageTable.setReceiveBG(img: img, edge: edge)
+        }
+        
+        if let send = config.sendTextColor {
+            messageTable.setSendColor(color: send)
+        }
+        
+        if let receive = config.receiveTextColor {
+            messageTable.setReceiveColor(color: receive)
+        }
+        
+        if let color = config.timeTextColor {
+            messageTable.setTimeColor(color: color)
+        }
+        
+        if let text = config.buttonText {
+            sendButton.setTitle(text, for: .normal)
+        }
+        
+        if let text = config.placeHolderText {
+            placeHolder = text
+            textView.text = text
+        }
+        
+        if let lottie = config.loadingLottie {
+            messageTable.setLottie(lottie: lottie)
         }
     }
 }

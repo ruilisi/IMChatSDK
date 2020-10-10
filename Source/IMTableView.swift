@@ -9,6 +9,7 @@
 import UIKit
 import Starscream
 import SwiftyJSON
+import Lottie
 
 enum HistoryTimeInterval {
     case latest
@@ -34,6 +35,10 @@ class IMTableView: UIView {
     var receiveBG = UIImage(named: "bgReceive", in: Resources.bundle, compatibleWith: nil)
     var sendEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     var receiveEdge = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    var sendColor: UIColor = .white
+    var receiveColor: UIColor = .white
+    var timeColor: UIColor = .white
+    var lottieanim: Animation? = nil
     var emptyHeight: CGFloat {
         get {
             return CGFloat.maximum(0, vHeight - messageTable.contentSize.height)
@@ -161,18 +166,30 @@ class IMTableView: UIView {
         sendEdge = edge
     }
     
+    func setReceiveColor(color: UIColor) {
+        receiveColor = color
+    }
+    
+    func setSendColor(color: UIColor) {
+        sendColor = color
+    }
+    
+    func setTimeColor(color: UIColor) {
+        timeColor = color
+    }
+    
+    func setLottie(lottie: Animation) {
+        lottieanim = lottie
+    }
+    
     // MARK: - 载入历史
     func historyLoad() {
         guard !HistoryDataAccess.historyData.isEmpty else { return }
         self.cells = []
         
         for item in HistoryDataAccess.historyData {
-            let cell = MessageTableViewCell()
             
-            cell.sendEdge = sendEdge
-            cell.receiveEdge = receiveEdge
-            cell.sendBG = sendBG
-            cell.receiveBG = receiveBG
+            let cell = configCell()
             
             var timeinterval = TimeInterval(item.timeInterval / 1000)
             if item.timeInterval == 0 {
@@ -196,16 +213,11 @@ class IMTableView: UIView {
     func insertRow(message: MessageModel, desc: Bool = false, send: Bool = false, needhide: Bool = true) {
         
         
-        let cell = MessageTableViewCell()
+        let cell = configCell()
         var timeinterval = TimeInterval(message.timeInterval / 1000)
         if message.timeInterval == 0 {
             timeinterval = Date().timeIntervalSince1970
         }
-
-        cell.sendEdge = sendEdge
-        cell.receiveEdge = receiveEdge
-        cell.sendBG = sendBG
-        cell.receiveBG = receiveBG
         
         DispatchQueue.main.async {
             let filcell = self.cells.filter {
@@ -226,6 +238,21 @@ class IMTableView: UIView {
             
             self.addCellRow(cell: cell, desc: desc, byself: message.bySelf)
         }
+    }
+    
+    func configCell() -> MessageTableViewCell {
+        let cell = MessageTableViewCell()
+        
+        cell.sendEdge = sendEdge
+        cell.receiveEdge = receiveEdge
+        cell.sendBG = sendBG
+        cell.receiveBG = receiveBG
+        cell.sendColor = sendColor
+        cell.receiveColor = receiveColor
+        cell.timeColor = timeColor
+        cell.anim = lottieanim
+        
+        return cell
     }
     
     func addCellRow(cell: MessageTableViewCell, desc: Bool, byself: Bool) {
