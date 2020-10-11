@@ -25,6 +25,7 @@ open class UnifyDataConfig {
     var apiKey = String()
     var departmentid = String()
     var username = String()
+    var agentemail = String()
     
     var baseUrl: String {
         get {

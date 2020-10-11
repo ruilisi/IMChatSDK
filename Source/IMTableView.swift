@@ -129,6 +129,7 @@ class IMTableView: UIView {
                                 self.dataConfig.wait = value["wait"].intValue
                                 self.dataConfig.welcomText = value["template"].stringValue
                                 self.dataConfig.timeout = value["timeout"].intValue
+                                self.dataConfig.agentemail = value["agent_email"].stringValue
                                 HistoryDataAccess.timeRecord = timeNow
                                 self.connectToWebSocket()
                              },
