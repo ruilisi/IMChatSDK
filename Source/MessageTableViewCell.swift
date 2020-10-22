@@ -75,7 +75,6 @@ class MessageTableViewCell: UITableViewCell {
     }
     
     // MARK: - Set Content
-//    func setContent(msgID: String, name: String, message: String, timeInterval: TimeInterval, isSelf: Bool = false, ishideTime: Bool = false) {
     func setContent(messageContent: MessageModel, ishideTime: Bool = false) {
         
         let msgID = messageContent.msgID
@@ -119,10 +118,25 @@ class MessageTableViewCell: UITableViewCell {
         
         bgimage.translatesAutoresizingMaskIntoConstraints = false
         
-        if message == "nikie" {
-            print("")
-        } else if message == "nike" {
-            print("")
+        if let url = messageContent.imageUrl, let width = messageContent.imageWidth, let height = messageContent.imageHeight {
+            
+            var imgwid = width.flo > windowWidth * 0.6 ? windowWidth * 0.6 : width.flo
+            var imghei = imgwid * (height.flo / width.flo)
+            
+            bgimage.widthAnchor.constraint(equalToConstant: imgwid + 30).isActive = true
+            bgimage.heightAnchor.constraint(equalToConstant: imghei + 30).isActive = true
+            bgimage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
+            if !isSelf {
+                bgimage.image = receiveBG?.resizableImage(withCapInsets: receiveEdge, resizingMode: .stretch)
+                bgimage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
+            } else {
+                bgimage.image = sendBG?.resizableImage(withCapInsets: sendEdge, resizingMode: .stretch)
+                bgimage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
+            }
+            bgimage.layoutIfNeeded()
+            
+            rowHeight = bgimage.frame.height + time.frame.height + 30
+            return
         }
         
         if label.frame.width + 30.0 < 50 {
