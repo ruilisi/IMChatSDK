@@ -9,6 +9,7 @@
 import Foundation
 
 let URLKEY = "CHAT.UrlKey"
+let WSKEY = "CHAT.WebSocketKey"
 let USERKEY = "CHAT.UserKey"
 let ROOMKEY = "CHAT.RoomKey"
 let TOKENKEY = "CHAT.TokenKey"
@@ -34,6 +35,15 @@ open class UnifyDataConfig {
         
         set {
             UserDefaults.standard.set(newValue, forKey: URLKEY)
+        }
+    }
+    var webSocket: String {
+        get {
+            return websocketInitial()
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: WSKEY)
         }
     }
     var roomID: String {
@@ -135,6 +145,11 @@ open class UnifyDataConfig {
     public func setTimeSpan(timeinterval: Int) -> UnifyDataConfig {
         timespan = timeinterval
         return self
+    }
+    
+    private func websocketInitial() -> String {
+        guard let wsk = UserDefaults.standard.string(forKey: WSKEY) else { return "" }
+        return wsk
     }
     
     private func urlInitial() -> String {

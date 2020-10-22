@@ -8,6 +8,7 @@
 
 import UIKit
 import Lottie
+import Kingfisher
 
 class MessageTableViewCell: UITableViewCell {
 
@@ -75,10 +76,9 @@ class MessageTableViewCell: UITableViewCell {
     }
     
     // MARK: - Set Content
-    func setContent(messageContent: MessageModel, ishideTime: Bool = false) {
+    func setContent(baseUrl: String, messageContent: MessageModel, ishideTime: Bool = false) {
         
         let msgID = messageContent.msgID
-        let name = messageContent.name
         let message = messageContent.message
         let isSelf = messageContent.bySelf
         let timeInterval = TimeInterval(messageContent.timeInterval / 1000)
@@ -120,8 +120,18 @@ class MessageTableViewCell: UITableViewCell {
         
         if let url = messageContent.imageUrl, let width = messageContent.imageWidth, let height = messageContent.imageHeight {
             
-            var imgwid = width.flo > windowWidth * 0.6 ? windowWidth * 0.6 : width.flo
-            var imghei = imgwid * (height.flo / width.flo)
+            let imgwid = width.flo > windowWidth * 0.6 ? windowWidth * 0.6 : width.flo
+            let imghei = imgwid * (height.flo / width.flo)
+            
+            addSubview(cellImage)
+            cellImage.translatesAutoresizingMaskIntoConstraints = false
+            cellImage.centerXAnchor.constraint(equalTo: bgimage.centerXAnchor).isActive = true
+            cellImage.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true
+            cellImage.widthAnchor.constraint(equalToConstant: imgwid).isActive = true
+            cellImage.heightAnchor.constraint(equalToConstant: imghei).isActive = true
+            
+            let imageurl = URL(string: baseUrl + url)
+            cellImage.kf.setImage(with: imageurl)
             
             bgimage.widthAnchor.constraint(equalToConstant: imgwid + 30).isActive = true
             bgimage.heightAnchor.constraint(equalToConstant: imghei + 30).isActive = true

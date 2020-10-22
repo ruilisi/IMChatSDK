@@ -1,8 +1,12 @@
 PODS:
   - IMChatSDK (1.1.6):
+    - Kingfisher
     - lottie-ios
     - Starscream
     - SwiftyJSON
+  - Kingfisher (5.15.4):
+    - Kingfisher/Core (= 5.15.4)
+  - Kingfisher/Core (5.15.4)
   - lottie-ios (3.1.8)
   - Starscream (4.0.4)
   - SwiftyJSON (5.0.0)
@@ -12,6 +16,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Kingfisher
     - lottie-ios
     - Starscream
     - SwiftyJSON
@@ -21,7 +26,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  IMChatSDK: c411bf20ec6627022f35c4a2a9b09258bd0f7daa
+  IMChatSDK: 1dbfeae4e02f0ac71e8dde161a12eb94cb9c4cac
+  Kingfisher: 657dc1077e5bbbfff864194c79f29e35b722d062
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7

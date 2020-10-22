@@ -27,6 +27,9 @@
     ],
     "SwiftyJSON": [
 
+    ],
+    "Kingfisher": [
+
     ]
   },
   "swift_versions": "5.0",

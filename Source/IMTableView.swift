@@ -100,7 +100,7 @@ class IMTableView: UIView {
         print("isAlive: \(isAlive)")
         
         // 用户不一致，token过期
-        if dataConfig.username != HistoryDataAccess.userName || timeNow - HistoryDataAccess.timeRecord > 10000000 {
+        if dataConfig.username != HistoryDataAccess.userName || timeNow - HistoryDataAccess.timeRecord > 10 {
             getData()
         } else {
             connectToWebSocket()
@@ -122,7 +122,8 @@ class IMTableView: UIView {
                                     self.cleanHistory()
                                 }
                                 
-                                self.dataConfig.baseUrl = value["base"].stringValue.webSocketURL
+                                self.dataConfig.baseUrl = value["base"].stringValue
+                                self.dataConfig.webSocket = value["base"].stringValue.webSocketURL
                                 self.dataConfig.userToken = value["token"].stringValue
                                 self.dataConfig.roomID = value["rid"].stringValue
                                 self.dataConfig.userID = value["id"].stringValue
@@ -202,7 +203,7 @@ class IMTableView: UIView {
             let hidetime = needHide(timeInterval: Int(timeinterval))
             
 //            cell.setContent(msgID: item.msgID, name: item.name, message: item.message, timeInterval: timeinterval, isSelf: item.bySelf, ishideTime: hidetime)
-            cell.setContent(messageContent: item, ishideTime: hidetime)
+            cell.setContent(baseUrl: dataConfig.baseUrl, messageContent: item, ishideTime: hidetime)
             cell.setLoading(isLoading: false)
             cells.append(cell)
         }
@@ -235,7 +236,7 @@ class IMTableView: UIView {
             hidetime = !needhide ? needhide : self.needHide(timeInterval: Int(timeinterval), desc: desc)
             
 //            cell.setContent(msgID: message.msgID, name: message.name, message: message.message, timeInterval: timeinterval, isSelf: message.bySelf, ishideTime: hidetime)
-            cell.setContent(messageContent: message, ishideTime: hidetime)
+            cell.setContent(baseUrl: self.dataConfig.baseUrl, messageContent: message, ishideTime: hidetime)
             
             if message.bySelf, send {
                 cell.setLoading(isLoading: true)
