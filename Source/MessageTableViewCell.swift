@@ -253,6 +253,8 @@ class MessageTableViewCell: UITableViewCell {
 
 extension MessageTableViewCell {
     @objc func imageClick() {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showImage"), object: nil, userInfo: ["url": imageUrl, "size": imageSize])
+        let frame = self.convert(cellImage.frame, to: self.superview)
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showImage"), object: nil, userInfo: ["url": imageUrl, "size": imageSize, "setAbel": frame])
     }
 }

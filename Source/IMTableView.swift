@@ -378,6 +378,10 @@ extension IMTableView: UITableViewDelegate, UITableViewDataSource {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
 //        superview?.endEditing(true)
     }
+    
+    func getCellRectFromSuperView(_ rect: CGRect) -> CGRect {
+        return messageTable.convert(rect, to: self.superview)
+    }
 }
 
 extension UIScrollView {

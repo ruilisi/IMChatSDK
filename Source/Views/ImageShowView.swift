@@ -14,12 +14,6 @@ class ImageShowView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        addSubview(image)
-        
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        image.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     
     required init?(coder: NSCoder) {
@@ -30,8 +24,16 @@ class ImageShowView: UIView {
         let wid = size.width
         let heg = size.height
         
+        addSubview(image)
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        image.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         image.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         image.heightAnchor.constraint(equalTo: image.widthAnchor, multiplier: heg / wid).isActive = true
         image.kf.setImage(with: URL(string: url))
+    }
+    
+    func removeImage() {
+        image.removeFromSuperview()
     }
 }

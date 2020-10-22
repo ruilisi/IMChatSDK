@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 open class IMChatView: UIView {
     
@@ -15,7 +16,12 @@ open class IMChatView: UIView {
     let sendButton = UIButton()
     let bottomSafeArea = UIView()
     let messageTable = IMTableView()
-    let showImageView = ImageShowView()
+    var showImageView = ImageShowView()
+    
+    var bgHover = UIImageView()
+    var alertImg = UIImageView()
+    var imgFrame = CGRect()
+    
     var parentController = UIViewController()
     
     var bottomHeight = CGFloat()
@@ -319,10 +325,7 @@ public extension IMChatView {
         
         if let view = self.parentViewController, !view.view.subviews.contains(showImageView) {
             parentController = view
-            parentController.view.addSubview(showImageView)
             
-            showImageView.frame = CGRect(x: 0, y: view.view.vHeight, width: view.view.vWidth, height: view.view.vHeight)
-            showImageView.backgroundColor = UIColor(hex: 0x000000, alpha: 0.5)
         }
     }
 }
@@ -330,28 +333,47 @@ public extension IMChatView {
 extension IMChatView {
     @objc func showImage(_ notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
-            if let url = dict["url"] as? String, let size = dict["size"] as? CGSize {
-                showImageView.setImage(url: url, size: size)
-                UIView.animate(withDuration: 0.4,
-                               delay: 0,
-                               usingSpringWithDamping: 0.7,
-                               initialSpringVelocity: 0,
-                               options: .allowUserInteraction,
-                               animations: {
-                                self.showImageView.originY = 0
-                               },
-                               completion: { value in
-                                if value {
-                                    if value {
-                                        
-                                    }
-                                }
-                               })
+            if let url = dict["url"] as? String, let size = dict["size"] as? CGSize, let rect = dict["setAbel"] as? CGRect {
+                imgFrame = messageTable.getCellRectFromSuperView(rect)
+                
+                let wid = size.width
+                let hei = size.height
+                
+                let parHei = parentController.view.vHeight
+                let bigWid = parentController.view.vWidth
+                let bigHei = parentController.view.vWidth * (hei / wid)
+                
+                alertImg.frame = imgFrame
+                alertImg.kf.setImage(with: URL(string: url))
+                
+                bgHover.backgroundColor = .black
+                bgHover.frame = parentController.view.frame
+                bgHover.alpha = 0
+                
+                self.addSubview(bgHover)
+                self.addSubview(alertImg)
+                
+                alertImg.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismiss)))
+                
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.alertImg.frame = CGRect(x: 0, y: (parHei - bigHei) * 0.5, width: bigWid, height: bigHei)
+                    self.bgHover.alpha = 1
+                }, completion: { value in
+                    self.alertImg.isUserInteractionEnabled = true
+                })
             }
         }
     }
     
     @objc func dismiss() {
-        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.alertImg.frame = self.imgFrame
+            self.bgHover.alpha = 0
+        }, completion: { value in
+            if value {
+                self.alertImg.removeFromSuperview()
+                self.bgHover.removeFromSuperview()
+            }
+        })
     }
 }
