@@ -36,7 +36,8 @@
   "source_files": [
     "Source/Core/*.{swift}",
     "Source/*.{swift}",
-    "Source/Http/*.{swift}"
+    "Source/Http/*.{swift}",
+    "Source/Views/*.{swift}"
   ],
   "resource_bundles": {
     "IMChatSDK": [

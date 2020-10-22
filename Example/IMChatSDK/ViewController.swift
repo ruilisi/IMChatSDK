@@ -32,10 +32,11 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor(hex: 0xFAFAFA)
         
         chatView = IMChatView(frame: CGRect(x: 0, y: 20, width: screenWidth, height: screenHeight - 20))
+        view.addSubview(chatView)
         
         let uiConfig = UnifyUIConfig()
             .setBGColor(color: .clear)
-            .setTextColor(color: .white)
+            .setTextColor(color: UIColor(hex: 0x333333))
             .setTextBGColor(color: UIColor(hex: 0xEBEEF2))
             .setBottomColor(color: UIColor(hex: 0xFFFFFF))
             .setButtonColor(color: UIColor(hex: 0x4D88FF))
@@ -47,8 +48,6 @@ class ViewController: UIViewController {
             .setReceiveBG(image: UIImage(named: "receiveBG"), edge: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
         
         chatView.buildUI(config: uiConfig)
-        
-        view.addSubview(chatView)
         
         self.automaticallyAdjustsScrollViewInsets = false
         

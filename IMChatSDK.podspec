@@ -37,7 +37,8 @@ TODO: Add long description of the pod here.
 
   s.source_files = ['Source/Core/*.{swift}',
                     'Source/*.{swift}',
-                    'Source/Http/*.{swift}']
+                    'Source/Http/*.{swift}',
+                    'Source/Views/*.{swift}']
   
   s.resource_bundles = {
    'IMChatSDK' => ['Resources/*.{xcassets,json}']

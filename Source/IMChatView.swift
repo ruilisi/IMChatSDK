@@ -15,6 +15,8 @@ open class IMChatView: UIView {
     let sendButton = UIButton()
     let bottomSafeArea = UIView()
     let messageTable = IMTableView()
+    let showImageView = ImageShowView()
+    var parentController = UIViewController()
     
     var bottomHeight = CGFloat()
     var navHeight = CGFloat()
@@ -68,6 +70,9 @@ open class IMChatView: UIView {
         selector: #selector(self.keyboardNotification(notification:)),
         name: UIResponder.keyboardWillChangeFrameNotification,
         object: nil)
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showImage(_:)), name: NSNotification.Name(rawValue: "showImage"), object: nil)
     }
     
     required public init?(coder: NSCoder) {
@@ -311,5 +316,42 @@ public extension IMChatView {
         if let lottie = config.loadingLottie {
             messageTable.setLottie(lottie: lottie)
         }
+        
+        if let view = self.parentViewController, !view.view.subviews.contains(showImageView) {
+            parentController = view
+            parentController.view.addSubview(showImageView)
+            
+            showImageView.frame = CGRect(x: 0, y: view.view.vHeight, width: view.view.vWidth, height: view.view.vHeight)
+            showImageView.backgroundColor = UIColor(hex: 0x000000, alpha: 0.5)
+        }
+    }
+}
+
+extension IMChatView {
+    @objc func showImage(_ notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            if let url = dict["url"] as? String, let size = dict["size"] as? CGSize {
+                showImageView.setImage(url: url, size: size)
+                UIView.animate(withDuration: 0.4,
+                               delay: 0,
+                               usingSpringWithDamping: 0.7,
+                               initialSpringVelocity: 0,
+                               options: .allowUserInteraction,
+                               animations: {
+                                self.showImageView.originY = 0
+                               },
+                               completion: { value in
+                                if value {
+                                    if value {
+                                        
+                                    }
+                                }
+                               })
+            }
+        }
+    }
+    
+    @objc func dismiss() {
+        
     }
 }

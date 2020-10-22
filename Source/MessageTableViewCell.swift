@@ -38,6 +38,9 @@ class MessageTableViewCell: UITableViewCell {
     var timeColor: UIColor = .white
     
     var rowHeight = CGFloat()
+    var imageUrl = String()
+    var imageSize = CGSize()
+    var model: MessageModel?
     
     private var hideTime: Bool = false
     
@@ -139,9 +142,15 @@ class MessageTableViewCell: UITableViewCell {
             cellImage.layer.masksToBounds = true
             cellImage.layer.borderWidth = 1
             cellImage.layer.borderColor = UIColor(hex: 0xCCCCCC).cgColor
+            cellImage.isUserInteractionEnabled = true
+            cellImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageClick)))
+            
+            imageUrl = baseUrl + url
+            imageSize = CGSize(width: width, height: height)
+            
+            let imageurl = URL(string: imageUrl)
             
             DispatchQueue.main.async {
-                let imageurl = URL(string: baseUrl + url)
                 self.cellImage.kf.setImage(with: imageurl)
             }
             
@@ -240,4 +249,10 @@ class MessageTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+}
+
+extension MessageTableViewCell {
+    @objc func imageClick() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showImage"), object: nil, userInfo: ["url": imageUrl, "size": imageSize])
+    }
 }

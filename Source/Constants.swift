@@ -6,3 +6,4 @@ public let unmistakableChars
 
 public let timeNow = Int(Date().timeIntervalSince1970) * 1000
 public var pingCount = 0
+
