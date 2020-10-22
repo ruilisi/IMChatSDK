@@ -258,7 +258,7 @@ extension IMTableView: WebSocketDelegate {
     func reconnectServer() {
         retryCount += 1
         print("Connection Faild, reconnecting: \(retryCount)")
-        socket = WebSocketHelper(baseurl: dataConfig.baseUrl)
+        socket = WebSocketHelper(baseurl: dataConfig.webSocket)
         socket.delegate = self
     }
     // MARK: - 处理异常

@@ -147,7 +147,7 @@ class IMTableView: UIView {
             }
         }
         
-        socket = WebSocketHelper(baseurl: dataConfig.baseUrl)
+        socket = WebSocketHelper(baseurl: dataConfig.webSocket)
         socket.delegate = self
     }
     
