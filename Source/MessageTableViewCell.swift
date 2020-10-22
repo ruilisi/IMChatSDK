@@ -130,8 +130,10 @@ class MessageTableViewCell: UITableViewCell {
             cellImage.widthAnchor.constraint(equalToConstant: imgwid).isActive = true
             cellImage.heightAnchor.constraint(equalToConstant: imghei).isActive = true
             
-            let imageurl = URL(string: baseUrl + url)
-            cellImage.kf.setImage(with: imageurl)
+            DispatchQueue.main.async {
+                let imageurl = URL(string: baseUrl + url)
+                self.cellImage.kf.setImage(with: imageurl)
+            }
             
             bgimage.widthAnchor.constraint(equalToConstant: imgwid + 30).isActive = true
             bgimage.heightAnchor.constraint(equalToConstant: imghei + 30).isActive = true
