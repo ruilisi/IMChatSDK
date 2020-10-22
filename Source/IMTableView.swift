@@ -201,7 +201,8 @@ class IMTableView: UIView {
             
             let hidetime = needHide(timeInterval: Int(timeinterval))
             
-            cell.setContent(msgID: item.msgID, name: item.name, message: item.message, timeInterval: timeinterval, isSelf: item.bySelf, ishideTime: hidetime)
+//            cell.setContent(msgID: item.msgID, name: item.name, message: item.message, timeInterval: timeinterval, isSelf: item.bySelf, ishideTime: hidetime)
+            cell.setContent(messageContent: item, ishideTime: hidetime)
             cell.setLoading(isLoading: false)
             cells.append(cell)
         }
@@ -233,7 +234,8 @@ class IMTableView: UIView {
             
             hidetime = !needhide ? needhide : self.needHide(timeInterval: Int(timeinterval), desc: desc)
             
-            cell.setContent(msgID: message.msgID, name: message.name, message: message.message, timeInterval: timeinterval, isSelf: message.bySelf, ishideTime: hidetime)
+//            cell.setContent(msgID: message.msgID, name: message.name, message: message.message, timeInterval: timeinterval, isSelf: message.bySelf, ishideTime: hidetime)
+            cell.setContent(messageContent: message, ishideTime: hidetime)
             
             if message.bySelf, send {
                 cell.setLoading(isLoading: true)

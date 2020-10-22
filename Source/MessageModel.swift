@@ -14,4 +14,7 @@ public struct MessageModel: Equatable, Codable, Hashable {
     var timeInterval: Int = 0
     var roomID: String = ""
     var bySelf: Bool = false
+    var imageUrl: String?
+    var imageWidth: Int?
+    var imageHeight: Int?
 }

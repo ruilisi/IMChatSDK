@@ -14,6 +14,7 @@ class MessageTableViewCell: UITableViewCell {
     let label = UILabel()
     let time = UILabel()
     let bgimage = UIImageView()
+    let cellImage = UIImageView()
     var anim: Animation? = nil
 //    let loadingLottie = AnimationView(name: "msgloading", bundle: Resources.bundle, imageProvider: nil, animationCache: nil)
     let loadingLottie = AnimationView()
@@ -74,7 +75,15 @@ class MessageTableViewCell: UITableViewCell {
     }
     
     // MARK: - Set Content
-    func setContent(msgID: String, name: String, message: String, timeInterval: TimeInterval, isSelf: Bool = false, ishideTime: Bool = false) {
+//    func setContent(msgID: String, name: String, message: String, timeInterval: TimeInterval, isSelf: Bool = false, ishideTime: Bool = false) {
+    func setContent(messageContent: MessageModel, ishideTime: Bool = false) {
+        
+        let msgID = messageContent.msgID
+        let name = messageContent.name
+        let message = messageContent.message
+        let isSelf = messageContent.bySelf
+        let timeInterval = TimeInterval(messageContent.timeInterval / 1000)
+        
         messageID = msgID
         timeInt = Int(timeInterval)
         label.text = message

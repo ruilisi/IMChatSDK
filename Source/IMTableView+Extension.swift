@@ -214,13 +214,20 @@ extension IMTableView: WebSocketDelegate {
     func receiveMessage(data: JSON) {
         if let msgs = data["args"].array, !msgs.isEmpty {
             for item in msgs {
-                let message = MessageModel(
+                var message = MessageModel(
                     msgID: item["_id"].stringValue,
                     name: item["u"]["username"].stringValue,
                     message: item["msg"].stringValue,
                     timeInterval: item["ts"]["$date"].intValue,
                     roomID: item["rid"].stringValue,
-                    bySelf: item["u"]["_id"].stringValue == dataConfig.userID)
+                    bySelf: item["u"]["_id"].stringValue == dataConfig.userID,
+                    imageUrl: item["attachments"]["title_link"].string)
+                
+                if let filearray = item["attachments"].array, !filearray.isEmpty {
+                    message.imageUrl = filearray[0]["title_link"].string
+                    message.imageWidth = filearray[0]["image_dimensions"]["width"].int
+                    message.imageHeight = filearray[0]["image_dimensions"]["height"].int
+                }
                 
                 let sameMSG = HistoryDataAccess.historyData.filter{ $0.msgID == message.msgID }
                 guard sameMSG.isEmpty else { continue }
