@@ -29,19 +29,22 @@ class ViewController: UIViewController {
             }
         }
         
-        view.backgroundColor = .gray
+        view.backgroundColor = UIColor(hex: 0xFAFAFA)
         
         chatView = IMChatView(frame: CGRect(x: 0, y: 20, width: screenWidth, height: screenHeight - 20))
         
         let uiConfig = UnifyUIConfig()
             .setBGColor(color: .clear)
             .setTextColor(color: .white)
-            .setTextBGColor(color: UIColor(hex: 0x494766))
-            .setBottomColor(color: UIColor(hex: 0x242433))
-            .setButtonColor(color: UIColor(hex: 0x494766))
-            .setPlaceHolderColor(color: UIColor(hex: 0x9696B5))
-            .setSendBG(image: UIImage(named: "testImg"), edge: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
-            .setReceiveBG(image: UIImage(named: "testImg2"), edge: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
+            .setTextBGColor(color: UIColor(hex: 0xEBEEF2))
+            .setBottomColor(color: UIColor(hex: 0xFFFFFF))
+            .setButtonColor(color: UIColor(hex: 0x4D88FF))
+            .setPlaceHolderColor(color: UIColor(hex: 0x636363))
+            .setSendTextColor(color: .white)
+            .setReceiveTextColor(color: .black)
+            .setTimeTextColor(color: .black)
+            .setSendBG(image: UIImage(named: "sendBG"), edge: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
+            .setReceiveBG(image: UIImage(named: "receiveBG"), edge: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
         
         chatView.buildUI(config: uiConfig)
         
@@ -65,8 +68,6 @@ class ViewController: UIViewController {
 
 extension ViewController {
     func requestService() {
-        let url = "wss://chat.esheeps.com/websocket"
-        
         let dataconfig = UnifyDataConfig()
             .setApiKey(key: "f6e873f72d5a465fae785d6143adb985")
             .setDepartmentID(did: "369d2d2b-f68b-4cf3-ba36-c588013fc511")
@@ -95,7 +96,7 @@ extension ViewController {
     func showSpinner(onView: UIView) {
         let spinnerView = UIView.init(frame: onView.bounds)
         spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.1)
-        let loadView = UIActivityIndicatorView.init(style: .whiteLarge)
+        let loadView = UIActivityIndicatorView.init(style: .gray)
         loadView.startAnimating()
         loadView.center = spinnerView.center
         

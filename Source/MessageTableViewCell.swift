@@ -119,35 +119,33 @@ class MessageTableViewCell: UITableViewCell {
         bgimage.translatesAutoresizingMaskIntoConstraints = false
         
         if let url = messageContent.imageUrl, let width = messageContent.imageWidth, let height = messageContent.imageHeight {
-            
+            bgimage.isHidden = true
             let imgwid = width.flo > windowWidth * 0.6 ? windowWidth * 0.6 : width.flo
             let imghei = imgwid * (height.flo / width.flo)
             
             addSubview(cellImage)
             cellImage.translatesAutoresizingMaskIntoConstraints = false
-            cellImage.centerXAnchor.constraint(equalTo: bgimage.centerXAnchor).isActive = true
-            cellImage.centerYAnchor.constraint(equalTo: bgimage.centerYAnchor).isActive = true
+            cellImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
             cellImage.widthAnchor.constraint(equalToConstant: imgwid).isActive = true
             cellImage.heightAnchor.constraint(equalToConstant: imghei).isActive = true
+            
+            if !isSelf {
+                cellImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
+            } else {
+                cellImage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
+            }
+            cellImage.layoutIfNeeded()
+            cellImage.layer.cornerRadius = 5
+            cellImage.layer.masksToBounds = true
+            cellImage.layer.borderWidth = 1
+            cellImage.layer.borderColor = UIColor(hex: 0xCCCCCC).cgColor
             
             DispatchQueue.main.async {
                 let imageurl = URL(string: baseUrl + url)
                 self.cellImage.kf.setImage(with: imageurl)
             }
             
-            bgimage.widthAnchor.constraint(equalToConstant: imgwid + 30).isActive = true
-            bgimage.heightAnchor.constraint(equalToConstant: imghei + 30).isActive = true
-            bgimage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
-            if !isSelf {
-                bgimage.image = receiveBG?.resizableImage(withCapInsets: receiveEdge, resizingMode: .stretch)
-                bgimage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
-            } else {
-                bgimage.image = sendBG?.resizableImage(withCapInsets: sendEdge, resizingMode: .stretch)
-                bgimage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
-            }
-            bgimage.layoutIfNeeded()
-            
-            rowHeight = bgimage.frame.height + time.frame.height + 30
+            rowHeight = cellImage.frame.height + time.frame.height + 30
             return
         }
         
@@ -188,16 +186,20 @@ class MessageTableViewCell: UITableViewCell {
         let dateVar = Date.init(timeIntervalSince1970: timeInterval)
         let dateFormatter = DateFormatter()
         
+        var timeshow = ""
+        
         let calender = NSCalendar.current
+        dateFormatter.dateFormat = "hh:mm"
+        
         if calender.isDateInYesterday(dateVar) {
-            dateFormatter.dateFormat = "昨天 hh:mm"
+            timeshow = "yesterday "
         } else if calender.isDateInToday(dateVar) {
-            dateFormatter.dateFormat = "今天 hh:mm"
+            timeshow = "today "
         } else {
-            dateFormatter.dateFormat = "yyyy年MM月dd日"
+            dateFormatter.dateFormat = "yyyy-MM-dd"
         }
         
-        return dateFormatter.string(from: dateVar)
+        return timeshow + dateFormatter.string(from: dateVar)
     }
     
     func setLoading(isLoading: Bool = true) {
