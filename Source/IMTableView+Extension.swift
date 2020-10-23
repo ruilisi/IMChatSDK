@@ -135,11 +135,12 @@ extension IMTableView: WebSocketDelegate {
         for item in list {
             let message = MessageModel(
                 msgID: item["_id"].stringValue,
-                name: item["u"]["name"].stringValue,
+                name: item["u"]["username"].stringValue,
                 message: item["msg"].stringValue,
-                timeInterval: item["_updatedAt"]["$date"].intValue,
+                timeInterval: item["ts"]["$date"].intValue,
                 roomID: item["rid"].stringValue,
-                bySelf: item["u"]["_id"].stringValue == dataConfig.userID)
+                bySelf: item["u"]["_id"].stringValue == dataConfig.userID,
+                imageUrl: item["attachments"]["title_link"].string)
             datalist.append(message)
         }
         
@@ -163,11 +164,12 @@ extension IMTableView: WebSocketDelegate {
         for item in list {
             let message = MessageModel(
                 msgID: item["_id"].stringValue,
-                name: item["u"]["name"].stringValue,
+                name: item["u"]["username"].stringValue,
                 message: item["msg"].stringValue,
-                timeInterval: item["_updatedAt"]["$date"].intValue,
+                timeInterval: item["ts"]["$date"].intValue,
                 roomID: item["rid"].stringValue,
-                bySelf: item["u"]["_id"].stringValue == dataConfig.userID)
+                bySelf: item["u"]["_id"].stringValue == dataConfig.userID,
+                imageUrl: item["attachments"]["title_link"].string)
             datalist.append(message)
         }
         
