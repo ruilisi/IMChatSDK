@@ -347,13 +347,15 @@ extension IMChatView {
                 alertImg.kf.setImage(with: URL(string: url))
                 
                 bgHover.backgroundColor = .black
-                bgHover.frame = parentController.view.frame
+                bgHover.frame = CGRect(x: 0, y: 0, width: parentController.view.vWidth, height: parentController.view.vHeight)
                 bgHover.alpha = 0
                 
                 self.addSubview(bgHover)
                 self.addSubview(alertImg)
                 
                 alertImg.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismiss)))
+                alertImg.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(startPanning(_:))))
+                alertImg.addGestureRecognizer(UIPinchGestureRecognizer(target: self, action: #selector(startPin(_:))))
                 
                 UIView.animate(withDuration: 0.3, animations: {
                     self.alertImg.frame = CGRect(x: 0, y: (parHei - bigHei) * 0.5, width: bigWid, height: bigHei)
@@ -375,5 +377,18 @@ extension IMChatView {
                 self.bgHover.removeFromSuperview()
             }
         })
+    }
+    
+    @objc func startPanning(_ sender: UIPanGestureRecognizer) {
+        guard let targetView = sender.view else { return }
+        let translation = sender.translation(in: self)
+        targetView.center = CGPoint(x: targetView.center.x + translation.x, y: targetView.center.y + translation.y)
+        sender.setTranslation(CGPoint.zero, in: self)
+    }
+    
+    @objc func startPin(_ sender: UIPinchGestureRecognizer) {
+        guard let targetView = sender.view else { return }
+        targetView.transform = targetView.transform.scaledBy(x: sender.scale, y: sender.scale)
+        sender.scale = 1
     }
 }
