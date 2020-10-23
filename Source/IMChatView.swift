@@ -369,7 +369,7 @@ extension IMChatView {
                 showScroll.setup()
                 showScroll.imageContentMode = .aspectFit
                 showScroll.initialOffset = .center
-                showScroll.display(img: alertImg.image)
+                showScroll.display(img: alertImg.image, imgsize: alertImg.image?.size)
                 
                 showScroll.isUserInteractionEnabled = true
                 showScroll.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismiss)))

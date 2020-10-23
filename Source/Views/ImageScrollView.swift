@@ -172,7 +172,7 @@ open class ImageScrollView: UIScrollView {
 
     // MARK: - Display image
     
-    @objc open func display(img: UIImage?) {
+    func display(img: UIImage?, imgsize: CGSize?) {
 
         guard let image = img else { return }
         
@@ -184,7 +184,13 @@ open class ImageScrollView: UIScrollView {
         zoomView!.isUserInteractionEnabled = true
         addSubview(zoomView!)
         
-        configureImageForSize(image.size)
+        if let picsize = imgsize {
+            configureImageForSize(picsize)
+        } else {
+            configureImageForSize(image.size)
+        }
+        
+        print("IMG Size:\(image.size)")
     }
     
     private func configureImageForSize(_ size: CGSize) {
