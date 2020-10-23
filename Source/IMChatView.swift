@@ -16,10 +16,10 @@ open class IMChatView: UIView {
     let sendButton = UIButton()
     let bottomSafeArea = UIView()
     let messageTable = IMTableView()
-    var showImageView = ImageShowView()
     
     var bgHover = UIImageView()
     var alertImg = UIImageView()
+    var showScroll = UIScrollView()
     var imgFrame = CGRect()
     
     var parentController = UIViewController()
@@ -323,7 +323,7 @@ public extension IMChatView {
             messageTable.setLottie(lottie: lottie)
         }
         
-        if let view = self.parentViewController, !view.view.subviews.contains(showImageView) {
+        if let view = self.parentViewController {
             parentController = view
             
         }
@@ -335,6 +335,7 @@ extension IMChatView {
         if let dict = notification.userInfo as NSDictionary? {
             if let url = dict["url"] as? String, let size = dict["size"] as? CGSize, let rect = dict["setAbel"] as? CGRect {
                 imgFrame = messageTable.getCellRectFromSuperView(rect)
+                imgFrame = self.convert(imgFrame, to: self.superview)
                 
                 let wid = size.width
                 let hei = size.height
@@ -350,13 +351,19 @@ extension IMChatView {
                 bgHover.frame = CGRect(x: 0, y: 0, width: parentController.view.vWidth, height: parentController.view.vHeight)
                 bgHover.alpha = 0
                 
-                self.addSubview(bgHover)
-                self.addSubview(alertImg)
+                showScroll.backgroundColor = .clear
+                showScroll.frame = CGRect(x: 0, y: 0, width: parentController.view.vWidth, height: parentController.view.vHeight)
+                showScroll.minimumZoomScale = 1.0
+                showScroll.maximumZoomScale = 5.0
+                showScroll.delegate = self
+                
+                parentController.view.addSubview(bgHover)
+                parentController.view.addSubview(showScroll)
+                showScroll.addSubview(alertImg)
+                showScroll.clipsToBounds = true
                 
                 alertImg.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismiss)))
-                alertImg.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(startPanning(_:))))
-                alertImg.addGestureRecognizer(UIPinchGestureRecognizer(target: self, action: #selector(startPin(_:))))
-                
+
                 UIView.animate(withDuration: 0.3, animations: {
                     self.alertImg.frame = CGRect(x: 0, y: (parHei - bigHei) * 0.5, width: bigWid, height: bigHei)
                     self.bgHover.alpha = 1
@@ -369,26 +376,22 @@ extension IMChatView {
     
     @objc func dismiss() {
         UIView.animate(withDuration: 0.3, animations: {
-            self.alertImg.frame = self.imgFrame
+            let framex = self.parentController.view.convert(self.imgFrame, to: self.showScroll)
+            self.alertImg.frame = framex
             self.bgHover.alpha = 0
         }, completion: { value in
             if value {
+                self.showScroll.contentSize = CGSize(width: 0, height: 0)
                 self.alertImg.removeFromSuperview()
                 self.bgHover.removeFromSuperview()
+                self.showScroll.removeFromSuperview()
             }
         })
     }
-    
-    @objc func startPanning(_ sender: UIPanGestureRecognizer) {
-        guard let targetView = sender.view else { return }
-        let translation = sender.translation(in: self)
-        targetView.center = CGPoint(x: targetView.center.x + translation.x, y: targetView.center.y + translation.y)
-        sender.setTranslation(CGPoint.zero, in: self)
-    }
-    
-    @objc func startPin(_ sender: UIPinchGestureRecognizer) {
-        guard let targetView = sender.view else { return }
-        targetView.transform = targetView.transform.scaledBy(x: sender.scale, y: sender.scale)
-        sender.scale = 1
+}
+
+extension IMChatView: UIScrollViewDelegate {
+    public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return alertImg
     }
 }
