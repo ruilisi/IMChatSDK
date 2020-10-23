@@ -355,10 +355,10 @@ extension IMChatView {
                 
                 alertImg = UIImageView()
                 alertImg.kf.setImage(with: URL(string: url))
-                parentController.view.addSubview(alertImg)
-                alertImg.frame = imgFrame
+//                parentController.view.addSubview(alertImg)
+//                alertImg.frame = imgFrame
                 
-                showScroll.isHidden = true
+                showScroll.alpha = 0
                 showScroll.translatesAutoresizingMaskIntoConstraints = false
                 showScroll.leftAnchor.constraint(equalTo: parentController.view.leftAnchor).isActive = true
                 showScroll.rightAnchor.constraint(equalTo: parentController.view.rightAnchor).isActive = true
@@ -374,12 +374,13 @@ extension IMChatView {
                 showScroll.isUserInteractionEnabled = true
                 showScroll.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismiss)))
 
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.alertImg.frame = CGRect(x: 0, y: (parHei - bigHei) * 0.5, width: bigWid, height: bigHei)
+                UIView.animate(withDuration: 0.2, animations: {
+//                    self.alertImg.frame = CGRect(x: 0, y: (parHei - bigHei) * 0.5, width: bigWid, height: bigHei)
                     self.bgHover.alpha = 1
+                    self.showScroll.alpha = 1
                 }, completion: { value in
 //                    self.alertImg.isUserInteractionEnabled = true
-                    self.alertImg.removeFromSuperview()
+//                    self.alertImg.removeFromSuperview()
                     self.showScroll.isHidden = false
                 })
             }
@@ -391,6 +392,7 @@ extension IMChatView {
             let framex = self.parentController.view.convert(self.imgFrame, to: self.showScroll)
             self.alertImg.frame = framex
             self.bgHover.alpha = 0
+            self.showScroll.alpha = 0
         }, completion: { value in
             if value {
 //                self.showScroll.contentSize = CGSize(width: 0, height: 0)
