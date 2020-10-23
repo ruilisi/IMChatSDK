@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 @objc public protocol ImageScrollViewDelegate: UIScrollViewDelegate {
     func imageScrollViewDidChangeOrientation(imageScrollView: ImageScrollView)
@@ -278,7 +279,7 @@ open class ImageScrollView: UIScrollView {
     
     open func refresh() {
         if let image = zoomView {
-            display(img: image.image)
+//            display(img: image.image)
         }
     }
     
