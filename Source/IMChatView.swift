@@ -17,7 +17,7 @@ open class IMChatView: UIView {
     let bottomSafeArea = UIView()
     let messageTable = IMTableView()
     
-    var bgHover = UIImageView()
+    var bgHover = UIView()
     var alertImg = UIImageView()
     var showScroll = UIScrollView()
     var imgFrame = CGRect()
@@ -344,13 +344,16 @@ extension IMChatView {
                 let bigWid = parentController.view.vWidth
                 let bigHei = parentController.view.vWidth * (hei / wid)
                 
+                alertImg = UIImageView()
                 alertImg.frame = imgFrame
                 alertImg.kf.setImage(with: URL(string: url))
                 
+                bgHover = UIView()
                 bgHover.backgroundColor = .black
                 bgHover.frame = CGRect(x: 0, y: 0, width: parentController.view.vWidth, height: parentController.view.vHeight)
                 bgHover.alpha = 0
                 
+                showScroll = UIScrollView()
                 showScroll.backgroundColor = .clear
                 showScroll.frame = CGRect(x: 0, y: 0, width: parentController.view.vWidth, height: parentController.view.vHeight)
                 showScroll.minimumZoomScale = 1.0
