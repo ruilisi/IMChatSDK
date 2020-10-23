@@ -168,10 +168,6 @@ open class ImageScrollView: UIScrollView {
         
         // Make sure views have already layout with precise frame
         topSupperView?.layoutIfNeeded()
-        
-        DispatchQueue.main.async {
-            self.refresh()
-        }
     }
 
     // MARK: - Display image
@@ -275,12 +271,6 @@ open class ImageScrollView: UIScrollView {
         zoomRect.origin.y    = center.y - (zoomRect.size.height / 2.0)
         
         return zoomRect
-    }
-    
-    open func refresh() {
-        if let image = zoomView {
-//            display(img: image.image)
-        }
     }
     
     // MARK: - Actions
