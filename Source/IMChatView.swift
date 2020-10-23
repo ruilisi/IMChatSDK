@@ -19,7 +19,7 @@ open class IMChatView: UIView {
     
     var bgHover = UIView()
     var alertImg = UIImageView()
-    var showScroll = UIScrollView()
+    var showScroll = ImageScrollView()
     var imgFrame = CGRect()
     
     var parentController = UIViewController()
@@ -344,34 +344,43 @@ extension IMChatView {
                 let bigWid = parentController.view.vWidth
                 let bigHei = parentController.view.vWidth * (hei / wid)
                 
-                alertImg = UIImageView()
-                alertImg.frame = imgFrame
-                alertImg.kf.setImage(with: URL(string: url))
-                
                 bgHover = UIView()
+                parentController.view.addSubview(bgHover)
                 bgHover.backgroundColor = .black
                 bgHover.frame = CGRect(x: 0, y: 0, width: parentController.view.vWidth, height: parentController.view.vHeight)
                 bgHover.alpha = 0
                 
-                showScroll = UIScrollView()
-                showScroll.backgroundColor = .clear
-                showScroll.frame = CGRect(x: 0, y: 0, width: parentController.view.vWidth, height: parentController.view.vHeight)
-                showScroll.minimumZoomScale = 1.0
-                showScroll.maximumZoomScale = 5.0
-                showScroll.delegate = self
-                
-                parentController.view.addSubview(bgHover)
+                showScroll = ImageScrollView()
                 parentController.view.addSubview(showScroll)
-                showScroll.addSubview(alertImg)
-                showScroll.clipsToBounds = true
                 
-                alertImg.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismiss)))
+                alertImg = UIImageView()
+                alertImg.kf.setImage(with: URL(string: url))
+                parentController.view.addSubview(alertImg)
+                alertImg.frame = imgFrame
+                
+                showScroll.isHidden = true
+                showScroll.translatesAutoresizingMaskIntoConstraints = false
+                showScroll.leftAnchor.constraint(equalTo: parentController.view.leftAnchor).isActive = true
+                showScroll.rightAnchor.constraint(equalTo: parentController.view.rightAnchor).isActive = true
+                showScroll.topAnchor.constraint(equalTo: parentController.view.topAnchor).isActive = true
+                showScroll.bottomAnchor.constraint(equalTo: parentController.view.bottomAnchor).isActive = true
+                showScroll.layoutIfNeeded()
+                
+                showScroll.setup()
+                showScroll.imageContentMode = .aspectFit
+                showScroll.initialOffset = .center
+                showScroll.display(img: alertImg.image)
+                
+                showScroll.isUserInteractionEnabled = true
+                showScroll.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismiss)))
 
                 UIView.animate(withDuration: 0.3, animations: {
                     self.alertImg.frame = CGRect(x: 0, y: (parHei - bigHei) * 0.5, width: bigWid, height: bigHei)
                     self.bgHover.alpha = 1
                 }, completion: { value in
-                    self.alertImg.isUserInteractionEnabled = true
+//                    self.alertImg.isUserInteractionEnabled = true
+                    self.alertImg.removeFromSuperview()
+                    self.showScroll.isHidden = false
                 })
             }
         }
@@ -384,17 +393,11 @@ extension IMChatView {
             self.bgHover.alpha = 0
         }, completion: { value in
             if value {
-                self.showScroll.contentSize = CGSize(width: 0, height: 0)
-                self.alertImg.removeFromSuperview()
+//                self.showScroll.contentSize = CGSize(width: 0, height: 0)
+//                self.alertImg.removeFromSuperview()
                 self.bgHover.removeFromSuperview()
                 self.showScroll.removeFromSuperview()
             }
         })
-    }
-}
-
-extension IMChatView: UIScrollViewDelegate {
-    public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return alertImg
     }
 }
