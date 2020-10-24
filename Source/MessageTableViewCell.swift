@@ -10,6 +10,13 @@ import UIKit
 import Lottie
 import Kingfisher
 
+enum CellType {
+    case Text
+    case Image
+    case Video
+    case File
+}
+
 class MessageTableViewCell: UITableViewCell {
 
     let label = UILabel()
@@ -79,7 +86,7 @@ class MessageTableViewCell: UITableViewCell {
     }
     
     // MARK: - Set Content
-    func setContent(baseUrl: String, messageContent: MessageModel, ishideTime: Bool = false) {
+    func setContent(baseUrl: String, messageContent: MessageModel, ishideTime: Bool = false, cellType: CellType = .Text) {
         
         let msgID = messageContent.msgID
         let message = messageContent.message
@@ -120,6 +127,17 @@ class MessageTableViewCell: UITableViewCell {
         label.layoutIfNeeded()
         
         bgimage.translatesAutoresizingMaskIntoConstraints = false
+        
+        switch cellType {
+        case .Text:
+            setTextContent()
+        case .Image:
+            setImageContent()
+        case .Video:
+            setVideoContent()
+        case .File:
+            setFileContent()
+        }
         
         if let url = messageContent.imageUrl, let width = messageContent.imageWidth, let height = messageContent.imageHeight {
             bgimage.isHidden = true
@@ -188,6 +206,22 @@ class MessageTableViewCell: UITableViewCell {
         bgimage.layoutIfNeeded()
         
         rowHeight = bgimage.frame.height + time.frame.height + 30
+    }
+    
+    func setTextContent() {
+        
+    }
+    
+    func setImageContent() {
+        
+    }
+    
+    func setVideoContent() {
+        
+    }
+    
+    func setFileContent() {
+        
     }
     
     func getTimeStringByCurrentDate(timeInterval: TimeInterval) -> String {
