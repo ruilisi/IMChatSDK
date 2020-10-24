@@ -344,6 +344,10 @@ extension IMChatView {
                 let bigWid = parentController.view.vWidth
                 let bigHei = parentController.view.vWidth * (hei / wid)
                 
+                alertImg = UIImageView()
+                alertImg.kf.setImage(with: URL(string: url))
+                if alertImg.image == nil { return }
+                
                 bgHover = UIView()
                 parentController.view.addSubview(bgHover)
                 bgHover.backgroundColor = .black
@@ -352,9 +356,6 @@ extension IMChatView {
                 
                 showScroll = ImageScrollView()
                 parentController.view.addSubview(showScroll)
-                
-                alertImg = UIImageView()
-                alertImg.kf.setImage(with: URL(string: url))
 //                parentController.view.addSubview(alertImg)
 //                alertImg.frame = imgFrame
                 
