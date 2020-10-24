@@ -86,11 +86,10 @@ class MessageTableViewCell: UITableViewCell {
     }
     
     // MARK: - Set Content
-    func setContent(baseUrl: String, messageContent: MessageModel, ishideTime: Bool = false, cellType: CellType = .Text) {
+    func setContent(baseUrl: String, messageContent: MessageModel, ishideTime: Bool = false) {
         
         let msgID = messageContent.msgID
         let message = messageContent.message
-        let isSelf = messageContent.bySelf
         let timeInterval = TimeInterval(messageContent.timeInterval / 1000)
         
         messageID = msgID
@@ -128,54 +127,23 @@ class MessageTableViewCell: UITableViewCell {
         
         bgimage.translatesAutoresizingMaskIntoConstraints = false
         
+        var cellType: CellType = .Text
+        
+        if messageContent.imageUrl != nil { cellType = .Image }
+        
         switch cellType {
         case .Text:
-            setTextContent()
+            setTextContent(messageContent: messageContent)
         case .Image:
-            setImageContent()
+            setImageContent(baseUrl: baseUrl, messageContent: messageContent)
         case .Video:
             setVideoContent()
         case .File:
             setFileContent()
         }
-        
-        if let url = messageContent.imageUrl, let width = messageContent.imageWidth, let height = messageContent.imageHeight {
-            bgimage.isHidden = true
-            let imgwid = width.flo > windowWidth * 0.6 ? windowWidth * 0.6 : width.flo
-            let imghei = imgwid * (height.flo / width.flo)
-            
-            addSubview(cellImage)
-            cellImage.translatesAutoresizingMaskIntoConstraints = false
-            cellImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
-            cellImage.widthAnchor.constraint(equalToConstant: imgwid).isActive = true
-            cellImage.heightAnchor.constraint(equalToConstant: imghei).isActive = true
-            
-            if !isSelf {
-                cellImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
-            } else {
-                cellImage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
-            }
-            cellImage.layoutIfNeeded()
-            cellImage.layer.cornerRadius = 5
-            cellImage.layer.masksToBounds = true
-            cellImage.layer.borderWidth = 1
-            cellImage.layer.borderColor = UIColor(hex: 0xCCCCCC).cgColor
-            cellImage.isUserInteractionEnabled = true
-            cellImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageClick)))
-            
-            imageUrl = baseUrl + url
-            imageSize = CGSize(width: width, height: height)
-            
-            let imageurl = URL(string: imageUrl)
-            
-            DispatchQueue.main.async {
-                self.cellImage.kf.setImage(with: imageurl)
-            }
-            
-            rowHeight = cellImage.frame.height + time.frame.height + 30
-            return
-        }
-        
+    }
+    
+    func setTextContent(messageContent: MessageModel) {
         if label.frame.width + 30.0 < 50 {
             bgimage.widthAnchor.constraint(equalToConstant: 50).isActive = true
         } else {
@@ -185,7 +153,7 @@ class MessageTableViewCell: UITableViewCell {
         bgimage.heightAnchor.constraint(equalTo: label.heightAnchor, constant: 25).isActive = true
         bgimage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
         
-        if !isSelf {
+        if !messageContent.bySelf {
             label.textColor = receiveColor
             bgimage.image = receiveBG?.resizableImage(withCapInsets: receiveEdge, resizingMode: .stretch)
             bgimage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
@@ -208,12 +176,42 @@ class MessageTableViewCell: UITableViewCell {
         rowHeight = bgimage.frame.height + time.frame.height + 30
     }
     
-    func setTextContent() {
-        
-    }
-    
-    func setImageContent() {
-        
+    func setImageContent(baseUrl: String, messageContent: MessageModel) {
+        if let url = messageContent.imageUrl, let width = messageContent.imageWidth, let height = messageContent.imageHeight {
+            bgimage.isHidden = true
+            let imgwid = width.flo > windowWidth * 0.6 ? windowWidth * 0.6 : width.flo
+            let imghei = imgwid * (height.flo / width.flo)
+            
+            addSubview(cellImage)
+            cellImage.translatesAutoresizingMaskIntoConstraints = false
+            cellImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
+            cellImage.widthAnchor.constraint(equalToConstant: imgwid).isActive = true
+            cellImage.heightAnchor.constraint(equalToConstant: imghei).isActive = true
+            
+            if !messageContent.bySelf {
+                cellImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
+            } else {
+                cellImage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
+            }
+            cellImage.layoutIfNeeded()
+            cellImage.layer.cornerRadius = 5
+            cellImage.layer.masksToBounds = true
+            cellImage.layer.borderWidth = 1
+            cellImage.layer.borderColor = UIColor(hex: 0xCCCCCC).cgColor
+            cellImage.isUserInteractionEnabled = true
+            cellImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageClick)))
+            
+            imageUrl = baseUrl + url
+            imageSize = CGSize(width: width, height: height)
+            
+            let imageurl = URL(string: imageUrl)
+            
+            DispatchQueue.main.async {
+                self.cellImage.kf.setImage(with: imageurl)
+            }
+            
+            rowHeight = cellImage.frame.height + time.frame.height + 30
+        }
     }
     
     func setVideoContent() {
