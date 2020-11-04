@@ -269,13 +269,13 @@ class IMTableView: UIView {
                 self.cells.insert(cell, at: 0)
             }
             
-            if !desc {
+//            if !desc {
                 self.messageTable.beginUpdates()
                 self.messageTable.insertRows(at: [IndexPath(row: desc ? 0 : self.cells.count - 1, section: 0)], with: .automatic)
                 self.messageTable.endUpdates()
-            } else {
-                self.messageTable.insertItemsAtTopWithFixedPosition(1)
-            }
+//            } else {
+//                self.messageTable.insertItemsAtTopWithFixedPosition(1)
+//            }
             
             if !desc {
                 self.messageTable.scrollToRow(at: IndexPath(row: self.cells.count - 1, section: 0), at: .bottom, animated: true)
@@ -388,10 +388,6 @@ extension IMTableView: UITableViewDelegate, UITableViewDataSource {
     
     func getCellRectFromSuperView(_ rect: CGRect) -> CGRect {
         return messageTable.convert(rect, to: self.superview)
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset)
     }
 }
 

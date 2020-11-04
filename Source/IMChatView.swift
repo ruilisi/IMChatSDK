@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import AVKit
+import AVFoundation
 
 open class IMChatView: UIView {
     
@@ -79,6 +81,7 @@ open class IMChatView: UIView {
         
         
         NotificationCenter.default.addObserver(self, selector: #selector(showImage(_:)), name: NSNotification.Name(rawValue: "showImage"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showVideo(_:)), name: NSNotification.Name(rawValue: "showVideo"), object: nil)
     }
     
     required public init?(coder: NSCoder) {
@@ -384,6 +387,21 @@ extension IMChatView {
 //                    self.alertImg.removeFromSuperview()
                     self.showScroll.isHidden = false
                 })
+            }
+        }
+    }
+    
+    @objc func showVideo(_ notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            if let url = dict["url"] as? String, let parentVC = self.parentViewController {
+//                let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+                let videoURL = URL(string: url)
+                let player = AVPlayer(url: videoURL!)
+                let playerViewController = AVPlayerViewController()
+                playerViewController.player = player
+                parentVC.present(playerViewController, animated: true) {
+                    playerViewController.player!.play()
+                }
             }
         }
     }

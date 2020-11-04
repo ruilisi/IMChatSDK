@@ -56,12 +56,17 @@ class ViewController: UIViewController {
         didDisapper = false
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        requestService()
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        didDisapper = true
-        chatView.cleanHistory()
-        chatView.disconnect()
-        removeSpinner()
+//        didDisapper = true
+//        chatView.cleanHistory()
+//        chatView.disconnect()
+//        removeSpinner()
     }
 }
 

@@ -139,7 +139,8 @@ extension IMTableView: WebSocketDelegate {
                 message: item["msg"].stringValue,
                 timeInterval: item["ts"]["$date"].intValue,
                 roomID: item["rid"].stringValue,
-                bySelf: item["u"]["_id"].stringValue == dataConfig.userID)
+                bySelf: item["u"]["_id"].stringValue == dataConfig.userID,
+                fileType: item["file"]["type"].string)
             
             if let fileArray = item["attachments"].array, !fileArray.isEmpty {
                 message.imageUrl = fileArray[0]["title_link"].string
@@ -174,7 +175,8 @@ extension IMTableView: WebSocketDelegate {
                 message: item["msg"].stringValue,
                 timeInterval: item["ts"]["$date"].intValue,
                 roomID: item["rid"].stringValue,
-                bySelf: item["u"]["_id"].stringValue == dataConfig.userID)
+                bySelf: item["u"]["_id"].stringValue == dataConfig.userID,
+                fileType: item["file"]["type"].string)
             
             if let fileArray = item["attachments"].array, !fileArray.isEmpty {
                 message.imageUrl = fileArray[0]["title_link"].string
@@ -235,7 +237,7 @@ extension IMTableView: WebSocketDelegate {
                     timeInterval: item["ts"]["$date"].intValue,
                     roomID: item["rid"].stringValue,
                     bySelf: item["u"]["_id"].stringValue == dataConfig.userID,
-                    imageUrl: item["attachments"]["title_link"].string)
+                    fileType: item["file"]["type"].string)
                 
                 if let filearray = item["attachments"].array, !filearray.isEmpty {
                     message.imageUrl = filearray[0]["title_link"].string

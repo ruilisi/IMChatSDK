@@ -17,4 +17,5 @@ public struct MessageModel: Equatable, Codable, Hashable {
     var imageUrl: String?
     var imageWidth: Int?
     var imageHeight: Int?
+    var fileType: String?
 }

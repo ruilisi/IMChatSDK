@@ -45,8 +45,10 @@ class MessageTableViewCell: UITableViewCell {
     
     var timeColor: UIColor = .white
     
+    var urlHead = String()
     var rowHeight = CGFloat()
     var imageUrl = String()
+    var videoUrl = String()
     var imageSize = CGSize()
     var model: MessageModel?
     
@@ -92,6 +94,8 @@ class MessageTableViewCell: UITableViewCell {
         let msgID = messageContent.msgID
         let message = messageContent.message
         let timeInterval = TimeInterval(messageContent.timeInterval / 1000)
+        model = messageContent
+        urlHead = baseUrl
         
         messageID = msgID
         timeInt = Int(timeInterval)
@@ -130,7 +134,17 @@ class MessageTableViewCell: UITableViewCell {
         
         var cellType: CellType = .Text
         
-        if messageContent.imageUrl != nil { cellType = .Image }
+//        if let imgUrl = messageContent.imageUrl, !imgUrl.isEmpty { cellType = .Image }
+//        if let imgUrl = messageContent.imageUrl, !imgUrl.isEmpty { cellType = .Image }
+         
+        let type = messageContent.fileType ?? ""
+        if type.contains("video") {
+            cellType = .Video
+        } else if type.contains("image") {
+            cellType = .Image
+        } else {
+            cellType = .Text
+        }
         
         switch cellType {
         case .Text:
@@ -218,7 +232,37 @@ class MessageTableViewCell: UITableViewCell {
     }
     
     func setVideoContent() {
-        
+        if let messageContent = model, let url = messageContent.imageUrl {
+            bgimage.isHidden = true
+            
+            let imgwid = windowWidth * 0.6
+            let imghei = windowHeight * 0.3
+            
+            addSubview(cellImage)
+            cellImage.translatesAutoresizingMaskIntoConstraints = false
+            cellImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
+            cellImage.widthAnchor.constraint(equalToConstant: imgwid).isActive = true
+            cellImage.heightAnchor.constraint(equalToConstant: imghei).isActive = true
+            
+            if !messageContent.bySelf {
+                cellImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
+            } else {
+                cellImage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
+            }
+            
+            cellImage.layoutIfNeeded()
+            cellImage.layer.cornerRadius = 5
+            cellImage.layer.masksToBounds = true
+            cellImage.layer.borderWidth = 1
+            cellImage.layer.borderColor = UIColor(hex: 0xCCCCCC).cgColor
+            cellImage.isUserInteractionEnabled = true
+            cellImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(videoClick)))
+            cellImage.backgroundColor = .black
+            
+            imageUrl = urlHead + url
+            
+            rowHeight = cellImage.frame.height + time.frame.height + 30
+        }
     }
     
     func setFileContent() {
@@ -291,5 +335,9 @@ extension MessageTableViewCell {
         let frame = self.convert(cellImage.frame, to: self.superview)
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showImage"), object: nil, userInfo: ["url": imageUrl, "size": imageSize, "setAbel": frame])
+    }
+    
+    @objc func videoClick() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showVideo"), object: nil, userInfo: ["url": imageUrl])
     }
 }
