@@ -212,12 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = ACK44BB9HY;
+						DevelopmentTeam = 32A3ZNKTH8;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = ACK44BB9HY;
+						DevelopmentTeam = 32A3ZNKTH8;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -488,7 +488,7 @@
 			baseConfigurationReference = DFDB4836527AC519766588CC /* Pods-IMChatSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ACK44BB9HY;
+				DEVELOPMENT_TEAM = 32A3ZNKTH8;
 				INFOPLIST_FILE = IMChatSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -504,7 +504,7 @@
 			baseConfigurationReference = 1E24B0FD25F14D77F4236DD1 /* Pods-IMChatSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ACK44BB9HY;
+				DEVELOPMENT_TEAM = 32A3ZNKTH8;
 				INFOPLIST_FILE = IMChatSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -519,7 +519,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7E52FB4DD15B94D571CB8297 /* Pods-IMChatSDK_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = ACK44BB9HY;
+				DEVELOPMENT_TEAM = 32A3ZNKTH8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -542,7 +542,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C01513DBF590A2F05163A74F /* Pods-IMChatSDK_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = ACK44BB9HY;
+				DEVELOPMENT_TEAM = 32A3ZNKTH8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

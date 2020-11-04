@@ -341,7 +341,9 @@ class IMTableView: UIView {
     func cleanHistory() {
         HistoryDataAccess.historyData = []
         cells = []
-        self.messageTable.reloadData()
+        DispatchQueue.main.async {
+            self.messageTable.reloadData()
+        }
     }
     
     required init?(coder: NSCoder) {

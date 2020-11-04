@@ -133,14 +133,20 @@ extension IMTableView: WebSocketDelegate {
         var datalist: [MessageModel] = []
         
         for item in list {
-            let message = MessageModel(
+            var message = MessageModel(
                 msgID: item["_id"].stringValue,
                 name: item["u"]["username"].stringValue,
                 message: item["msg"].stringValue,
                 timeInterval: item["ts"]["$date"].intValue,
                 roomID: item["rid"].stringValue,
-                bySelf: item["u"]["_id"].stringValue == dataConfig.userID,
-                imageUrl: item["attachments"]["title_link"].string)
+                bySelf: item["u"]["_id"].stringValue == dataConfig.userID)
+            
+            if let fileArray = item["attachments"].array, !fileArray.isEmpty {
+                message.imageUrl = fileArray[0]["title_link"].string
+                message.imageWidth = fileArray[0]["image_dimensions"]["width"].int
+                message.imageHeight = fileArray[0]["image_dimensions"]["height"].int
+            }
+            
             datalist.append(message)
         }
         
@@ -162,14 +168,20 @@ extension IMTableView: WebSocketDelegate {
         var datalist: [MessageModel] = []
         
         for item in list {
-            let message = MessageModel(
+            var message = MessageModel(
                 msgID: item["_id"].stringValue,
                 name: item["u"]["username"].stringValue,
                 message: item["msg"].stringValue,
                 timeInterval: item["ts"]["$date"].intValue,
                 roomID: item["rid"].stringValue,
-                bySelf: item["u"]["_id"].stringValue == dataConfig.userID,
-                imageUrl: item["attachments"]["title_link"].string)
+                bySelf: item["u"]["_id"].stringValue == dataConfig.userID)
+            
+            if let fileArray = item["attachments"].array, !fileArray.isEmpty {
+                message.imageUrl = fileArray[0]["title_link"].string
+                message.imageWidth = fileArray[0]["image_dimensions"]["width"].int
+                message.imageHeight = fileArray[0]["image_dimensions"]["height"].int
+            }
+            
             datalist.append(message)
         }
         
