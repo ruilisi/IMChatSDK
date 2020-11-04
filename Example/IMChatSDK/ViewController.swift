@@ -73,7 +73,7 @@ extension ViewController {
             .setUserName(uname: "TestUserName")
             .setWelcome(text: "Welcom to eSheep")
             .setLoadHistoryCount(count: 10)
-            .setPerLoadHistoryCount(count: 2)
+            .setPerLoadHistoryCount(count: 10)
             .setTimeSpan(timeinterval: 200)
         
         self.chatView.buildConnection(config: dataconfig, onSuccess: {

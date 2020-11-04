@@ -262,20 +262,25 @@ class IMTableView: UIView {
     }
     
     func addCellRow(cell: MessageTableViewCell, desc: Bool, byself: Bool) {
-        
-        messageTable.beginUpdates()
-        
-        if !desc {
-            cells.append(cell)
-            messageTable.insertRows(at: [IndexPath(row: cells.count - 1, section: 0)], with: .automatic)
-        } else {
-            cells.insert(cell, at: 0)
-            messageTable.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        DispatchQueue.main.async {
+            if !desc {
+                self.cells.append(cell)
+            } else {
+                self.cells.insert(cell, at: 0)
+            }
+            
+            if !desc {
+                self.messageTable.beginUpdates()
+                self.messageTable.insertRows(at: [IndexPath(row: desc ? 0 : self.cells.count - 1, section: 0)], with: .automatic)
+                self.messageTable.endUpdates()
+            } else {
+                self.messageTable.insertItemsAtTopWithFixedPosition(1)
+            }
+            
+            if !desc {
+                self.messageTable.scrollToRow(at: IndexPath(row: self.cells.count - 1, section: 0), at: .bottom, animated: true)
+            }
         }
-        
-        messageTable.endUpdates()
-        
-        self.messageTable.scrollToRow(at: IndexPath(row: !desc ? self.cells.count - 1 : 0, section: 0), at: !desc ? .bottom : .top, animated: true)
     }
     
     func needHide(timeInterval: Int, desc: Bool = false) -> Bool {
@@ -384,6 +389,10 @@ extension IMTableView: UITableViewDelegate, UITableViewDataSource {
     func getCellRectFromSuperView(_ rect: CGRect) -> CGRect {
         return messageTable.convert(rect, to: self.superview)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset)
+    }
 }
 
 extension UIScrollView {
@@ -396,5 +405,33 @@ extension UIScrollView {
             originy = self.contentSize.height - height
         }
         self.setContentOffset(CGPoint(x: 0, y: originy), animated: animated)
+    }
+}
+
+extension UITableView {
+    /**
+     Method to use whenever new items should be inserted at the top of the table view.
+     The table view maintains its scroll position using this method.
+     - warning: Make sure your data model contains the correct count of items before invoking this method.
+     - parameter itemCount: The count of items that should be added at the top of the table view.
+     - note: Works with `UITableViewAutomaticDimension`.
+     - links: https://bluelemonbits.com/2018/08/26/inserting-cells-at-the-top-of-a-uitableview-with-no-scrolling/
+     */
+    func insertItemsAtTopWithFixedPosition(_ itemCount: Int) {
+        layoutIfNeeded() // makes sure layout is set correctly.
+        var initialContentOffSet = contentOffset.y
+
+        // If offset is less than 0 due to refresh up gesture, assume 0.
+        if initialContentOffSet < 0 {
+            initialContentOffSet = 0
+        }
+
+        // Reload, scroll and set offset:
+        reloadData()
+        scrollToRow(
+            at: IndexPath(row: itemCount, section: 0),
+            at: .top,
+            animated: false)
+        contentOffset.y += initialContentOffSet
     }
 }
