@@ -32,6 +32,7 @@ class MessageTableViewCell: UITableViewCell {
     
     let windowSize = UIScreen.main.bounds
     let windowWidth = screenSize.width
+    let windowHeight = screenSize.height
 
     var sendBG = UIImage(named: "bgSend", in: Resources.bundle, compatibleWith: nil)
     var receiveBG = UIImage(named: "bgReceive", in: Resources.bundle, compatibleWith: nil)
@@ -180,7 +181,7 @@ class MessageTableViewCell: UITableViewCell {
         if let url = messageContent.imageUrl, let width = messageContent.imageWidth, let height = messageContent.imageHeight {
             bgimage.isHidden = true
             let imgwid = width.flo > windowWidth * 0.6 ? windowWidth * 0.6 : width.flo
-            let imghei = imgwid * (height.flo / width.flo)
+            let imghei = CGFloat.maximum(CGFloat.minimum(imgwid * (height.flo / width.flo), windowHeight * 0.4), windowHeight * 0.2)
             
             addSubview(cellImage)
             cellImage.translatesAutoresizingMaskIntoConstraints = false
@@ -208,6 +209,8 @@ class MessageTableViewCell: UITableViewCell {
             
             DispatchQueue.main.async {
                 self.cellImage.kf.setImage(with: imageurl)
+                self.cellImage.contentMode = .scaleAspectFill
+                self.cellImage.clipsToBounds = true
             }
             
             rowHeight = cellImage.frame.height + time.frame.height + 30
