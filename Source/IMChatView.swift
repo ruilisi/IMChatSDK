@@ -394,7 +394,6 @@ extension IMChatView {
     @objc func showVideo(_ notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
             if let url = dict["url"] as? String, let parentVC = self.parentViewController {
-//                let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
                 let videoURL = URL(string: url)
                 let player = AVPlayer(url: videoURL!)
                 let playerViewController = AVPlayerViewController()
