@@ -236,7 +236,12 @@ class MessageTableViewCell: UITableViewCell {
         if let messageContent = model, let url = messageContent.imageUrl {
             bgimage.isHidden = true
             
+            let playIcon = UIImage(named: "playIcon", in: Resources.bundle, compatibleWith: nil)
+            let playImage = UIImageView()
+            playImage.image = playIcon
+            
             addSubview(cellImage)
+            cellImage.addSubview(playImage)
             
             imageUrl = urlHead + url
             let videoImage = getThumbnailImage(forUrl: URL(string: imageUrl))
@@ -268,6 +273,12 @@ class MessageTableViewCell: UITableViewCell {
             cellImage.backgroundColor = .black
             cellImage.image = videoImage
             cellImage.contentMode = .scaleAspectFit
+            
+            playImage.translatesAutoresizingMaskIntoConstraints = false
+            playImage.centerXAnchor.constraint(equalTo: cellImage.centerXAnchor).isActive = true
+            playImage.centerYAnchor.constraint(equalTo: cellImage.centerYAnchor).isActive = true
+            playImage.widthAnchor.constraint(equalToConstant: 40).isActive = true
+            playImage.heightAnchor.constraint(equalToConstant: 40).isActive = true
             
             rowHeight = cellImage.frame.height + time.frame.height + 30
         }
