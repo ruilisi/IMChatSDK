@@ -340,13 +340,6 @@ extension IMChatView {
                 imgFrame = messageTable.getCellRectFromSuperView(rect)
                 imgFrame = self.convert(imgFrame, to: self.superview)
                 
-                let wid = size.width
-                let hei = size.height
-                
-                let parHei = parentController.view.vHeight
-                let bigWid = parentController.view.vWidth
-                let bigHei = parentController.view.vWidth * (hei / wid)
-                
                 alertImg = UIImageView()
                 alertImg.kf.setImage(with: URL(string: url))
                 if alertImg.image == nil { return }
@@ -359,8 +352,6 @@ extension IMChatView {
                 
                 showScroll = ImageScrollView()
                 parentController.view.addSubview(showScroll)
-//                parentController.view.addSubview(alertImg)
-//                alertImg.frame = imgFrame
                 
                 showScroll.alpha = 0
                 showScroll.translatesAutoresizingMaskIntoConstraints = false
