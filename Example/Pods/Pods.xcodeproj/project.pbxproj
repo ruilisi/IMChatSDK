@@ -152,6 +152,7 @@
 		8CAECB846FB9ECBF09B5FB0C33A90EE1 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05DBA65582436DAFEB9DD59F67AAC72 /* Security.swift */; };
 		8EEEA87217AB1AC02658D492CC65F4F3 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2C39A971069685F4C36677BF5A050 /* SessionDelegate.swift */; };
 		900EC18C255290860096F93D /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EC18B255290860096F93D /* VideoView.swift */; };
+		907D44D12553D4F600A656B2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907D44D02553D4F600A656B2 /* ImagePicker.swift */; };
 		917A35D95B69865CBE0F3E6F6C29D478 /* WSEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86F5CBEF9C53DD0110DC0D102C1EAF /* WSEngine.swift */; };
 		9289BEF5DEB6223C7365F1A285639DFB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042B6049A079AD62A38220D2538510B /* ImageDownloader.swift */; };
 		92D378A2EC99850E1D722C36F12F8DB0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35ABA3B70A8D15B06361874847FAA47 /* QuartzCore.framework */; };
@@ -507,6 +508,7 @@
 		8D967BC0B57020F4F919C796277BA0ED /* Pods-IMChatSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IMChatSDK_Example-dummy.m"; sourceTree = "<group>"; };
 		8E7FD06CAA242C2C10166F2D674409A5 /* FoundationSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationSecurity.swift; path = Sources/Security/FoundationSecurity.swift; sourceTree = "<group>"; };
 		900EC18B255290860096F93D /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		907D44D02553D4F600A656B2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		963D00701680D93BD05C4C87DC03FE34 /* UnifyUIConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnifyUIConfig.swift; path = Source/UnifyUIConfig.swift; sourceTree = "<group>"; };
 		97ABD1824BA4F890150E4DB6EFEFDC92 /* ThisClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThisClass.swift; path = Source/ThisClass.swift; sourceTree = "<group>"; };
 		97EC782BFF241DBB5A001CA3E82D7BA7 /* Engine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Engine.swift; path = Sources/Engine/Engine.swift; sourceTree = "<group>"; };
@@ -762,6 +764,7 @@
 				19F30AEA9A7B042D9013AD3CA3FB71DA /* Constants.swift */,
 				33DD7DFEA2B96B6472B660CBEFCEAD53 /* HistoryDataAccess.swift */,
 				5B37C08C0945841B00CCC6E21DD8BB0A /* IMChatView.swift */,
+				907D44D02553D4F600A656B2 /* ImagePicker.swift */,
 				B52D725CE04CF5B850ED5DFEB0EC51BA /* ImInfo.swift */,
 				33F747B0E78D2653D4246E29E69999BE /* IMTableView.swift */,
 				B2D6E9032F74ED517F4F63DC5B85B933 /* IMTableView+Extension.swift */,
@@ -1557,6 +1560,7 @@
 				8134192D49B7930AFEADEB61A74F87EF /* AutoLayoutScrollView.swift in Sources */,
 				ABB7D7CD375B70ACCEB9B8040690713A /* Constants.swift in Sources */,
 				5681CB6AAF3B4170EBFB8A79414E517D /* Helper.swift in Sources */,
+				907D44D12553D4F600A656B2 /* ImagePicker.swift in Sources */,
 				A9F544770C7FC05A45481EE75729A52D /* HistoryDataAccess.swift in Sources */,
 				7679C5AF09AC3B2A9DC7009C8BCE9770 /* HttpRequest.swift in Sources */,
 				24E75B58E9AFFA211EFF23CDEEA26051 /* ImageScrollView.swift in Sources */,

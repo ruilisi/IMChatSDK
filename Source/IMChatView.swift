@@ -10,6 +10,7 @@ import UIKit
 import Kingfisher
 import AVKit
 import AVFoundation
+import MobileCoreServices
 
 open class IMChatView: UIView {
     
@@ -40,6 +41,7 @@ open class IMChatView: UIView {
     
     private var placeHoderColor: UIColor = .lightGray
     private var textColor: UIColor = .white
+    var imagePicker: ImagePicker!
     
     var completeAction: (() -> Void)? {
         get {
@@ -145,6 +147,13 @@ private extension IMChatView {
 
 extension IMChatView {
     @objc func sendMsg() {
+        //发送图片测试：
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum), let parentVC = self.parentViewController{
+            imagePicker = ImagePicker(presentationController: parentVC, delegate: self)
+            imagePicker.present(from: parentVC.view)
+        }
+        return
+        
         if let msg = textView.text, !msg.isEmpty {
             messageTable.sendMessage(message: msg)
             self.textView.text = ""
@@ -410,5 +419,11 @@ extension IMChatView {
                 self.showScroll.removeFromSuperview()
             }
         })
+    }
+}
+
+extension IMChatView: ImagePickerDelegate {
+    public func didSelect(image: UIImage?) {
+        
     }
 }
