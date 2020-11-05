@@ -9,6 +9,7 @@
 import UIKit
 import Lottie
 import Kingfisher
+import AVFoundation
 
 enum CellType {
     case Text
@@ -235,10 +236,17 @@ class MessageTableViewCell: UITableViewCell {
         if let messageContent = model, let url = messageContent.imageUrl {
             bgimage.isHidden = true
             
-            let imgwid = windowWidth * 0.6
-            let imghei = windowHeight * 0.3
-            
             addSubview(cellImage)
+            
+            imageUrl = urlHead + url
+            let videoImage = getThumbnailImage(forUrl: URL(string: imageUrl))
+            
+            let width = videoImage?.size.width ?? windowWidth * 0.6
+            let height = videoImage?.size.height ?? windowHeight * 0.6
+            
+            let imgwid = width > windowWidth * 0.6 ? windowWidth * 0.6 : width
+            let imghei = CGFloat.maximum(CGFloat.minimum(imgwid * (height / width), windowHeight * 0.4), windowHeight * 0.2)
+            
             cellImage.translatesAutoresizingMaskIntoConstraints = false
             cellImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
             cellImage.widthAnchor.constraint(equalToConstant: imgwid).isActive = true
@@ -258,8 +266,8 @@ class MessageTableViewCell: UITableViewCell {
             cellImage.isUserInteractionEnabled = true
             cellImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(videoClick)))
             cellImage.backgroundColor = .black
-            
-            imageUrl = urlHead + url
+            cellImage.image = videoImage
+            cellImage.contentMode = .scaleAspectFit
             
             rowHeight = cellImage.frame.height + time.frame.height + 30
         }
@@ -299,6 +307,22 @@ class MessageTableViewCell: UITableViewCell {
         } else {
             loadingLottie.pause()
         }
+    }
+    
+    func getThumbnailImage(forUrl url: URL?) -> UIImage? {
+        
+        guard let videoUrl = url else { return nil }
+        
+        let asset: AVAsset = AVAsset(url: videoUrl)
+        let imageGenerator = AVAssetImageGenerator(asset: asset)
+
+        do {
+            let thumbnailImage = try imageGenerator.copyCGImage(at: CMTimeMake(value: 1, timescale: 60) , actualTime: nil)
+            return UIImage(cgImage: thumbnailImage)
+        } catch let error {
+            print(error)
+        }
+        return nil
     }
     
     private func getLabelSize(text: String, attributes: [NSAttributedString.Key: Any], textWidth: Int) -> CGRect {
