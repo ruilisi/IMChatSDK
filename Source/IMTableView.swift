@@ -133,6 +133,7 @@ class IMTableView: UIView {
                                 self.dataConfig.agentemail = value["agent_email"].stringValue
                                 HistoryDataAccess.timeRecord = timeNow
                                 self.connectToWebSocket()
+                                globalDataConfig = self.dataConfig
                              },
                              onFailure: { value in
                                 print(value)

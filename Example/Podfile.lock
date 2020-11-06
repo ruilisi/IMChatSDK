@@ -2,12 +2,18 @@ PODS:
   - IMChatSDK (1.1.6):
     - Kingfisher
     - lottie-ios
+    - RealmSwift
     - Starscream
     - SwiftyJSON
   - Kingfisher (5.15.4):
     - Kingfisher/Core (= 5.15.4)
   - Kingfisher/Core (5.15.4)
   - lottie-ios (3.1.8)
+  - Realm (10.1.1):
+    - Realm/Headers (= 10.1.1)
+  - Realm/Headers (10.1.1)
+  - RealmSwift (10.1.1):
+    - Realm (= 10.1.1)
   - Starscream (4.0.4)
   - SwiftyJSON (5.0.0)
 
@@ -18,6 +24,8 @@ SPEC REPOS:
   trunk:
     - Kingfisher
     - lottie-ios
+    - Realm
+    - RealmSwift
     - Starscream
     - SwiftyJSON
 
@@ -26,12 +34,14 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  IMChatSDK: d3c4ee5d43c4e2811cca85a612d1122294e2740a
+  IMChatSDK: 4769083a189259e251de85ed3a6868d6fd983f37
   Kingfisher: 657dc1077e5bbbfff864194c79f29e35b722d062
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
+  Realm: 784ca1da1453e31a9c9adc14445421a81f316119
+  RealmSwift: cc52fe0dcea56387274dff36e19219e055a3bb84
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
 PODFILE CHECKSUM: 7bd117499a9be03d3ab25ede6b0b55498ea2cd50
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0

@@ -30,12 +30,16 @@
     ],
     "Kingfisher": [
 
+    ],
+    "RealmSwift": [
+
     ]
   },
   "swift_versions": "5.0",
   "source_files": [
     "Source/Core/*.{swift}",
     "Source/*.{swift}",
+    "Source/*.{m}",
     "Source/Http/*.{swift}",
     "Source/Views/*.{swift}"
   ],

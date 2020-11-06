@@ -33,10 +33,12 @@ TODO: Add long description of the pod here.
   s.dependency 'lottie-ios'
   s.dependency 'SwiftyJSON'
   s.dependency 'Kingfisher'
+  s.dependency 'RealmSwift'
   s.swift_version= '5.0'
 
   s.source_files = ['Source/Core/*.{swift}',
                     'Source/*.{swift}',
+                    'Source/*.{m}',
                     'Source/Http/*.{swift}',
                     'Source/Views/*.{swift}']
   
