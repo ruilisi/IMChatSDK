@@ -38,6 +38,7 @@ TODO: Add long description of the pod here.
   s.source_files = ['Source/Core/*.{swift}',
                     'Source/*.{swift}',
                     'Source/API/*.{swift}',
+                    'Source/Extensions/*.{swift}',
                     'Source/*.{m}',
                     'Source/Http/*.{swift}',
                     'Source/Views/*.{swift}']

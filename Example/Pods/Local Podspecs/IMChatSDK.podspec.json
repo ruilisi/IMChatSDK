@@ -37,6 +37,7 @@
     "Source/Core/*.{swift}",
     "Source/*.{swift}",
     "Source/API/*.{swift}",
+    "Source/Extensions/*.{swift}",
     "Source/*.{m}",
     "Source/Http/*.{swift}",
     "Source/Views/*.{swift}"
