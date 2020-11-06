@@ -40,7 +40,6 @@ TODO: Add long description of the pod here.
                     'Source/API/*.{swift}',
                     'Source/Extensions/*.{swift}',
                     'Source/Uploader/*.{swift}',
-                    'Source/*.{m}',
                     'Source/Http/*.{swift}',
                     'Source/Views/*.{swift}']
   
