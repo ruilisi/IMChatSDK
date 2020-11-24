@@ -148,11 +148,11 @@ private extension IMChatView {
 extension IMChatView {
     @objc func sendMsg() {
         //发送图片测试：
-        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum), let parentVC = self.parentViewController{
-            imagePicker = ImagePicker(presentationController: parentVC, delegate: self)
-            imagePicker.present(from: parentVC.view)
-        }
-        return
+//        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum), let parentVC = self.parentViewController{
+//            imagePicker = ImagePicker(presentationController: parentVC, delegate: self)
+//            imagePicker.present(from: parentVC.view)
+//        }
+//        return
         
         if let msg = textView.text, !msg.isEmpty {
             messageTable.sendMessage(message: msg)
