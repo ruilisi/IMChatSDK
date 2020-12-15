@@ -70,11 +70,14 @@ open class IMChatView: UIView {
         self.addSubview(bottomSafeArea)
         self.addSubview(bottomView)
         
+        bottomView.addSubview(textView)
+        bottomView.addSubview(sendButton)
+        
         messageTable.bgColor = .clear
         messageTable.separatorColor = .clear
         
         setBottomView()
-        setMsgView()
+        setConstraints()
         
         NotificationCenter.default.addObserver(self,
         selector: #selector(self.keyboardNotification(notification:)),
@@ -92,6 +95,15 @@ open class IMChatView: UIView {
 }
 
 private extension IMChatView {
+    
+    func setConstraints() {
+        messageTable.translatesAutoresizingMaskIntoConstraints = false
+        messageTable.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        messageTable.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        messageTable.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        messageTable.bottomAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
+    }
+    
     func setBottomView() {
         let bottomViewWidth = frame.width
         let bottomViewHeight = 57.flo
@@ -99,10 +111,13 @@ private extension IMChatView {
         let btnWidth = CGFloat.minimum(frame.width * 0.16, 120)
         let inputWidth = frame.width * 0.85 - btnWidth
         
-        bottomView.addSubview(textView)
-        bottomView.addSubview(sendButton)
+//        bottomView.frame = CGRect(x: 0, y: frame.height - bottomViewHeight - safeareaBottom, width: bottomViewWidth, height: bottomViewHeight)
+        bottomView.translatesAutoresizingMaskIntoConstraints = false
+        bottomView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        bottomView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -safeareaBottom).isActive = true
+        bottomView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        bottomView.heightAnchor.constraint(equalTo: textView.heightAnchor, constant: 20).isActive = true
         
-        bottomView.frame = CGRect(x: 0, y: frame.height - bottomViewHeight - safeareaBottom, width: bottomViewWidth, height: bottomViewHeight)
         bottomView.backgroundColor = .clear
         bottomHeight = bottomView.vHeight
         
@@ -111,6 +126,16 @@ private extension IMChatView {
         
         textviewHeight = bottomViewHeight * 0.66
         textView.frame = CGRect(x: frame.width * 0.06, y: bottomViewHeight * 0.16, width: inputWidth, height: textviewHeight)
+        
+//        textView.translatesAutoresizingMaskIntoConstraints = false
+//        textView.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: frame.width * 0.06).isActive = true
+//        textView.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
+//        textView.widthAnchor.constraint(equalTo: bottomView.widthAnchor, multiplier: 0.85, constant: -btnWidth).isActive = true
+//        textView.heightAnchor.constraint(equalTo: bottomView.heightAnchor, multiplier: 0.66).isActive = true
+//        textView.widthAnchor.constraint(equalToConstant: inputWidth).isActive = true
+//        textView.heightAnchor.constraint(equalToConstant: textviewHeight).isActive = true
+//        textView.layoutIfNeeded()
+        
         textView.backgroundColor = .white
         textView.delegate = self
         textView.textColor = placeHoderColor
@@ -123,22 +148,14 @@ private extension IMChatView {
         sendButton.centerYAnchor.constraint(equalTo: textView.centerYAnchor).isActive = true
         sendButton.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -frame.width * 0.06).isActive = true
         sendButton.widthAnchor.constraint(equalToConstant: btnWidth).isActive = true
-        sendButton.heightAnchor.constraint(equalTo: bottomView.heightAnchor, multiplier: 0.55).isActive = true
+        sendButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        sendButton.layoutIfNeeded()
         
         sendButton.setTitle("发送", for: .normal)
         sendButton.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         sendButton.layer.cornerRadius = 3
         sendButton.backgroundColor = .white
         sendButton.addTarget(self, action: #selector(sendMsg), for: .touchUpInside)
-    }
-    
-    // MARK: - 消息列表
-    func setMsgView() {
-        messageTable.translatesAutoresizingMaskIntoConstraints = false
-        messageTable.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        messageTable.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        messageTable.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        messageTable.bottomAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
     }
 }
 
@@ -217,7 +234,7 @@ extension IMChatView: UITextViewDelegate {
         bottomView.vHeight += range
         bottomView.originY -= range
         
-        sendButton.originY -= range * 0.5
+//        sendButton.originY -= range * 0.5
     }
     
     public func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
