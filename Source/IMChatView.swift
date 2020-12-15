@@ -120,11 +120,11 @@ private extension IMChatView {
         textView.font = UIFont.systemFont(ofSize: textView.vHeight * 0.45, weight: .regular)
         
         sendButton.translatesAutoresizingMaskIntoConstraints = false
-        bottomView.addConstraints([
-            .init(item: sendButton, attribute: .centerY, relatedBy: .equal, toItem: textView, attribute: .centerY, multiplier: 1, constant: 0),
-            .init(item: sendButton, attribute: .trailing, relatedBy: .equal, toItem: bottomView, attribute: .trailing, multiplier: 1, constant: -frame.width * 0.06),
-            .init(item: sendButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: btnWidth),
-            .init(item: sendButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: bottomViewHeight * 0.55)])
+        sendButton.centerYAnchor.constraint(equalTo: textView.centerYAnchor).isActive = true
+        sendButton.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -frame.width * 0.06).isActive = true
+        sendButton.widthAnchor.constraint(equalToConstant: btnWidth).isActive = true
+        sendButton.heightAnchor.constraint(equalTo: bottomView.heightAnchor, multiplier: 0.55).isActive = true
+        
         sendButton.setTitle("发送", for: .normal)
         sendButton.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         sendButton.layer.cornerRadius = 3
