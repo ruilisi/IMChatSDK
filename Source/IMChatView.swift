@@ -96,28 +96,6 @@ open class IMChatView: UIView {
 
 private extension IMChatView {
     
-    func setConstraints() {
-        messageTable.translatesAutoresizingMaskIntoConstraints = false
-        messageTable.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        messageTable.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        messageTable.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        messageTable.bottomAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
-        
-        bottomView.translatesAutoresizingMaskIntoConstraints = false
-        bottomView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        bottomView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -safeareaBottom).isActive = true
-        bottomView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        bottomView.heightAnchor.constraint(equalTo: textView.heightAnchor, constant: 20).isActive = true
-        
-        sendButton.translatesAutoresizingMaskIntoConstraints = false
-        sendButton.centerYAnchor.constraint(equalTo: textView.centerYAnchor).isActive = true
-        sendButton.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -frame.width * 0.06).isActive = true
-        sendButton.widthAnchor.constraint(equalToConstant: CGFloat.minimum(frame.width * 0.16, 120)).isActive = true
-        sendButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        
-        bottomView.layoutIfNeeded()
-    }
-    
     func setBottomView() {
         let bottomViewWidth = frame.width
         let bottomViewHeight = 57.flo
@@ -147,6 +125,28 @@ private extension IMChatView {
         sendButton.layer.cornerRadius = 3
         sendButton.backgroundColor = .white
         sendButton.addTarget(self, action: #selector(sendMsg), for: .touchUpInside)
+    }
+    
+    func setConstraints() {
+        messageTable.translatesAutoresizingMaskIntoConstraints = false
+        messageTable.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        messageTable.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        messageTable.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        messageTable.bottomAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
+        
+        bottomView.translatesAutoresizingMaskIntoConstraints = false
+        bottomView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        bottomView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -safeareaBottom).isActive = true
+        bottomView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        bottomView.heightAnchor.constraint(equalTo: textView.heightAnchor, constant: 20).isActive = true
+        
+        sendButton.translatesAutoresizingMaskIntoConstraints = false
+        sendButton.centerYAnchor.constraint(equalTo: textView.centerYAnchor).isActive = true
+        sendButton.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -frame.width * 0.06).isActive = true
+        sendButton.widthAnchor.constraint(equalToConstant: CGFloat.minimum(frame.width * 0.16, 120)).isActive = true
+        sendButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        bottomView.layoutIfNeeded()
     }
 }
 
