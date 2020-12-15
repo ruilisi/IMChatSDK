@@ -135,11 +135,10 @@ private extension IMChatView {
     // MARK: - 消息列表
     func setMsgView() {
         messageTable.translatesAutoresizingMaskIntoConstraints = false
-        self.addConstraints([
-            .init(item: messageTable, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0),
-            .init(item: messageTable, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0),
-            .init(item: messageTable, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 1, constant: 0),
-            .init(item: messageTable, attribute: .bottom, relatedBy: .equal, toItem: bottomView, attribute: .top, multiplier: 1, constant: 0)])
+        messageTable.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        messageTable.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        messageTable.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        messageTable.bottomAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
     }
 }
 
