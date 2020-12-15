@@ -154,7 +154,7 @@ extension IMChatView {
 //        }
 //        return
         
-        if let msg = textView.text, !msg.isEmpty {
+        if let msg = textView.text, !msg.isEmpty, textView.isFirstResponder {
             messageTable.sendMessage(message: msg)
             self.textView.text = ""
             self.textViewDidChange(textView)
